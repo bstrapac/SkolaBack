@@ -1,0 +1,1329 @@
+11:50:25.027 [restartedMain]   INFO  c.s.p.ProjectApplication - Starting ProjectApplication on BSTRAPAC with PID 8276 (D:\bstrapac\Desktop\projects\SkolaBack\target\classes started by bstrapac in D:\bstrapac\Desktop\projects\SkolaBack) 
+11:50:25.035 [restartedMain]   INFO  c.s.p.ProjectApplication - No active profile set, falling back to default profiles: default 
+11:50:25.073 [restartedMain]   INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable 
+11:50:25.073 [restartedMain]   INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG' 
+11:50:25.963 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 3030 (http) 
+11:50:25.969 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3030"] 
+11:50:25.969 [restartedMain]   INFO  o.a.c.c.StandardService - Starting service [Tomcat] 
+11:50:25.969 [restartedMain]   INFO  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38] 
+11:50:26.034 [restartedMain]   INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring embedded WebApplicationContext 
+11:50:26.034 [restartedMain]   INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 960 ms 
+11:50:26.543 [restartedMain]   INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor' 
+11:50:26.784 [restartedMain]   INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+11:50:26.796 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3030"] 
+11:50:26.812 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 3030 (http) with context path '/skola' 
+11:50:26.820 [restartedMain]   INFO  c.s.p.ProjectApplication - Started ProjectApplication in 2.007 seconds (JVM running for 3.383) 
+11:50:44.398 [http-nio-3030-exec-1] INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+11:50:44.399 [http-nio-3030-exec-1] INFO  o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+11:50:44.412 [http-nio-3030-exec-1] INFO  o.s.w.s.DispatcherServlet - Completed initialization in 13 ms 
+11:50:44.440 [http-nio-3030-exec-1] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Starting... 
+11:50:44.574 [http-nio-3030-exec-1] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Start completed. 
+11:58:08.467 [Thread-5]        INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor' 
+11:58:08.469 [Thread-5]        INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Shutdown initiated... 
+11:58:08.473 [Thread-5]        INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Shutdown completed. 
+11:58:08.530 [restartedMain]   INFO  c.s.p.ProjectApplication - Starting ProjectApplication on BSTRAPAC with PID 8276 (D:\bstrapac\Desktop\projects\SkolaBack\target\classes started by bstrapac in D:\bstrapac\Desktop\projects\SkolaBack) 
+11:58:08.531 [restartedMain]   INFO  c.s.p.ProjectApplication - No active profile set, falling back to default profiles: default 
+11:58:08.771 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 3030 (http) 
+11:58:08.772 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3030"] 
+11:58:08.772 [restartedMain]   INFO  o.a.c.c.StandardService - Starting service [Tomcat] 
+11:58:08.772 [restartedMain]   INFO  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38] 
+11:58:08.788 [restartedMain]   INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring embedded WebApplicationContext 
+11:58:08.788 [restartedMain]   INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 256 ms 
+11:58:08.896 [restartedMain]   INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor' 
+11:58:08.948 [restartedMain]   INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+11:58:08.955 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3030"] 
+11:58:08.958 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 3030 (http) with context path '/skola' 
+11:58:08.961 [restartedMain]   INFO  c.s.p.ProjectApplication - Started ProjectApplication in 0.454 seconds (JVM running for 465.521) 
+11:58:08.962 [restartedMain]   INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+11:58:12.109 [RMI TCP Connection(11)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested. 
+11:58:12.168 [RMI TCP Connection(11)-127.0.0.1] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor' 
+11:59:44.180 [restartedMain]   INFO  c.s.p.ProjectApplication - Starting ProjectApplication on BSTRAPAC with PID 11716 (D:\bstrapac\Desktop\projects\SkolaBack\target\classes started by bstrapac in D:\bstrapac\Desktop\projects\SkolaBack) 
+11:59:44.182 [restartedMain]   INFO  c.s.p.ProjectApplication - No active profile set, falling back to default profiles: default 
+11:59:44.211 [restartedMain]   INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable 
+11:59:44.212 [restartedMain]   INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG' 
+11:59:45.012 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 3030 (http) 
+11:59:45.017 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3030"] 
+11:59:45.017 [restartedMain]   INFO  o.a.c.c.StandardService - Starting service [Tomcat] 
+11:59:45.017 [restartedMain]   INFO  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38] 
+11:59:45.085 [restartedMain]   INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring embedded WebApplicationContext 
+11:59:45.086 [restartedMain]   INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 874 ms 
+11:59:45.578 [restartedMain]   INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor' 
+11:59:45.803 [restartedMain]   INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+11:59:45.815 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3030"] 
+11:59:45.831 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 3030 (http) with context path '/skola' 
+11:59:45.839 [restartedMain]   INFO  c.s.p.ProjectApplication - Started ProjectApplication in 1.851 seconds (JVM running for 2.499) 
+11:59:50.234 [http-nio-3030-exec-2] INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+11:59:50.234 [http-nio-3030-exec-2] INFO  o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+11:59:50.247 [http-nio-3030-exec-2] INFO  o.s.w.s.DispatcherServlet - Completed initialization in 13 ms 
+11:59:50.278 [http-nio-3030-exec-2] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Starting... 
+11:59:50.411 [http-nio-3030-exec-2] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Start completed. 
+12:00:19.601 [Thread-5]        INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor' 
+12:00:19.602 [Thread-5]        INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Shutdown initiated... 
+12:00:19.608 [Thread-5]        INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Shutdown completed. 
+12:00:19.665 [restartedMain]   INFO  c.s.p.ProjectApplication - Starting ProjectApplication on BSTRAPAC with PID 11716 (D:\bstrapac\Desktop\projects\SkolaBack\target\classes started by bstrapac in D:\bstrapac\Desktop\projects\SkolaBack) 
+12:00:19.665 [restartedMain]   INFO  c.s.p.ProjectApplication - No active profile set, falling back to default profiles: default 
+12:00:19.907 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 3030 (http) 
+12:00:19.908 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3030"] 
+12:00:19.908 [restartedMain]   INFO  o.a.c.c.StandardService - Starting service [Tomcat] 
+12:00:19.908 [restartedMain]   INFO  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38] 
+12:00:19.925 [restartedMain]   INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring embedded WebApplicationContext 
+12:00:19.925 [restartedMain]   INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 259 ms 
+12:00:20.031 [restartedMain]   INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor' 
+12:00:20.085 [restartedMain]   INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+12:00:20.094 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3030"] 
+12:00:20.097 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 3030 (http) with context path '/skola' 
+12:00:20.099 [restartedMain]   INFO  c.s.p.ProjectApplication - Started ProjectApplication in 0.459 seconds (JVM running for 36.759) 
+12:00:20.100 [restartedMain]   INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+12:00:22.688 [http-nio-3030-exec-2] INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+12:00:22.688 [http-nio-3030-exec-2] INFO  o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+12:00:22.690 [http-nio-3030-exec-2] INFO  o.s.w.s.DispatcherServlet - Completed initialization in 2 ms 
+12:00:22.694 [http-nio-3030-exec-2] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Starting... 
+12:00:22.789 [http-nio-3030-exec-2] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Start completed. 
+12:01:13.042 [Thread-9]        INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor' 
+12:01:13.043 [Thread-9]        INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Shutdown initiated... 
+12:01:13.050 [Thread-9]        INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Shutdown completed. 
+12:01:13.105 [restartedMain]   INFO  c.s.p.ProjectApplication - Starting ProjectApplication on BSTRAPAC with PID 11716 (D:\bstrapac\Desktop\projects\SkolaBack\target\classes started by bstrapac in D:\bstrapac\Desktop\projects\SkolaBack) 
+12:01:13.105 [restartedMain]   INFO  c.s.p.ProjectApplication - No active profile set, falling back to default profiles: default 
+12:01:13.330 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 3030 (http) 
+12:01:13.331 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3030"] 
+12:01:13.331 [restartedMain]   INFO  o.a.c.c.StandardService - Starting service [Tomcat] 
+12:01:13.331 [restartedMain]   INFO  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38] 
+12:01:13.349 [restartedMain]   INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring embedded WebApplicationContext 
+12:01:13.349 [restartedMain]   INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 242 ms 
+12:01:13.448 [restartedMain]   INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor' 
+12:01:13.498 [restartedMain]   INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+12:01:13.504 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3030"] 
+12:01:13.509 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 3030 (http) with context path '/skola' 
+12:01:13.511 [restartedMain]   INFO  c.s.p.ProjectApplication - Started ProjectApplication in 0.429 seconds (JVM running for 90.172) 
+12:01:13.512 [restartedMain]   INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+12:01:15.645 [RMI TCP Connection(5)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested. 
+12:01:15.711 [RMI TCP Connection(5)-127.0.0.1] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor' 
+12:02:23.954 [restartedMain]   INFO  c.s.p.ProjectApplication - Starting ProjectApplication on BSTRAPAC with PID 14156 (D:\bstrapac\Desktop\projects\SkolaBack\target\classes started by bstrapac in D:\bstrapac\Desktop\projects\SkolaBack) 
+12:02:23.955 [restartedMain]   INFO  c.s.p.ProjectApplication - No active profile set, falling back to default profiles: default 
+12:02:23.984 [restartedMain]   INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable 
+12:02:23.985 [restartedMain]   INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG' 
+12:02:24.784 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 3030 (http) 
+12:02:24.789 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3030"] 
+12:02:24.790 [restartedMain]   INFO  o.a.c.c.StandardService - Starting service [Tomcat] 
+12:02:24.790 [restartedMain]   INFO  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38] 
+12:02:24.855 [restartedMain]   INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring embedded WebApplicationContext 
+12:02:24.855 [restartedMain]   INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 870 ms 
+12:02:25.328 [restartedMain]   INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor' 
+12:02:25.554 [restartedMain]   INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+12:02:25.566 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3030"] 
+12:02:25.582 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 3030 (http) with context path '/skola' 
+12:02:25.590 [restartedMain]   INFO  c.s.p.ProjectApplication - Started ProjectApplication in 1.825 seconds (JVM running for 2.467) 
+12:02:29.017 [http-nio-3030-exec-2] INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+12:02:29.018 [http-nio-3030-exec-2] INFO  o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+12:02:29.034 [http-nio-3030-exec-2] INFO  o.s.w.s.DispatcherServlet - Completed initialization in 16 ms 
+12:02:29.060 [http-nio-3030-exec-2] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Starting... 
+12:02:29.189 [http-nio-3030-exec-2] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Start completed. 
+12:02:53.253 [Thread-5]        INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor' 
+12:02:53.257 [Thread-5]        INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Shutdown initiated... 
+12:02:53.269 [Thread-5]        INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Shutdown completed. 
+12:02:53.329 [restartedMain]   INFO  c.s.p.ProjectApplication - Starting ProjectApplication on BSTRAPAC with PID 14156 (D:\bstrapac\Desktop\projects\SkolaBack\target\classes started by bstrapac in D:\bstrapac\Desktop\projects\SkolaBack) 
+12:02:53.329 [restartedMain]   INFO  c.s.p.ProjectApplication - No active profile set, falling back to default profiles: default 
+12:02:53.573 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 3030 (http) 
+12:02:53.573 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3030"] 
+12:02:53.573 [restartedMain]   INFO  o.a.c.c.StandardService - Starting service [Tomcat] 
+12:02:53.573 [restartedMain]   INFO  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38] 
+12:02:53.589 [restartedMain]   INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring embedded WebApplicationContext 
+12:02:53.589 [restartedMain]   INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 259 ms 
+12:02:53.697 [restartedMain]   INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor' 
+12:02:53.754 [restartedMain]   INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+12:02:53.759 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3030"] 
+12:02:53.765 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 3030 (http) with context path '/skola' 
+12:02:53.768 [restartedMain]   INFO  c.s.p.ProjectApplication - Started ProjectApplication in 0.463 seconds (JVM running for 30.645) 
+12:02:53.769 [restartedMain]   INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+12:02:56.666 [http-nio-3030-exec-1] INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+12:02:56.666 [http-nio-3030-exec-1] INFO  o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+12:02:56.667 [http-nio-3030-exec-1] INFO  o.s.w.s.DispatcherServlet - Completed initialization in 1 ms 
+12:02:56.672 [http-nio-3030-exec-1] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Starting... 
+12:02:56.768 [http-nio-3030-exec-1] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Start completed. 
+12:05:09.473 [Thread-9]        INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor' 
+12:05:09.474 [Thread-9]        INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Shutdown initiated... 
+12:05:09.480 [Thread-9]        INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Shutdown completed. 
+12:05:09.544 [restartedMain]   INFO  c.s.p.ProjectApplication - Starting ProjectApplication on BSTRAPAC with PID 14156 (D:\bstrapac\Desktop\projects\SkolaBack\target\classes started by bstrapac in D:\bstrapac\Desktop\projects\SkolaBack) 
+12:05:09.544 [restartedMain]   INFO  c.s.p.ProjectApplication - No active profile set, falling back to default profiles: default 
+12:05:09.764 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 3030 (http) 
+12:05:09.765 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3030"] 
+12:05:09.765 [restartedMain]   INFO  o.a.c.c.StandardService - Starting service [Tomcat] 
+12:05:09.765 [restartedMain]   INFO  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38] 
+12:05:09.781 [restartedMain]   INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring embedded WebApplicationContext 
+12:05:09.781 [restartedMain]   INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 235 ms 
+12:05:09.797 [restartedMain]   WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'ocjenaController': Unsatisfied dependency expressed through field 'ocjenaService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'ocjenaServiceImpl': Unsatisfied dependency expressed through field 'ocjenaDao'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'ocjenaDAOImpl' defined in file [D:\bstrapac\Desktop\projects\SkolaBack\target\classes\com\skole\project\dao\OcjenaDAOImpl.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.skole.project.dao.OcjenaDAOImpl]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problem: 
+	The method put(String, String) in the type HashMap<String,String> is not applicable for the arguments (String, double)
+ 
+12:05:09.798 [restartedMain]   INFO  o.a.c.c.StandardService - Stopping service [Tomcat] 
+12:05:09.801 [restartedMain]   INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled. 
+12:05:09.806 [restartedMain]   ERROR o.s.b.SpringApplication - Application run failed 
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'ocjenaController': Unsatisfied dependency expressed through field 'ocjenaService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'ocjenaServiceImpl': Unsatisfied dependency expressed through field 'ocjenaDao'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'ocjenaDAOImpl' defined in file [D:\bstrapac\Desktop\projects\SkolaBack\target\classes\com\skole\project\dao\OcjenaDAOImpl.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.skole.project.dao.OcjenaDAOImpl]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problem: 
+	The method put(String, String) in the type HashMap<String,String> is not applicable for the arguments (String, double)
+
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1420)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.skole.project.ProjectApplication.main(ProjectApplication.java:11)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'ocjenaServiceImpl': Unsatisfied dependency expressed through field 'ocjenaDao'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'ocjenaDAOImpl' defined in file [D:\bstrapac\Desktop\projects\SkolaBack\target\classes\com\skole\project\dao\OcjenaDAOImpl.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.skole.project.dao.OcjenaDAOImpl]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problem: 
+	The method put(String, String) in the type HashMap<String,String> is not applicable for the arguments (String, double)
+
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1420)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1307)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	... 25 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'ocjenaDAOImpl' defined in file [D:\bstrapac\Desktop\projects\SkolaBack\target\classes\com\skole\project\dao\OcjenaDAOImpl.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.skole.project.dao.OcjenaDAOImpl]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problem: 
+	The method put(String, String) in the type HashMap<String,String> is not applicable for the arguments (String, double)
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1318)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1213)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1307)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	... 38 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.skole.project.dao.OcjenaDAOImpl]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problem: 
+	The method put(String, String) in the type HashMap<String,String> is not applicable for the arguments (String, double)
+
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:217)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1310)
+	... 49 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problem: 
+	The method put(String, String) in the type HashMap<String,String> is not applicable for the arguments (String, double)
+
+	at com.skole.project.dao.OcjenaDAOImpl.<init>(OcjenaDAOImpl.java:205)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:204)
+	... 51 common frames omitted
+12:06:09.730 [restartedMain]   INFO  c.s.p.ProjectApplication - Starting ProjectApplication on BSTRAPAC with PID 14020 (D:\bstrapac\Desktop\projects\SkolaBack\target\classes started by bstrapac in D:\bstrapac\Desktop\projects\SkolaBack) 
+12:06:09.732 [restartedMain]   INFO  c.s.p.ProjectApplication - No active profile set, falling back to default profiles: default 
+12:06:09.760 [restartedMain]   INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable 
+12:06:09.760 [restartedMain]   INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG' 
+12:06:10.540 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 3030 (http) 
+12:06:10.545 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3030"] 
+12:06:10.545 [restartedMain]   INFO  o.a.c.c.StandardService - Starting service [Tomcat] 
+12:06:10.546 [restartedMain]   INFO  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38] 
+12:06:10.611 [restartedMain]   INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring embedded WebApplicationContext 
+12:06:10.612 [restartedMain]   INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 852 ms 
+12:06:11.080 [restartedMain]   INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor' 
+12:06:11.307 [restartedMain]   INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+12:06:11.319 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3030"] 
+12:06:11.336 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 3030 (http) with context path '/skola' 
+12:06:11.343 [restartedMain]   INFO  c.s.p.ProjectApplication - Started ProjectApplication in 1.802 seconds (JVM running for 2.44) 
+12:06:15.407 [http-nio-3030-exec-2] INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+12:06:15.408 [http-nio-3030-exec-2] INFO  o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+12:06:15.421 [http-nio-3030-exec-2] INFO  o.s.w.s.DispatcherServlet - Completed initialization in 13 ms 
+12:06:15.448 [http-nio-3030-exec-2] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Starting... 
+12:06:15.577 [http-nio-3030-exec-2] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Start completed. 
+12:08:38.061 [Thread-5]        INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor' 
+12:08:38.062 [Thread-5]        INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Shutdown initiated... 
+12:08:38.070 [Thread-5]        INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Shutdown completed. 
+12:08:38.128 [restartedMain]   INFO  c.s.p.ProjectApplication - Starting ProjectApplication on BSTRAPAC with PID 14020 (D:\bstrapac\Desktop\projects\SkolaBack\target\classes started by bstrapac in D:\bstrapac\Desktop\projects\SkolaBack) 
+12:08:38.128 [restartedMain]   INFO  c.s.p.ProjectApplication - No active profile set, falling back to default profiles: default 
+12:08:38.365 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 3030 (http) 
+12:08:38.366 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3030"] 
+12:08:38.366 [restartedMain]   INFO  o.a.c.c.StandardService - Starting service [Tomcat] 
+12:08:38.366 [restartedMain]   INFO  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38] 
+12:08:38.383 [restartedMain]   INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring embedded WebApplicationContext 
+12:08:38.383 [restartedMain]   INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 254 ms 
+12:08:38.490 [restartedMain]   INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor' 
+12:08:38.548 [restartedMain]   INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+12:08:38.554 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3030"] 
+12:08:38.557 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 3030 (http) with context path '/skola' 
+12:08:38.560 [restartedMain]   INFO  c.s.p.ProjectApplication - Started ProjectApplication in 0.457 seconds (JVM running for 149.656) 
+12:08:38.561 [restartedMain]   INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+12:08:40.841 [http-nio-3030-exec-2] INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+12:08:40.841 [http-nio-3030-exec-2] INFO  o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+12:08:40.843 [http-nio-3030-exec-2] INFO  o.s.w.s.DispatcherServlet - Completed initialization in 2 ms 
+12:08:40.847 [http-nio-3030-exec-2] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Starting... 
+12:08:41.070 [http-nio-3030-exec-2] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Start completed. 
+12:08:41.119 [http-nio-3030-exec-2] ERROR c.s.p.c.OcjenaController - Nije pronađena ocjena sa ID: 4. Poruka: PreparedStatementCallback; uncategorized SQLException for SQL [select	avg(oc.ocjena) as avg,	p.naziv_predmet as predmet from ocjene oc left join predmet_osoba po on oc.id_predmet_osoba = po.id_predmet_osoba left join predmeti p on po.id_predmet = p.id_predmet where po.id_osoba = ?  group by p.naziv_predmet;]; SQL state [24000]; error code [0]; Operation requires a scrollable ResultSet, but this ResultSet is FORWARD_ONLY.; nested exception is org.postgresql.util.PSQLException: Operation requires a scrollable ResultSet, but this ResultSet is FORWARD_ONLY. 
+12:10:12.879 [Thread-9]        INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor' 
+12:10:12.881 [Thread-9]        INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Shutdown initiated... 
+12:10:12.890 [Thread-9]        INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Shutdown completed. 
+12:10:12.952 [restartedMain]   INFO  c.s.p.ProjectApplication - Starting ProjectApplication on BSTRAPAC with PID 14020 (D:\bstrapac\Desktop\projects\SkolaBack\target\classes started by bstrapac in D:\bstrapac\Desktop\projects\SkolaBack) 
+12:10:12.952 [restartedMain]   INFO  c.s.p.ProjectApplication - No active profile set, falling back to default profiles: default 
+12:10:13.172 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 3030 (http) 
+12:10:13.173 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3030"] 
+12:10:13.173 [restartedMain]   INFO  o.a.c.c.StandardService - Starting service [Tomcat] 
+12:10:13.173 [restartedMain]   INFO  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38] 
+12:10:13.190 [restartedMain]   INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring embedded WebApplicationContext 
+12:10:13.190 [restartedMain]   INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 236 ms 
+12:10:13.287 [restartedMain]   INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor' 
+12:10:13.338 [restartedMain]   INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+12:10:13.344 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3030"] 
+12:10:13.347 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 3030 (http) with context path '/skola' 
+12:10:13.349 [restartedMain]   INFO  c.s.p.ProjectApplication - Started ProjectApplication in 0.419 seconds (JVM running for 244.445) 
+12:10:13.351 [restartedMain]   INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+12:10:14.804 [http-nio-3030-exec-2] INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+12:10:14.805 [http-nio-3030-exec-2] INFO  o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+12:10:14.806 [http-nio-3030-exec-2] INFO  o.s.w.s.DispatcherServlet - Completed initialization in 1 ms 
+12:10:14.810 [http-nio-3030-exec-2] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Starting... 
+12:10:14.907 [http-nio-3030-exec-2] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Start completed. 
+12:19:58.203 [Thread-15]       INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor' 
+12:19:58.206 [Thread-15]       INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Shutdown initiated... 
+12:19:58.213 [Thread-15]       INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Shutdown completed. 
+12:19:58.266 [restartedMain]   INFO  c.s.p.ProjectApplication - Starting ProjectApplication on BSTRAPAC with PID 14020 (D:\bstrapac\Desktop\projects\SkolaBack\target\classes started by bstrapac in D:\bstrapac\Desktop\projects\SkolaBack) 
+12:19:58.267 [restartedMain]   INFO  c.s.p.ProjectApplication - No active profile set, falling back to default profiles: default 
+12:19:58.473 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 3030 (http) 
+12:19:58.473 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3030"] 
+12:19:58.473 [restartedMain]   INFO  o.a.c.c.StandardService - Starting service [Tomcat] 
+12:19:58.473 [restartedMain]   INFO  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38] 
+12:19:58.489 [restartedMain]   INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring embedded WebApplicationContext 
+12:19:58.489 [restartedMain]   INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 221 ms 
+12:19:58.586 [restartedMain]   INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor' 
+12:19:58.639 [restartedMain]   INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+12:19:58.644 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3030"] 
+12:19:58.647 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 3030 (http) with context path '/skola' 
+12:19:58.650 [restartedMain]   INFO  c.s.p.ProjectApplication - Started ProjectApplication in 0.405 seconds (JVM running for 829.743) 
+12:19:58.651 [restartedMain]   INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+12:20:01.780 [http-nio-3030-exec-2] INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+12:20:01.780 [http-nio-3030-exec-2] INFO  o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+12:20:01.782 [http-nio-3030-exec-2] INFO  o.s.w.s.DispatcherServlet - Completed initialization in 2 ms 
+12:20:01.785 [http-nio-3030-exec-2] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Starting... 
+12:20:01.878 [http-nio-3030-exec-2] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Start completed. 
+12:21:09.707 [Thread-21]       INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor' 
+12:21:09.708 [Thread-21]       INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Shutdown initiated... 
+12:21:09.712 [Thread-21]       INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Shutdown completed. 
+12:21:09.767 [restartedMain]   INFO  c.s.p.ProjectApplication - Starting ProjectApplication on BSTRAPAC with PID 14020 (D:\bstrapac\Desktop\projects\SkolaBack\target\classes started by bstrapac in D:\bstrapac\Desktop\projects\SkolaBack) 
+12:21:09.767 [restartedMain]   INFO  c.s.p.ProjectApplication - No active profile set, falling back to default profiles: default 
+12:21:09.968 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 3030 (http) 
+12:21:09.969 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3030"] 
+12:21:09.969 [restartedMain]   INFO  o.a.c.c.StandardService - Starting service [Tomcat] 
+12:21:09.969 [restartedMain]   INFO  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38] 
+12:21:09.984 [restartedMain]   INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring embedded WebApplicationContext 
+12:21:09.984 [restartedMain]   INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 216 ms 
+12:21:10.080 [restartedMain]   INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor' 
+12:21:10.127 [restartedMain]   INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+12:21:10.132 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3030"] 
+12:21:10.135 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 3030 (http) with context path '/skola' 
+12:21:10.137 [restartedMain]   INFO  c.s.p.ProjectApplication - Started ProjectApplication in 0.392 seconds (JVM running for 901.23) 
+12:21:10.138 [restartedMain]   INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+12:21:11.121 [RMI TCP Connection(18)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested. 
+12:21:11.183 [RMI TCP Connection(18)-127.0.0.1] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor' 
+12:26:41.175 [restartedMain]   INFO  c.s.p.ProjectApplication - Starting ProjectApplication on BSTRAPAC with PID 10816 (D:\bstrapac\Desktop\projects\SkolaBack\target\classes started by bstrapac in D:\bstrapac\Desktop\projects\SkolaBack) 
+12:26:41.177 [restartedMain]   INFO  c.s.p.ProjectApplication - No active profile set, falling back to default profiles: default 
+12:26:41.205 [restartedMain]   INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable 
+12:26:41.205 [restartedMain]   INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG' 
+12:26:41.992 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 3030 (http) 
+12:26:41.997 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3030"] 
+12:26:41.998 [restartedMain]   INFO  o.a.c.c.StandardService - Starting service [Tomcat] 
+12:26:41.998 [restartedMain]   INFO  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38] 
+12:26:42.061 [restartedMain]   INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring embedded WebApplicationContext 
+12:26:42.062 [restartedMain]   INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 857 ms 
+12:26:42.528 [restartedMain]   INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor' 
+12:26:42.749 [restartedMain]   INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+12:26:42.761 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3030"] 
+12:26:42.777 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 3030 (http) with context path '/skola' 
+12:26:42.785 [restartedMain]   INFO  c.s.p.ProjectApplication - Started ProjectApplication in 1.796 seconds (JVM running for 2.435) 
+12:26:48.777 [http-nio-3030-exec-2] INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+12:26:48.778 [http-nio-3030-exec-2] INFO  o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+12:26:48.791 [http-nio-3030-exec-2] INFO  o.s.w.s.DispatcherServlet - Completed initialization in 13 ms 
+12:26:48.817 [http-nio-3030-exec-2] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Starting... 
+12:26:48.948 [http-nio-3030-exec-2] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Start completed. 
+12:35:13.913 [Thread-5]        INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor' 
+12:35:13.914 [Thread-5]        INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Shutdown initiated... 
+12:35:13.918 [Thread-5]        INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Shutdown completed. 
+12:35:13.974 [restartedMain]   INFO  c.s.p.ProjectApplication - Starting ProjectApplication on BSTRAPAC with PID 10816 (D:\bstrapac\Desktop\projects\SkolaBack\target\classes started by bstrapac in D:\bstrapac\Desktop\projects\SkolaBack) 
+12:35:13.974 [restartedMain]   INFO  c.s.p.ProjectApplication - No active profile set, falling back to default profiles: default 
+12:35:14.203 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 3030 (http) 
+12:35:14.204 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3030"] 
+12:35:14.204 [restartedMain]   INFO  o.a.c.c.StandardService - Starting service [Tomcat] 
+12:35:14.204 [restartedMain]   INFO  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38] 
+12:35:14.220 [restartedMain]   INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring embedded WebApplicationContext 
+12:35:14.220 [restartedMain]   INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 245 ms 
+12:35:14.327 [restartedMain]   INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor' 
+12:35:14.381 [restartedMain]   INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+12:35:14.386 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3030"] 
+12:35:14.389 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 3030 (http) with context path '/skola' 
+12:35:14.392 [restartedMain]   INFO  c.s.p.ProjectApplication - Started ProjectApplication in 0.44 seconds (JVM running for 514.04) 
+12:35:14.393 [restartedMain]   INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+12:35:16.500 [RMI TCP Connection(12)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested. 
+12:35:16.561 [RMI TCP Connection(12)-127.0.0.1] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor' 
+13:10:25.366 [restartedMain]   INFO  c.s.p.ProjectApplication - Starting ProjectApplication on BSTRAPAC with PID 12484 (D:\bstrapac\Desktop\projects\SkolaBack\target\classes started by bstrapac in D:\bstrapac\Desktop\projects\SkolaBack) 
+13:10:25.368 [restartedMain]   INFO  c.s.p.ProjectApplication - No active profile set, falling back to default profiles: default 
+13:10:25.395 [restartedMain]   INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable 
+13:10:25.396 [restartedMain]   INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG' 
+13:10:26.167 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 3030 (http) 
+13:10:26.172 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3030"] 
+13:10:26.172 [restartedMain]   INFO  o.a.c.c.StandardService - Starting service [Tomcat] 
+13:10:26.173 [restartedMain]   INFO  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38] 
+13:10:26.239 [restartedMain]   INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring embedded WebApplicationContext 
+13:10:26.239 [restartedMain]   INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 843 ms 
+13:10:26.691 [restartedMain]   INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor' 
+13:10:26.940 [restartedMain]   INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+13:10:26.952 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3030"] 
+13:10:26.968 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 3030 (http) with context path '/skola' 
+13:10:26.976 [restartedMain]   INFO  c.s.p.ProjectApplication - Started ProjectApplication in 1.796 seconds (JVM running for 2.929) 
+13:10:30.671 [http-nio-3030-exec-1] INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+13:10:30.672 [http-nio-3030-exec-1] INFO  o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+13:10:30.686 [http-nio-3030-exec-1] INFO  o.s.w.s.DispatcherServlet - Completed initialization in 14 ms 
+13:10:30.713 [http-nio-3030-exec-1] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Starting... 
+13:10:30.852 [http-nio-3030-exec-1] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Start completed. 
+13:11:17.894 [Thread-5]        INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor' 
+13:11:17.895 [Thread-5]        INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Shutdown initiated... 
+13:11:17.901 [Thread-5]        INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Shutdown completed. 
+13:11:17.963 [restartedMain]   INFO  c.s.p.ProjectApplication - Starting ProjectApplication on BSTRAPAC with PID 12484 (D:\bstrapac\Desktop\projects\SkolaBack\target\classes started by bstrapac in D:\bstrapac\Desktop\projects\SkolaBack) 
+13:11:17.963 [restartedMain]   INFO  c.s.p.ProjectApplication - No active profile set, falling back to default profiles: default 
+13:11:18.208 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 3030 (http) 
+13:11:18.208 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3030"] 
+13:11:18.208 [restartedMain]   INFO  o.a.c.c.StandardService - Starting service [Tomcat] 
+13:11:18.208 [restartedMain]   INFO  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38] 
+13:11:18.225 [restartedMain]   INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring embedded WebApplicationContext 
+13:11:18.225 [restartedMain]   INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 260 ms 
+13:11:18.331 [restartedMain]   INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor' 
+13:11:18.387 [restartedMain]   INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+13:11:18.396 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3030"] 
+13:11:18.398 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 3030 (http) with context path '/skola' 
+13:11:18.401 [restartedMain]   INFO  c.s.p.ProjectApplication - Started ProjectApplication in 0.463 seconds (JVM running for 54.355) 
+13:11:18.402 [restartedMain]   INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+13:11:21.561 [RMI TCP Connection(4)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested. 
+13:11:21.623 [RMI TCP Connection(4)-127.0.0.1] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor' 
+13:17:10.815 [restartedMain]   INFO  c.s.p.ProjectApplication - Starting ProjectApplication on BSTRAPAC with PID 9260 (D:\bstrapac\Desktop\projects\SkolaBack\target\classes started by bstrapac in D:\bstrapac\Desktop\projects\SkolaBack) 
+13:17:10.817 [restartedMain]   INFO  c.s.p.ProjectApplication - No active profile set, falling back to default profiles: default 
+13:17:10.845 [restartedMain]   INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable 
+13:17:10.846 [restartedMain]   INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG' 
+13:17:11.623 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 3030 (http) 
+13:17:11.628 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3030"] 
+13:17:11.628 [restartedMain]   INFO  o.a.c.c.StandardService - Starting service [Tomcat] 
+13:17:11.628 [restartedMain]   INFO  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38] 
+13:17:11.694 [restartedMain]   INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring embedded WebApplicationContext 
+13:17:11.694 [restartedMain]   INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 848 ms 
+13:17:12.154 [restartedMain]   INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor' 
+13:17:12.373 [restartedMain]   INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+13:17:12.385 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3030"] 
+13:17:12.400 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 3030 (http) with context path '/skola' 
+13:17:12.408 [restartedMain]   INFO  c.s.p.ProjectApplication - Started ProjectApplication in 1.787 seconds (JVM running for 2.425) 
+13:17:18.062 [http-nio-3030-exec-1] INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+13:17:18.063 [http-nio-3030-exec-1] INFO  o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+13:17:18.081 [http-nio-3030-exec-1] INFO  o.s.w.s.DispatcherServlet - Completed initialization in 18 ms 
+13:17:18.110 [http-nio-3030-exec-1] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Starting... 
+13:17:18.240 [http-nio-3030-exec-1] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Start completed. 
+13:17:18.498 [http-nio-3030-exec-1] WARN  o.a.p.p.f.FileSystemFontProvider - New fonts found, font cache will be re-built 
+13:17:18.498 [http-nio-3030-exec-1] WARN  o.a.p.p.f.FileSystemFontProvider - Building on-disk font cache, this may take a while 
+13:17:18.945 [http-nio-3030-exec-1] WARN  o.a.p.p.f.FileSystemFontProvider - Finished building on-disk font cache, found 377 fonts 
+13:22:37.103 [Thread-5]        INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor' 
+13:22:37.103 [Thread-5]        INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Shutdown initiated... 
+13:22:37.107 [Thread-5]        INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Shutdown completed. 
+13:22:37.169 [restartedMain]   INFO  c.s.p.ProjectApplication - Starting ProjectApplication on BSTRAPAC with PID 9260 (D:\bstrapac\Desktop\projects\SkolaBack\target\classes started by bstrapac in D:\bstrapac\Desktop\projects\SkolaBack) 
+13:22:37.169 [restartedMain]   INFO  c.s.p.ProjectApplication - No active profile set, falling back to default profiles: default 
+13:22:37.411 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 3030 (http) 
+13:22:37.411 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3030"] 
+13:22:37.411 [restartedMain]   INFO  o.a.c.c.StandardService - Starting service [Tomcat] 
+13:22:37.411 [restartedMain]   INFO  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38] 
+13:22:37.428 [restartedMain]   INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring embedded WebApplicationContext 
+13:22:37.428 [restartedMain]   INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 258 ms 
+13:22:37.535 [restartedMain]   INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor' 
+13:22:37.602 [restartedMain]   INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+13:22:37.608 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3030"] 
+13:22:37.610 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 3030 (http) with context path '/skola' 
+13:22:37.613 [restartedMain]   INFO  c.s.p.ProjectApplication - Started ProjectApplication in 0.469 seconds (JVM running for 327.629) 
+13:22:37.615 [restartedMain]   INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+13:22:52.224 [Thread-9]        INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor' 
+13:22:52.283 [restartedMain]   INFO  c.s.p.ProjectApplication - Starting ProjectApplication on BSTRAPAC with PID 9260 (D:\bstrapac\Desktop\projects\SkolaBack\target\classes started by bstrapac in D:\bstrapac\Desktop\projects\SkolaBack) 
+13:22:52.283 [restartedMain]   INFO  c.s.p.ProjectApplication - No active profile set, falling back to default profiles: default 
+13:22:52.507 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 3030 (http) 
+13:22:52.508 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3030"] 
+13:22:52.508 [restartedMain]   INFO  o.a.c.c.StandardService - Starting service [Tomcat] 
+13:22:52.508 [restartedMain]   INFO  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38] 
+13:22:52.525 [restartedMain]   INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring embedded WebApplicationContext 
+13:22:52.525 [restartedMain]   INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 240 ms 
+13:22:52.621 [restartedMain]   INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor' 
+13:22:52.671 [restartedMain]   INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+13:22:52.677 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3030"] 
+13:22:52.680 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 3030 (http) with context path '/skola' 
+13:22:52.682 [restartedMain]   INFO  c.s.p.ProjectApplication - Started ProjectApplication in 0.424 seconds (JVM running for 342.698) 
+13:22:52.683 [restartedMain]   INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+13:22:56.264 [http-nio-3030-exec-2] INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+13:22:56.264 [http-nio-3030-exec-2] INFO  o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+13:22:56.266 [http-nio-3030-exec-2] INFO  o.s.w.s.DispatcherServlet - Completed initialization in 2 ms 
+13:22:56.270 [http-nio-3030-exec-2] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Starting... 
+13:22:56.365 [http-nio-3030-exec-2] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Start completed. 
+13:24:58.166 [RMI TCP Connection(11)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested. 
+13:24:58.226 [RMI TCP Connection(11)-127.0.0.1] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor' 
+13:24:58.227 [RMI TCP Connection(11)-127.0.0.1] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Shutdown initiated... 
+13:24:58.232 [RMI TCP Connection(11)-127.0.0.1] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Shutdown completed. 
+13:30:29.499 [restartedMain]   INFO  c.s.p.ProjectApplication - Starting ProjectApplication on BSTRAPAC with PID 4940 (D:\bstrapac\Desktop\projects\SkolaBack\target\classes started by bstrapac in D:\bstrapac\Desktop\projects\SkolaBack) 
+13:30:29.500 [restartedMain]   INFO  c.s.p.ProjectApplication - No active profile set, falling back to default profiles: default 
+13:30:29.529 [restartedMain]   INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable 
+13:30:29.529 [restartedMain]   INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG' 
+13:30:30.314 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 3030 (http) 
+13:30:30.319 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3030"] 
+13:30:30.319 [restartedMain]   INFO  o.a.c.c.StandardService - Starting service [Tomcat] 
+13:30:30.319 [restartedMain]   INFO  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38] 
+13:30:30.387 [restartedMain]   INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring embedded WebApplicationContext 
+13:30:30.387 [restartedMain]   INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 858 ms 
+13:30:30.853 [restartedMain]   INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor' 
+13:30:31.073 [restartedMain]   INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+13:30:31.084 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3030"] 
+13:30:31.099 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 3030 (http) with context path '/skola' 
+13:30:31.107 [restartedMain]   INFO  c.s.p.ProjectApplication - Started ProjectApplication in 1.799 seconds (JVM running for 2.433) 
+13:30:36.096 [http-nio-3030-exec-1] INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+13:30:36.096 [http-nio-3030-exec-1] INFO  o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+13:30:36.109 [http-nio-3030-exec-1] INFO  o.s.w.s.DispatcherServlet - Completed initialization in 13 ms 
+13:30:36.136 [http-nio-3030-exec-1] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Starting... 
+13:30:36.266 [http-nio-3030-exec-1] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Start completed. 
+13:31:18.958 [Thread-5]        INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor' 
+13:31:18.959 [Thread-5]        INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Shutdown initiated... 
+13:31:18.967 [Thread-5]        INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Shutdown completed. 
+13:31:19.032 [restartedMain]   INFO  c.s.p.ProjectApplication - Starting ProjectApplication on BSTRAPAC with PID 4940 (D:\bstrapac\Desktop\projects\SkolaBack\target\classes started by bstrapac in D:\bstrapac\Desktop\projects\SkolaBack) 
+13:31:19.032 [restartedMain]   INFO  c.s.p.ProjectApplication - No active profile set, falling back to default profiles: default 
+13:31:19.268 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 3030 (http) 
+13:31:19.269 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3030"] 
+13:31:19.269 [restartedMain]   INFO  o.a.c.c.StandardService - Starting service [Tomcat] 
+13:31:19.269 [restartedMain]   INFO  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38] 
+13:31:19.285 [restartedMain]   INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring embedded WebApplicationContext 
+13:31:19.285 [restartedMain]   INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 252 ms 
+13:31:19.390 [restartedMain]   INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor' 
+13:31:19.441 [restartedMain]   INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+13:31:19.447 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3030"] 
+13:31:19.450 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 3030 (http) with context path '/skola' 
+13:31:19.452 [restartedMain]   INFO  c.s.p.ProjectApplication - Started ProjectApplication in 0.446 seconds (JVM running for 50.778) 
+13:31:19.453 [restartedMain]   INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+13:32:09.347 [Thread-9]        INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor' 
+13:32:09.412 [restartedMain]   INFO  c.s.p.ProjectApplication - Starting ProjectApplication on BSTRAPAC with PID 4940 (D:\bstrapac\Desktop\projects\SkolaBack\target\classes started by bstrapac in D:\bstrapac\Desktop\projects\SkolaBack) 
+13:32:09.412 [restartedMain]   INFO  c.s.p.ProjectApplication - No active profile set, falling back to default profiles: default 
+13:32:09.640 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 3030 (http) 
+13:32:09.640 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3030"] 
+13:32:09.640 [restartedMain]   INFO  o.a.c.c.StandardService - Starting service [Tomcat] 
+13:32:09.640 [restartedMain]   INFO  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38] 
+13:32:09.658 [restartedMain]   INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring embedded WebApplicationContext 
+13:32:09.658 [restartedMain]   INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 244 ms 
+13:32:09.754 [restartedMain]   INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor' 
+13:32:09.804 [restartedMain]   INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+13:32:09.809 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3030"] 
+13:32:09.812 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 3030 (http) with context path '/skola' 
+13:32:09.814 [restartedMain]   INFO  c.s.p.ProjectApplication - Started ProjectApplication in 0.431 seconds (JVM running for 101.14) 
+13:32:09.815 [restartedMain]   INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+13:32:18.594 [http-nio-3030-exec-2] INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+13:32:18.595 [http-nio-3030-exec-2] INFO  o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+13:32:18.596 [http-nio-3030-exec-2] INFO  o.s.w.s.DispatcherServlet - Completed initialization in 1 ms 
+13:32:18.601 [http-nio-3030-exec-2] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Starting... 
+13:32:18.696 [http-nio-3030-exec-2] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Start completed. 
+13:33:43.151 [Thread-14]       INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor' 
+13:33:43.151 [Thread-14]       INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Shutdown initiated... 
+13:33:43.158 [Thread-14]       INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Shutdown completed. 
+13:33:43.224 [restartedMain]   INFO  c.s.p.ProjectApplication - Starting ProjectApplication on BSTRAPAC with PID 4940 (D:\bstrapac\Desktop\projects\SkolaBack\target\classes started by bstrapac in D:\bstrapac\Desktop\projects\SkolaBack) 
+13:33:43.225 [restartedMain]   INFO  c.s.p.ProjectApplication - No active profile set, falling back to default profiles: default 
+13:33:43.452 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 3030 (http) 
+13:33:43.452 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3030"] 
+13:33:43.452 [restartedMain]   INFO  o.a.c.c.StandardService - Starting service [Tomcat] 
+13:33:43.452 [restartedMain]   INFO  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38] 
+13:33:43.469 [restartedMain]   INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring embedded WebApplicationContext 
+13:33:43.469 [restartedMain]   INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 243 ms 
+13:33:43.569 [restartedMain]   INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor' 
+13:33:43.619 [restartedMain]   INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+13:33:43.624 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3030"] 
+13:33:43.626 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 3030 (http) with context path '/skola' 
+13:33:43.628 [restartedMain]   INFO  c.s.p.ProjectApplication - Started ProjectApplication in 0.432 seconds (JVM running for 194.954) 
+13:33:43.629 [restartedMain]   INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+13:36:45.917 [RMI TCP Connection(11)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested. 
+13:36:45.978 [RMI TCP Connection(11)-127.0.0.1] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor' 
+13:40:29.501 [restartedMain]   INFO  c.s.p.ProjectApplication - Starting ProjectApplication on BSTRAPAC with PID 14560 (D:\bstrapac\Desktop\projects\SkolaBack\target\classes started by bstrapac in D:\bstrapac\Desktop\projects\SkolaBack) 
+13:40:29.502 [restartedMain]   INFO  c.s.p.ProjectApplication - No active profile set, falling back to default profiles: default 
+13:40:29.531 [restartedMain]   INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable 
+13:40:29.531 [restartedMain]   INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG' 
+13:40:30.344 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 3030 (http) 
+13:40:30.349 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3030"] 
+13:40:30.349 [restartedMain]   INFO  o.a.c.c.StandardService - Starting service [Tomcat] 
+13:40:30.349 [restartedMain]   INFO  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38] 
+13:40:30.416 [restartedMain]   INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring embedded WebApplicationContext 
+13:40:30.416 [restartedMain]   INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 885 ms 
+13:40:30.896 [restartedMain]   INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor' 
+13:40:31.126 [restartedMain]   INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+13:40:31.138 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3030"] 
+13:40:31.154 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 3030 (http) with context path '/skola' 
+13:40:31.163 [restartedMain]   INFO  c.s.p.ProjectApplication - Started ProjectApplication in 1.852 seconds (JVM running for 2.487) 
+13:40:36.511 [http-nio-3030-exec-1] INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+13:40:36.512 [http-nio-3030-exec-1] INFO  o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+13:40:36.525 [http-nio-3030-exec-1] INFO  o.s.w.s.DispatcherServlet - Completed initialization in 13 ms 
+13:40:36.552 [http-nio-3030-exec-1] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Starting... 
+13:40:36.680 [http-nio-3030-exec-1] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Start completed. 
+13:41:24.199 [RMI TCP Connection(4)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested. 
+13:41:24.263 [RMI TCP Connection(4)-127.0.0.1] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor' 
+13:41:24.264 [RMI TCP Connection(4)-127.0.0.1] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Shutdown initiated... 
+13:41:24.267 [RMI TCP Connection(4)-127.0.0.1] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Shutdown completed. 
+13:42:48.500 [restartedMain]   INFO  c.s.p.ProjectApplication - Starting ProjectApplication on BSTRAPAC with PID 12224 (D:\bstrapac\Desktop\projects\SkolaBack\target\classes started by bstrapac in D:\bstrapac\Desktop\projects\SkolaBack) 
+13:42:48.502 [restartedMain]   INFO  c.s.p.ProjectApplication - No active profile set, falling back to default profiles: default 
+13:42:48.530 [restartedMain]   INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable 
+13:42:48.530 [restartedMain]   INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG' 
+13:42:49.330 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 3030 (http) 
+13:42:49.335 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3030"] 
+13:42:49.336 [restartedMain]   INFO  o.a.c.c.StandardService - Starting service [Tomcat] 
+13:42:49.336 [restartedMain]   INFO  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38] 
+13:42:49.404 [restartedMain]   INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring embedded WebApplicationContext 
+13:42:49.404 [restartedMain]   INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 874 ms 
+13:42:49.877 [restartedMain]   INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor' 
+13:42:50.103 [restartedMain]   INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+13:42:50.116 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3030"] 
+13:42:50.132 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 3030 (http) with context path '/skola' 
+13:42:50.139 [restartedMain]   INFO  c.s.p.ProjectApplication - Started ProjectApplication in 1.827 seconds (JVM running for 2.467) 
+13:42:53.899 [http-nio-3030-exec-2] INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+13:42:53.899 [http-nio-3030-exec-2] INFO  o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+13:42:53.915 [http-nio-3030-exec-2] INFO  o.s.w.s.DispatcherServlet - Completed initialization in 16 ms 
+13:42:53.945 [http-nio-3030-exec-2] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Starting... 
+13:42:54.188 [http-nio-3030-exec-2] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Start completed. 
+13:43:28.236 [RMI TCP Connection(4)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested. 
+13:43:28.295 [RMI TCP Connection(4)-127.0.0.1] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor' 
+13:43:28.296 [RMI TCP Connection(4)-127.0.0.1] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Shutdown initiated... 
+13:43:28.299 [RMI TCP Connection(4)-127.0.0.1] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Shutdown completed. 
+13:45:16.318 [restartedMain]   INFO  c.s.p.ProjectApplication - Starting ProjectApplication on BSTRAPAC with PID 11844 (D:\bstrapac\Desktop\projects\SkolaBack\target\classes started by bstrapac in D:\bstrapac\Desktop\projects\SkolaBack) 
+13:45:16.319 [restartedMain]   INFO  c.s.p.ProjectApplication - No active profile set, falling back to default profiles: default 
+13:45:16.348 [restartedMain]   INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable 
+13:45:16.348 [restartedMain]   INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG' 
+13:45:17.133 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 3030 (http) 
+13:45:17.138 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3030"] 
+13:45:17.138 [restartedMain]   INFO  o.a.c.c.StandardService - Starting service [Tomcat] 
+13:45:17.138 [restartedMain]   INFO  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38] 
+13:45:17.205 [restartedMain]   INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring embedded WebApplicationContext 
+13:45:17.205 [restartedMain]   INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 857 ms 
+13:45:17.667 [restartedMain]   INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor' 
+13:45:17.886 [restartedMain]   INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+13:45:17.898 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3030"] 
+13:45:17.914 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 3030 (http) with context path '/skola' 
+13:45:17.922 [restartedMain]   INFO  c.s.p.ProjectApplication - Started ProjectApplication in 1.793 seconds (JVM running for 2.428) 
+13:45:22.267 [http-nio-3030-exec-2] INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+13:45:22.268 [http-nio-3030-exec-2] INFO  o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+13:45:22.282 [http-nio-3030-exec-2] INFO  o.s.w.s.DispatcherServlet - Completed initialization in 14 ms 
+13:45:22.310 [http-nio-3030-exec-2] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Starting... 
+13:45:22.442 [http-nio-3030-exec-2] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Start completed. 
+13:45:38.552 [Thread-5]        INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor' 
+13:45:38.555 [Thread-5]        INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Shutdown initiated... 
+13:45:38.566 [Thread-5]        INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Shutdown completed. 
+13:45:38.625 [restartedMain]   INFO  c.s.p.ProjectApplication - Starting ProjectApplication on BSTRAPAC with PID 11844 (D:\bstrapac\Desktop\projects\SkolaBack\target\classes started by bstrapac in D:\bstrapac\Desktop\projects\SkolaBack) 
+13:45:38.625 [restartedMain]   INFO  c.s.p.ProjectApplication - No active profile set, falling back to default profiles: default 
+13:45:38.875 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 3030 (http) 
+13:45:38.875 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3030"] 
+13:45:38.875 [restartedMain]   INFO  o.a.c.c.StandardService - Starting service [Tomcat] 
+13:45:38.875 [restartedMain]   INFO  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38] 
+13:45:38.892 [restartedMain]   INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring embedded WebApplicationContext 
+13:45:38.892 [restartedMain]   INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 266 ms 
+13:45:39.002 [restartedMain]   INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor' 
+13:45:39.056 [restartedMain]   INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+13:45:39.061 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3030"] 
+13:45:39.068 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 3030 (http) with context path '/skola' 
+13:45:39.070 [restartedMain]   INFO  c.s.p.ProjectApplication - Started ProjectApplication in 0.471 seconds (JVM running for 23.575) 
+13:45:39.070 [restartedMain]   INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+13:45:39.704 [http-nio-3030-exec-3] INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+13:45:39.705 [http-nio-3030-exec-3] INFO  o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+13:45:39.706 [http-nio-3030-exec-3] INFO  o.s.w.s.DispatcherServlet - Completed initialization in 1 ms 
+13:45:39.710 [http-nio-3030-exec-3] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Starting... 
+13:45:39.805 [http-nio-3030-exec-3] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Start completed. 
+13:46:09.825 [Thread-9]        INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor' 
+13:46:09.827 [Thread-9]        INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Shutdown initiated... 
+13:46:09.830 [Thread-9]        INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Shutdown completed. 
+13:46:09.887 [restartedMain]   INFO  c.s.p.ProjectApplication - Starting ProjectApplication on BSTRAPAC with PID 11844 (D:\bstrapac\Desktop\projects\SkolaBack\target\classes started by bstrapac in D:\bstrapac\Desktop\projects\SkolaBack) 
+13:46:09.887 [restartedMain]   INFO  c.s.p.ProjectApplication - No active profile set, falling back to default profiles: default 
+13:46:10.121 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 3030 (http) 
+13:46:10.122 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3030"] 
+13:46:10.122 [restartedMain]   INFO  o.a.c.c.StandardService - Starting service [Tomcat] 
+13:46:10.122 [restartedMain]   INFO  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38] 
+13:46:10.139 [restartedMain]   INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring embedded WebApplicationContext 
+13:46:10.140 [restartedMain]   INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 252 ms 
+13:46:10.240 [restartedMain]   INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor' 
+13:46:10.292 [restartedMain]   INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+13:46:10.298 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3030"] 
+13:46:10.303 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 3030 (http) with context path '/skola' 
+13:46:10.306 [restartedMain]   INFO  c.s.p.ProjectApplication - Started ProjectApplication in 0.443 seconds (JVM running for 54.811) 
+13:46:10.307 [restartedMain]   INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+13:46:26.497 [http-nio-3030-exec-2] INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+13:46:26.497 [http-nio-3030-exec-2] INFO  o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+13:46:26.499 [http-nio-3030-exec-2] INFO  o.s.w.s.DispatcherServlet - Completed initialization in 2 ms 
+13:46:26.503 [http-nio-3030-exec-2] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Starting... 
+13:46:26.598 [http-nio-3030-exec-2] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Start completed. 
+13:46:46.496 [RMI TCP Connection(5)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested. 
+13:46:46.559 [RMI TCP Connection(5)-127.0.0.1] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor' 
+13:46:46.560 [RMI TCP Connection(5)-127.0.0.1] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Shutdown initiated... 
+13:46:46.571 [RMI TCP Connection(5)-127.0.0.1] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Shutdown completed. 
+13:47:34.472 [restartedMain]   INFO  c.s.p.ProjectApplication - Starting ProjectApplication on BSTRAPAC with PID 3360 (D:\bstrapac\Desktop\projects\SkolaBack\target\classes started by bstrapac in D:\bstrapac\Desktop\projects\SkolaBack) 
+13:47:34.473 [restartedMain]   INFO  c.s.p.ProjectApplication - No active profile set, falling back to default profiles: default 
+13:47:34.501 [restartedMain]   INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable 
+13:47:34.502 [restartedMain]   INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG' 
+13:47:35.289 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 3030 (http) 
+13:47:35.294 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3030"] 
+13:47:35.295 [restartedMain]   INFO  o.a.c.c.StandardService - Starting service [Tomcat] 
+13:47:35.295 [restartedMain]   INFO  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38] 
+13:47:35.360 [restartedMain]   INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring embedded WebApplicationContext 
+13:47:35.361 [restartedMain]   INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 859 ms 
+13:47:35.836 [restartedMain]   INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor' 
+13:47:36.062 [restartedMain]   INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+13:47:36.073 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3030"] 
+13:47:36.089 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 3030 (http) with context path '/skola' 
+13:47:36.096 [restartedMain]   INFO  c.s.p.ProjectApplication - Started ProjectApplication in 1.814 seconds (JVM running for 2.449) 
+13:47:43.686 [http-nio-3030-exec-2] INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+13:47:43.687 [http-nio-3030-exec-2] INFO  o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+13:47:43.701 [http-nio-3030-exec-2] INFO  o.s.w.s.DispatcherServlet - Completed initialization in 14 ms 
+13:47:43.730 [http-nio-3030-exec-2] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Starting... 
+13:47:43.862 [http-nio-3030-exec-2] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Start completed. 
+13:47:57.724 [Thread-5]        INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor' 
+13:47:57.725 [Thread-5]        INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Shutdown initiated... 
+13:47:57.730 [Thread-5]        INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Shutdown completed. 
+13:47:57.797 [restartedMain]   INFO  c.s.p.ProjectApplication - Starting ProjectApplication on BSTRAPAC with PID 3360 (D:\bstrapac\Desktop\projects\SkolaBack\target\classes started by bstrapac in D:\bstrapac\Desktop\projects\SkolaBack) 
+13:47:57.797 [restartedMain]   INFO  c.s.p.ProjectApplication - No active profile set, falling back to default profiles: default 
+13:47:58.039 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 3030 (http) 
+13:47:58.039 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3030"] 
+13:47:58.039 [restartedMain]   INFO  o.a.c.c.StandardService - Starting service [Tomcat] 
+13:47:58.039 [restartedMain]   INFO  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38] 
+13:47:58.055 [restartedMain]   INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring embedded WebApplicationContext 
+13:47:58.055 [restartedMain]   INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 256 ms 
+13:47:58.161 [restartedMain]   INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor' 
+13:47:58.214 [restartedMain]   INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+13:47:58.219 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3030"] 
+13:47:58.222 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 3030 (http) with context path '/skola' 
+13:47:58.225 [restartedMain]   INFO  c.s.p.ProjectApplication - Started ProjectApplication in 0.454 seconds (JVM running for 24.577) 
+13:47:58.226 [restartedMain]   INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+13:48:05.979 [http-nio-3030-exec-2] INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+13:48:05.979 [http-nio-3030-exec-2] INFO  o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+13:48:05.981 [http-nio-3030-exec-2] INFO  o.s.w.s.DispatcherServlet - Completed initialization in 2 ms 
+13:48:05.984 [http-nio-3030-exec-2] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Starting... 
+13:48:06.077 [http-nio-3030-exec-2] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Start completed. 
+13:48:38.218 [RMI TCP Connection(3)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested. 
+13:48:38.281 [RMI TCP Connection(3)-127.0.0.1] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor' 
+13:48:38.282 [RMI TCP Connection(3)-127.0.0.1] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Shutdown initiated... 
+13:48:38.287 [RMI TCP Connection(3)-127.0.0.1] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Shutdown completed. 
+14:06:55.438 [restartedMain]   INFO  c.s.p.ProjectApplication - Starting ProjectApplication on BSTRAPAC with PID 2804 (D:\bstrapac\Desktop\projects\SkolaBack\target\classes started by bstrapac in D:\bstrapac\Desktop\projects\SkolaBack) 
+14:06:55.440 [restartedMain]   INFO  c.s.p.ProjectApplication - No active profile set, falling back to default profiles: default 
+14:06:55.468 [restartedMain]   INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable 
+14:06:55.468 [restartedMain]   INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG' 
+14:06:56.268 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 3030 (http) 
+14:06:56.275 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3030"] 
+14:06:56.275 [restartedMain]   INFO  o.a.c.c.StandardService - Starting service [Tomcat] 
+14:06:56.275 [restartedMain]   INFO  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38] 
+14:06:56.340 [restartedMain]   INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring embedded WebApplicationContext 
+14:06:56.340 [restartedMain]   INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 872 ms 
+14:06:56.808 [restartedMain]   INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor' 
+14:06:57.031 [restartedMain]   INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+14:06:57.043 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3030"] 
+14:06:57.062 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 3030 (http) with context path '/skola' 
+14:06:57.069 [restartedMain]   INFO  c.s.p.ProjectApplication - Started ProjectApplication in 1.821 seconds (JVM running for 3.009) 
+14:07:13.655 [Thread-5]        INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor' 
+14:07:13.713 [restartedMain]   INFO  c.s.p.ProjectApplication - Starting ProjectApplication on BSTRAPAC with PID 2804 (D:\bstrapac\Desktop\projects\SkolaBack\target\classes started by bstrapac in D:\bstrapac\Desktop\projects\SkolaBack) 
+14:07:13.713 [restartedMain]   INFO  c.s.p.ProjectApplication - No active profile set, falling back to default profiles: default 
+14:07:13.956 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 3030 (http) 
+14:07:13.957 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3030"] 
+14:07:13.957 [restartedMain]   INFO  o.a.c.c.StandardService - Starting service [Tomcat] 
+14:07:13.957 [restartedMain]   INFO  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38] 
+14:07:13.974 [restartedMain]   INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring embedded WebApplicationContext 
+14:07:13.974 [restartedMain]   INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 259 ms 
+14:07:14.079 [restartedMain]   INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor' 
+14:07:14.134 [restartedMain]   INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+14:07:14.139 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3030"] 
+14:07:14.142 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 3030 (http) with context path '/skola' 
+14:07:14.145 [restartedMain]   INFO  c.s.p.ProjectApplication - Started ProjectApplication in 0.458 seconds (JVM running for 20.084) 
+14:07:14.146 [restartedMain]   INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+14:07:17.367 [http-nio-3030-exec-1] INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+14:07:17.368 [http-nio-3030-exec-1] INFO  o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+14:07:17.383 [http-nio-3030-exec-1] INFO  o.s.w.s.DispatcherServlet - Completed initialization in 15 ms 
+14:07:17.414 [http-nio-3030-exec-1] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Starting... 
+14:07:17.545 [http-nio-3030-exec-1] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Start completed. 
+14:08:57.477 [Thread-8]        INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor' 
+14:08:57.478 [Thread-8]        INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Shutdown initiated... 
+14:08:57.488 [Thread-8]        INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Shutdown completed. 
+14:08:57.550 [restartedMain]   INFO  c.s.p.ProjectApplication - Starting ProjectApplication on BSTRAPAC with PID 2804 (D:\bstrapac\Desktop\projects\SkolaBack\target\classes started by bstrapac in D:\bstrapac\Desktop\projects\SkolaBack) 
+14:08:57.550 [restartedMain]   INFO  c.s.p.ProjectApplication - No active profile set, falling back to default profiles: default 
+14:08:57.781 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 3030 (http) 
+14:08:57.782 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3030"] 
+14:08:57.782 [restartedMain]   INFO  o.a.c.c.StandardService - Starting service [Tomcat] 
+14:08:57.782 [restartedMain]   INFO  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38] 
+14:08:57.800 [restartedMain]   INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring embedded WebApplicationContext 
+14:08:57.800 [restartedMain]   INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 249 ms 
+14:08:57.903 [restartedMain]   INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor' 
+14:08:57.954 [restartedMain]   INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+14:08:57.960 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3030"] 
+14:08:57.963 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 3030 (http) with context path '/skola' 
+14:08:57.965 [restartedMain]   INFO  c.s.p.ProjectApplication - Started ProjectApplication in 0.441 seconds (JVM running for 123.904) 
+14:08:57.966 [restartedMain]   INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+14:09:05.485 [Thread-14]       INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor' 
+14:09:05.546 [restartedMain]   INFO  c.s.p.ProjectApplication - Starting ProjectApplication on BSTRAPAC with PID 2804 (D:\bstrapac\Desktop\projects\SkolaBack\target\classes started by bstrapac in D:\bstrapac\Desktop\projects\SkolaBack) 
+14:09:05.546 [restartedMain]   INFO  c.s.p.ProjectApplication - No active profile set, falling back to default profiles: default 
+14:09:05.767 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 3030 (http) 
+14:09:05.768 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3030"] 
+14:09:05.768 [restartedMain]   INFO  o.a.c.c.StandardService - Starting service [Tomcat] 
+14:09:05.768 [restartedMain]   INFO  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38] 
+14:09:05.785 [restartedMain]   INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring embedded WebApplicationContext 
+14:09:05.785 [restartedMain]   INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 238 ms 
+14:09:05.885 [restartedMain]   INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor' 
+14:09:05.941 [restartedMain]   INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+14:09:05.946 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3030"] 
+14:09:05.949 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 3030 (http) with context path '/skola' 
+14:09:05.952 [restartedMain]   INFO  c.s.p.ProjectApplication - Started ProjectApplication in 0.43 seconds (JVM running for 131.891) 
+14:09:05.952 [restartedMain]   INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+14:09:12.461 [Thread-19]       INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor' 
+14:09:12.522 [restartedMain]   INFO  c.s.p.ProjectApplication - Starting ProjectApplication on BSTRAPAC with PID 2804 (D:\bstrapac\Desktop\projects\SkolaBack\target\classes started by bstrapac in D:\bstrapac\Desktop\projects\SkolaBack) 
+14:09:12.522 [restartedMain]   INFO  c.s.p.ProjectApplication - No active profile set, falling back to default profiles: default 
+14:09:12.736 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 3030 (http) 
+14:09:12.737 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3030"] 
+14:09:12.737 [restartedMain]   INFO  o.a.c.c.StandardService - Starting service [Tomcat] 
+14:09:12.737 [restartedMain]   INFO  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38] 
+14:09:12.753 [restartedMain]   INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring embedded WebApplicationContext 
+14:09:12.753 [restartedMain]   INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 230 ms 
+14:09:12.849 [restartedMain]   INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor' 
+14:09:12.900 [restartedMain]   INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+14:09:12.905 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3030"] 
+14:09:12.908 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 3030 (http) with context path '/skola' 
+14:09:12.911 [restartedMain]   INFO  c.s.p.ProjectApplication - Started ProjectApplication in 0.413 seconds (JVM running for 138.849) 
+14:09:12.912 [restartedMain]   INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+14:09:18.003 [http-nio-3030-exec-2] INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+14:09:18.003 [http-nio-3030-exec-2] INFO  o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+14:09:18.006 [http-nio-3030-exec-2] INFO  o.s.w.s.DispatcherServlet - Completed initialization in 3 ms 
+14:09:18.009 [http-nio-3030-exec-2] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Starting... 
+14:09:18.106 [http-nio-3030-exec-2] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Start completed. 
+14:09:52.722 [Thread-24]       INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor' 
+14:09:52.723 [Thread-24]       INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Shutdown initiated... 
+14:09:52.728 [Thread-24]       INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Shutdown completed. 
+14:09:52.790 [restartedMain]   INFO  c.s.p.ProjectApplication - Starting ProjectApplication on BSTRAPAC with PID 2804 (D:\bstrapac\Desktop\projects\SkolaBack\target\classes started by bstrapac in D:\bstrapac\Desktop\projects\SkolaBack) 
+14:09:52.790 [restartedMain]   INFO  c.s.p.ProjectApplication - No active profile set, falling back to default profiles: default 
+14:09:53.018 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 3030 (http) 
+14:09:53.019 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3030"] 
+14:09:53.019 [restartedMain]   INFO  o.a.c.c.StandardService - Starting service [Tomcat] 
+14:09:53.019 [restartedMain]   INFO  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38] 
+14:09:53.035 [restartedMain]   INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring embedded WebApplicationContext 
+14:09:53.035 [restartedMain]   INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 243 ms 
+14:09:53.130 [restartedMain]   INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor' 
+14:09:53.180 [restartedMain]   INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+14:09:53.186 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3030"] 
+14:09:53.188 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 3030 (http) with context path '/skola' 
+14:09:53.190 [restartedMain]   INFO  c.s.p.ProjectApplication - Started ProjectApplication in 0.426 seconds (JVM running for 179.13) 
+14:09:53.193 [restartedMain]   INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+14:10:01.730 [Thread-30]       INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor' 
+14:10:01.791 [restartedMain]   INFO  c.s.p.ProjectApplication - Starting ProjectApplication on BSTRAPAC with PID 2804 (D:\bstrapac\Desktop\projects\SkolaBack\target\classes started by bstrapac in D:\bstrapac\Desktop\projects\SkolaBack) 
+14:10:01.791 [restartedMain]   INFO  c.s.p.ProjectApplication - No active profile set, falling back to default profiles: default 
+14:10:02.007 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 3030 (http) 
+14:10:02.008 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3030"] 
+14:10:02.008 [restartedMain]   INFO  o.a.c.c.StandardService - Starting service [Tomcat] 
+14:10:02.008 [restartedMain]   INFO  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38] 
+14:10:02.024 [restartedMain]   INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring embedded WebApplicationContext 
+14:10:02.024 [restartedMain]   INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 232 ms 
+14:10:02.120 [restartedMain]   INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor' 
+14:10:02.169 [restartedMain]   INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+14:10:02.175 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3030"] 
+14:10:02.178 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 3030 (http) with context path '/skola' 
+14:10:02.181 [restartedMain]   INFO  c.s.p.ProjectApplication - Started ProjectApplication in 0.415 seconds (JVM running for 188.12) 
+14:10:02.182 [restartedMain]   INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+14:10:08.688 [Thread-35]       INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor' 
+14:10:08.749 [restartedMain]   INFO  c.s.p.ProjectApplication - Starting ProjectApplication on BSTRAPAC with PID 2804 (D:\bstrapac\Desktop\projects\SkolaBack\target\classes started by bstrapac in D:\bstrapac\Desktop\projects\SkolaBack) 
+14:10:08.749 [restartedMain]   INFO  c.s.p.ProjectApplication - No active profile set, falling back to default profiles: default 
+14:10:08.971 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 3030 (http) 
+14:10:08.971 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3030"] 
+14:10:08.971 [restartedMain]   INFO  o.a.c.c.StandardService - Starting service [Tomcat] 
+14:10:08.971 [restartedMain]   INFO  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38] 
+14:10:08.987 [restartedMain]   INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring embedded WebApplicationContext 
+14:10:08.988 [restartedMain]   INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 238 ms 
+14:10:09.081 [restartedMain]   INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor' 
+14:10:09.130 [restartedMain]   INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+14:10:09.136 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3030"] 
+14:10:09.139 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 3030 (http) with context path '/skola' 
+14:10:09.142 [restartedMain]   INFO  c.s.p.ProjectApplication - Started ProjectApplication in 0.416 seconds (JVM running for 195.081) 
+14:10:09.143 [restartedMain]   INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+14:10:10.887 [http-nio-3030-exec-2] INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+14:10:10.888 [http-nio-3030-exec-2] INFO  o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+14:10:10.889 [http-nio-3030-exec-2] INFO  o.s.w.s.DispatcherServlet - Completed initialization in 1 ms 
+14:10:10.893 [http-nio-3030-exec-2] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Starting... 
+14:10:10.990 [http-nio-3030-exec-2] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Start completed. 
+14:10:11.005 [http-nio-3030-exec-2] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/skola] threw exception [Request processing failed; nested exception is java.util.regex.PatternSyntaxException: Illegal repetition near index 2
+({})
+  ^] with root cause 
+java.util.regex.PatternSyntaxException: Illegal repetition near index 2
+({})
+  ^
+	at java.base/java.util.regex.Pattern.error(Pattern.java:2029)
+	at java.base/java.util.regex.Pattern.closure(Pattern.java:3328)
+	at java.base/java.util.regex.Pattern.sequence(Pattern.java:2215)
+	at java.base/java.util.regex.Pattern.expr(Pattern.java:2070)
+	at java.base/java.util.regex.Pattern.group0(Pattern.java:3060)
+	at java.base/java.util.regex.Pattern.sequence(Pattern.java:2125)
+	at java.base/java.util.regex.Pattern.expr(Pattern.java:2070)
+	at java.base/java.util.regex.Pattern.compile(Pattern.java:1784)
+	at java.base/java.util.regex.Pattern.<init>(Pattern.java:1431)
+	at java.base/java.util.regex.Pattern.compile(Pattern.java:1070)
+	at java.base/java.lang.String.replaceAll(String.java:2141)
+	at com.skole.project.report.PDFGenerator.lambda$0(PDFGenerator.java:32)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at com.skole.project.report.PDFGenerator.createReport(PDFGenerator.java:29)
+	at com.skole.project.controller.OcjenaController.getReportCard(OcjenaController.java:96)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+14:10:28.804 [Thread-40]       INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor' 
+14:10:28.805 [Thread-40]       INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Shutdown initiated... 
+14:10:28.812 [Thread-40]       INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Shutdown completed. 
+14:10:28.842 [Finalizer]       WARN  o.a.p.c.COSDocument - Warning: You did not close a PDF Document 
+14:10:28.871 [restartedMain]   INFO  c.s.p.ProjectApplication - Starting ProjectApplication on BSTRAPAC with PID 2804 (D:\bstrapac\Desktop\projects\SkolaBack\target\classes started by bstrapac in D:\bstrapac\Desktop\projects\SkolaBack) 
+14:10:28.871 [restartedMain]   INFO  c.s.p.ProjectApplication - No active profile set, falling back to default profiles: default 
+14:10:29.083 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 3030 (http) 
+14:10:29.084 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3030"] 
+14:10:29.084 [restartedMain]   INFO  o.a.c.c.StandardService - Starting service [Tomcat] 
+14:10:29.084 [restartedMain]   INFO  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38] 
+14:10:29.100 [restartedMain]   INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring embedded WebApplicationContext 
+14:10:29.100 [restartedMain]   INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 228 ms 
+14:10:29.195 [restartedMain]   INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor' 
+14:10:29.244 [restartedMain]   INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+14:10:29.250 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3030"] 
+14:10:29.253 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 3030 (http) with context path '/skola' 
+14:10:29.255 [restartedMain]   INFO  c.s.p.ProjectApplication - Started ProjectApplication in 0.407 seconds (JVM running for 215.194) 
+14:10:29.256 [restartedMain]   INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+14:10:32.507 [http-nio-3030-exec-2] INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+14:10:32.507 [http-nio-3030-exec-2] INFO  o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+14:10:32.509 [http-nio-3030-exec-2] INFO  o.s.w.s.DispatcherServlet - Completed initialization in 2 ms 
+14:10:32.513 [http-nio-3030-exec-2] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Starting... 
+14:10:32.647 [http-nio-3030-exec-2] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Start completed. 
+14:10:32.659 [http-nio-3030-exec-2] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/skola] threw exception [Request processing failed; nested exception is java.util.regex.PatternSyntaxException: Illegal repetition near index 1
+{}
+ ^] with root cause 
+java.util.regex.PatternSyntaxException: Illegal repetition near index 1
+{}
+ ^
+	at java.base/java.util.regex.Pattern.error(Pattern.java:2029)
+	at java.base/java.util.regex.Pattern.closure(Pattern.java:3328)
+	at java.base/java.util.regex.Pattern.sequence(Pattern.java:2215)
+	at java.base/java.util.regex.Pattern.expr(Pattern.java:2070)
+	at java.base/java.util.regex.Pattern.compile(Pattern.java:1784)
+	at java.base/java.util.regex.Pattern.<init>(Pattern.java:1431)
+	at java.base/java.util.regex.Pattern.compile(Pattern.java:1070)
+	at java.base/java.lang.String.replaceAll(String.java:2141)
+	at com.skole.project.report.PDFGenerator.lambda$0(PDFGenerator.java:32)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at com.skole.project.report.PDFGenerator.createReport(PDFGenerator.java:29)
+	at com.skole.project.controller.OcjenaController.getReportCard(OcjenaController.java:96)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+14:10:52.894 [Thread-46]       INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor' 
+14:10:52.894 [Thread-46]       INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Shutdown initiated... 
+14:10:52.901 [Thread-46]       INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Shutdown completed. 
+14:10:52.932 [Finalizer]       WARN  o.a.p.c.COSDocument - Warning: You did not close a PDF Document 
+14:10:52.977 [restartedMain]   INFO  c.s.p.ProjectApplication - Starting ProjectApplication on BSTRAPAC with PID 2804 (D:\bstrapac\Desktop\projects\SkolaBack\target\classes started by bstrapac in D:\bstrapac\Desktop\projects\SkolaBack) 
+14:10:52.977 [restartedMain]   INFO  c.s.p.ProjectApplication - No active profile set, falling back to default profiles: default 
+14:10:53.192 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 3030 (http) 
+14:10:53.192 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3030"] 
+14:10:53.192 [restartedMain]   INFO  o.a.c.c.StandardService - Starting service [Tomcat] 
+14:10:53.192 [restartedMain]   INFO  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38] 
+14:10:53.208 [restartedMain]   INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring embedded WebApplicationContext 
+14:10:53.208 [restartedMain]   INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 230 ms 
+14:10:53.302 [restartedMain]   INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor' 
+14:10:53.350 [restartedMain]   INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+14:10:53.355 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3030"] 
+14:10:53.358 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 3030 (http) with context path '/skola' 
+14:10:53.361 [restartedMain]   INFO  c.s.p.ProjectApplication - Started ProjectApplication in 0.422 seconds (JVM running for 239.299) 
+14:10:53.361 [restartedMain]   INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+14:10:58.872 [Thread-52]       INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor' 
+14:10:58.932 [restartedMain]   INFO  c.s.p.ProjectApplication - Starting ProjectApplication on BSTRAPAC with PID 2804 (D:\bstrapac\Desktop\projects\SkolaBack\target\classes started by bstrapac in D:\bstrapac\Desktop\projects\SkolaBack) 
+14:10:58.932 [restartedMain]   INFO  c.s.p.ProjectApplication - No active profile set, falling back to default profiles: default 
+14:10:59.147 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 3030 (http) 
+14:10:59.147 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3030"] 
+14:10:59.147 [restartedMain]   INFO  o.a.c.c.StandardService - Starting service [Tomcat] 
+14:10:59.147 [restartedMain]   INFO  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38] 
+14:10:59.163 [restartedMain]   INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring embedded WebApplicationContext 
+14:10:59.163 [restartedMain]   INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 230 ms 
+14:10:59.256 [restartedMain]   INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor' 
+14:10:59.308 [restartedMain]   INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+14:10:59.314 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3030"] 
+14:10:59.317 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 3030 (http) with context path '/skola' 
+14:10:59.320 [restartedMain]   INFO  c.s.p.ProjectApplication - Started ProjectApplication in 0.41 seconds (JVM running for 245.258) 
+14:10:59.320 [restartedMain]   INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+14:11:02.419 [http-nio-3030-exec-2] INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+14:11:02.419 [http-nio-3030-exec-2] INFO  o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+14:11:02.421 [http-nio-3030-exec-2] INFO  o.s.w.s.DispatcherServlet - Completed initialization in 2 ms 
+14:11:02.424 [http-nio-3030-exec-2] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Starting... 
+14:11:02.518 [http-nio-3030-exec-2] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Start completed. 
+14:12:29.602 [Thread-57]       INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor' 
+14:12:29.602 [Thread-57]       INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Shutdown initiated... 
+14:12:29.605 [Thread-57]       INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Shutdown completed. 
+14:12:29.664 [restartedMain]   INFO  c.s.p.ProjectApplication - Starting ProjectApplication on BSTRAPAC with PID 2804 (D:\bstrapac\Desktop\projects\SkolaBack\target\classes started by bstrapac in D:\bstrapac\Desktop\projects\SkolaBack) 
+14:12:29.665 [restartedMain]   INFO  c.s.p.ProjectApplication - No active profile set, falling back to default profiles: default 
+14:12:29.877 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 3030 (http) 
+14:12:29.877 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3030"] 
+14:12:29.877 [restartedMain]   INFO  o.a.c.c.StandardService - Starting service [Tomcat] 
+14:12:29.877 [restartedMain]   INFO  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38] 
+14:12:29.892 [restartedMain]   INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring embedded WebApplicationContext 
+14:12:29.892 [restartedMain]   INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 226 ms 
+14:12:29.986 [restartedMain]   INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor' 
+14:12:30.030 [restartedMain]   INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+14:12:30.035 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3030"] 
+14:12:30.039 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 3030 (http) with context path '/skola' 
+14:12:30.041 [restartedMain]   INFO  c.s.p.ProjectApplication - Started ProjectApplication in 0.4 seconds (JVM running for 335.98) 
+14:12:30.042 [restartedMain]   INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+14:12:37.568 [Thread-63]       INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor' 
+14:12:37.629 [restartedMain]   INFO  c.s.p.ProjectApplication - Starting ProjectApplication on BSTRAPAC with PID 2804 (D:\bstrapac\Desktop\projects\SkolaBack\target\classes started by bstrapac in D:\bstrapac\Desktop\projects\SkolaBack) 
+14:12:37.630 [restartedMain]   INFO  c.s.p.ProjectApplication - No active profile set, falling back to default profiles: default 
+14:12:37.841 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 3030 (http) 
+14:12:37.841 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3030"] 
+14:12:37.841 [restartedMain]   INFO  o.a.c.c.StandardService - Starting service [Tomcat] 
+14:12:37.841 [restartedMain]   INFO  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38] 
+14:12:37.857 [restartedMain]   INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring embedded WebApplicationContext 
+14:12:37.857 [restartedMain]   INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 226 ms 
+14:12:37.954 [restartedMain]   INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor' 
+14:12:38.003 [restartedMain]   INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+14:12:38.008 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3030"] 
+14:12:38.011 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 3030 (http) with context path '/skola' 
+14:12:38.013 [restartedMain]   INFO  c.s.p.ProjectApplication - Started ProjectApplication in 0.407 seconds (JVM running for 343.952) 
+14:12:38.014 [restartedMain]   INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+14:12:44.231 [http-nio-3030-exec-2] INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+14:12:44.232 [http-nio-3030-exec-2] INFO  o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+14:12:44.233 [http-nio-3030-exec-2] INFO  o.s.w.s.DispatcherServlet - Completed initialization in 1 ms 
+14:12:44.237 [http-nio-3030-exec-2] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Starting... 
+14:12:44.330 [http-nio-3030-exec-2] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Start completed. 
+14:12:59.697 [Thread-68]       INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor' 
+14:12:59.697 [Thread-68]       INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Shutdown initiated... 
+14:12:59.706 [Thread-68]       INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Shutdown completed. 
+14:12:59.764 [restartedMain]   INFO  c.s.p.ProjectApplication - Starting ProjectApplication on BSTRAPAC with PID 2804 (D:\bstrapac\Desktop\projects\SkolaBack\target\classes started by bstrapac in D:\bstrapac\Desktop\projects\SkolaBack) 
+14:12:59.764 [restartedMain]   INFO  c.s.p.ProjectApplication - No active profile set, falling back to default profiles: default 
+14:12:59.975 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 3030 (http) 
+14:12:59.975 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3030"] 
+14:12:59.975 [restartedMain]   INFO  o.a.c.c.StandardService - Starting service [Tomcat] 
+14:12:59.975 [restartedMain]   INFO  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38] 
+14:12:59.990 [restartedMain]   INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring embedded WebApplicationContext 
+14:12:59.990 [restartedMain]   INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 225 ms 
+14:13:00.090 [restartedMain]   INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor' 
+14:13:00.136 [restartedMain]   INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+14:13:00.141 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3030"] 
+14:13:00.143 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 3030 (http) with context path '/skola' 
+14:13:00.146 [restartedMain]   INFO  c.s.p.ProjectApplication - Started ProjectApplication in 0.405 seconds (JVM running for 366.084) 
+14:13:00.147 [restartedMain]   INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+14:13:08.705 [http-nio-3030-exec-1] INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+14:13:08.705 [http-nio-3030-exec-1] INFO  o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+14:13:08.708 [http-nio-3030-exec-1] INFO  o.s.w.s.DispatcherServlet - Completed initialization in 2 ms 
+14:13:08.713 [http-nio-3030-exec-1] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Starting... 
+14:13:08.826 [http-nio-3030-exec-1] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Start completed. 
+14:13:39.971 [Thread-74]       INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor' 
+14:13:39.971 [Thread-74]       INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Shutdown initiated... 
+14:13:39.976 [Thread-74]       INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Shutdown completed. 
+14:13:40.040 [restartedMain]   INFO  c.s.p.ProjectApplication - Starting ProjectApplication on BSTRAPAC with PID 2804 (D:\bstrapac\Desktop\projects\SkolaBack\target\classes started by bstrapac in D:\bstrapac\Desktop\projects\SkolaBack) 
+14:13:40.041 [restartedMain]   INFO  c.s.p.ProjectApplication - No active profile set, falling back to default profiles: default 
+14:13:40.251 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 3030 (http) 
+14:13:40.252 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3030"] 
+14:13:40.252 [restartedMain]   INFO  o.a.c.c.StandardService - Starting service [Tomcat] 
+14:13:40.252 [restartedMain]   INFO  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38] 
+14:13:40.267 [restartedMain]   INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring embedded WebApplicationContext 
+14:13:40.267 [restartedMain]   INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 225 ms 
+14:13:40.363 [restartedMain]   INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor' 
+14:13:40.408 [restartedMain]   INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+14:13:40.413 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3030"] 
+14:13:40.416 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 3030 (http) with context path '/skola' 
+14:13:40.418 [restartedMain]   INFO  c.s.p.ProjectApplication - Started ProjectApplication in 0.402 seconds (JVM running for 406.356) 
+14:13:40.419 [restartedMain]   INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+14:13:46.928 [Thread-80]       INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor' 
+14:13:46.992 [restartedMain]   INFO  c.s.p.ProjectApplication - Starting ProjectApplication on BSTRAPAC with PID 2804 (D:\bstrapac\Desktop\projects\SkolaBack\target\classes started by bstrapac in D:\bstrapac\Desktop\projects\SkolaBack) 
+14:13:46.992 [restartedMain]   INFO  c.s.p.ProjectApplication - No active profile set, falling back to default profiles: default 
+14:13:47.217 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 3030 (http) 
+14:13:47.218 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3030"] 
+14:13:47.218 [restartedMain]   INFO  o.a.c.c.StandardService - Starting service [Tomcat] 
+14:13:47.218 [restartedMain]   INFO  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38] 
+14:13:47.235 [restartedMain]   INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring embedded WebApplicationContext 
+14:13:47.235 [restartedMain]   INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 241 ms 
+14:13:47.342 [restartedMain]   INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor' 
+14:13:47.398 [restartedMain]   INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+14:13:47.403 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3030"] 
+14:13:47.406 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 3030 (http) with context path '/skola' 
+14:13:47.409 [restartedMain]   INFO  c.s.p.ProjectApplication - Started ProjectApplication in 0.442 seconds (JVM running for 413.347) 
+14:13:47.410 [restartedMain]   INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+14:13:56.664 [http-nio-3030-exec-2] INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+14:13:56.665 [http-nio-3030-exec-2] INFO  o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+14:13:56.666 [http-nio-3030-exec-2] INFO  o.s.w.s.DispatcherServlet - Completed initialization in 1 ms 
+14:13:56.670 [http-nio-3030-exec-2] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Starting... 
+14:13:56.762 [http-nio-3030-exec-2] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Start completed. 
+14:14:22.164 [Thread-85]       INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor' 
+14:14:22.164 [Thread-85]       INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Shutdown initiated... 
+14:14:22.165 [Thread-85]       INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Shutdown completed. 
+14:14:22.231 [restartedMain]   INFO  c.s.p.ProjectApplication - Starting ProjectApplication on BSTRAPAC with PID 2804 (D:\bstrapac\Desktop\projects\SkolaBack\target\classes started by bstrapac in D:\bstrapac\Desktop\projects\SkolaBack) 
+14:14:22.231 [restartedMain]   INFO  c.s.p.ProjectApplication - No active profile set, falling back to default profiles: default 
+14:14:22.448 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 3030 (http) 
+14:14:22.448 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3030"] 
+14:14:22.448 [restartedMain]   INFO  o.a.c.c.StandardService - Starting service [Tomcat] 
+14:14:22.449 [restartedMain]   INFO  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38] 
+14:14:22.464 [restartedMain]   INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring embedded WebApplicationContext 
+14:14:22.464 [restartedMain]   INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 232 ms 
+14:14:22.558 [restartedMain]   INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor' 
+14:14:22.603 [restartedMain]   INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+14:14:22.609 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3030"] 
+14:14:22.612 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 3030 (http) with context path '/skola' 
+14:14:22.614 [restartedMain]   INFO  c.s.p.ProjectApplication - Started ProjectApplication in 0.406 seconds (JVM running for 448.552) 
+14:14:22.615 [restartedMain]   INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+14:14:36.173 [Thread-91]       INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor' 
+14:14:36.233 [restartedMain]   INFO  c.s.p.ProjectApplication - Starting ProjectApplication on BSTRAPAC with PID 2804 (D:\bstrapac\Desktop\projects\SkolaBack\target\classes started by bstrapac in D:\bstrapac\Desktop\projects\SkolaBack) 
+14:14:36.233 [restartedMain]   INFO  c.s.p.ProjectApplication - No active profile set, falling back to default profiles: default 
+14:14:36.447 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 3030 (http) 
+14:14:36.448 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3030"] 
+14:14:36.448 [restartedMain]   INFO  o.a.c.c.StandardService - Starting service [Tomcat] 
+14:14:36.448 [restartedMain]   INFO  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38] 
+14:14:36.463 [restartedMain]   INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring embedded WebApplicationContext 
+14:14:36.464 [restartedMain]   INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 229 ms 
+14:14:36.561 [restartedMain]   INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor' 
+14:14:36.605 [restartedMain]   INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+14:14:36.610 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3030"] 
+14:14:36.613 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 3030 (http) with context path '/skola' 
+14:14:36.616 [restartedMain]   INFO  c.s.p.ProjectApplication - Started ProjectApplication in 0.405 seconds (JVM running for 462.554) 
+14:14:36.617 [restartedMain]   INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+14:14:40.452 [http-nio-3030-exec-2] INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+14:14:40.452 [http-nio-3030-exec-2] INFO  o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+14:14:40.454 [http-nio-3030-exec-2] INFO  o.s.w.s.DispatcherServlet - Completed initialization in 2 ms 
+14:14:40.458 [http-nio-3030-exec-2] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Starting... 
+14:14:40.553 [http-nio-3030-exec-2] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Start completed. 
+14:33:13.283 [RMI TCP Connection(30)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested. 
+14:33:13.347 [RMI TCP Connection(30)-127.0.0.1] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor' 
+14:33:13.347 [RMI TCP Connection(30)-127.0.0.1] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Shutdown initiated... 
+14:33:13.353 [RMI TCP Connection(30)-127.0.0.1] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Shutdown completed. 
+14:45:33.185 [restartedMain]   INFO  c.s.p.ProjectApplication - Starting ProjectApplication on BSTRAPAC with PID 7672 (D:\bstrapac\Desktop\projects\SkolaBack\target\classes started by bstrapac in D:\bstrapac\Desktop\projects\SkolaBack) 
+14:45:33.186 [restartedMain]   INFO  c.s.p.ProjectApplication - No active profile set, falling back to default profiles: default 
+14:45:33.214 [restartedMain]   INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable 
+14:45:33.214 [restartedMain]   INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG' 
+14:45:34.017 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 3030 (http) 
+14:45:34.022 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3030"] 
+14:45:34.022 [restartedMain]   INFO  o.a.c.c.StandardService - Starting service [Tomcat] 
+14:45:34.022 [restartedMain]   INFO  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38] 
+14:45:34.091 [restartedMain]   INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring embedded WebApplicationContext 
+14:45:34.092 [restartedMain]   INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 878 ms 
+14:45:34.606 [restartedMain]   INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor' 
+14:45:34.837 [restartedMain]   INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+14:45:34.850 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3030"] 
+14:45:34.866 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 3030 (http) with context path '/skola' 
+14:45:34.874 [restartedMain]   INFO  c.s.p.ProjectApplication - Started ProjectApplication in 1.877 seconds (JVM running for 2.511) 
+14:45:41.322 [http-nio-3030-exec-2] INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+14:45:41.323 [http-nio-3030-exec-2] INFO  o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+14:45:41.337 [http-nio-3030-exec-2] INFO  o.s.w.s.DispatcherServlet - Completed initialization in 14 ms 
+14:45:41.354 [http-nio-3030-exec-2] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "id"] 
+14:47:52.612 [http-nio-3030-exec-4] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Starting... 
+14:47:52.859 [http-nio-3030-exec-4] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Start completed. 
+14:47:53.191 [http-nio-3030-exec-4] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/skola] threw exception [Request processing failed; nested exception is java.lang.IllegalArgumentException: U+0107 ('cacute') is not available in this font's encoding: WinAnsiEncoding] with root cause 
+java.lang.IllegalArgumentException: U+0107 ('cacute') is not available in this font's encoding: WinAnsiEncoding
+	at org.apache.pdfbox.pdmodel.font.PDType1Font.encode(PDType1Font.java:345)
+	at org.apache.pdfbox.pdmodel.font.PDFont.encode(PDFont.java:286)
+	at org.apache.pdfbox.pdmodel.PDPageContentStream.showText(PDPageContentStream.java:411)
+	at com.skole.project.report.PDFGenerator.createReport(PDFGenerator.java:30)
+	at com.skole.project.controller.OcjenaController.genrateCard(OcjenaController.java:119)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+14:51:27.989 [http-nio-3030-exec-6] ERROR c.s.p.c.OcjenaController - Nije pronađena ocjena sa ID: 4. Poruka: Incorrect result size: expected 1, actual 0 
+14:52:31.466 [Thread-5]        INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor' 
+14:52:31.467 [Thread-5]        INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Shutdown initiated... 
+14:52:31.471 [Thread-5]        INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Shutdown completed. 
+14:52:31.503 [Finalizer]       WARN  o.a.p.c.COSDocument - Warning: You did not close a PDF Document 
+14:52:31.540 [restartedMain]   INFO  c.s.p.ProjectApplication - Starting ProjectApplication on BSTRAPAC with PID 7672 (D:\bstrapac\Desktop\projects\SkolaBack\target\classes started by bstrapac in D:\bstrapac\Desktop\projects\SkolaBack) 
+14:52:31.540 [restartedMain]   INFO  c.s.p.ProjectApplication - No active profile set, falling back to default profiles: default 
+14:52:31.809 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 3030 (http) 
+14:52:31.809 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3030"] 
+14:52:31.809 [restartedMain]   INFO  o.a.c.c.StandardService - Starting service [Tomcat] 
+14:52:31.809 [restartedMain]   INFO  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38] 
+14:52:31.826 [restartedMain]   INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring embedded WebApplicationContext 
+14:52:31.826 [restartedMain]   INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 285 ms 
+14:52:31.941 [restartedMain]   INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor' 
+14:52:31.997 [restartedMain]   INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+14:52:32.003 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3030"] 
+14:52:32.006 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 3030 (http) with context path '/skola' 
+14:52:32.008 [restartedMain]   INFO  c.s.p.ProjectApplication - Started ProjectApplication in 0.498 seconds (JVM running for 419.644) 
+14:52:32.010 [restartedMain]   INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+14:52:33.139 [http-nio-3030-exec-2] INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+14:52:33.140 [http-nio-3030-exec-2] INFO  o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+14:52:33.141 [http-nio-3030-exec-2] INFO  o.s.w.s.DispatcherServlet - Completed initialization in 1 ms 
+14:52:33.146 [http-nio-3030-exec-2] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Starting... 
+14:52:33.331 [http-nio-3030-exec-2] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Start completed. 
+14:54:03.280 [Thread-9]        INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor' 
+14:54:03.281 [Thread-9]        INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Shutdown initiated... 
+14:54:03.287 [Thread-9]        INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Shutdown completed. 
+14:54:03.346 [restartedMain]   INFO  c.s.p.ProjectApplication - Starting ProjectApplication on BSTRAPAC with PID 7672 (D:\bstrapac\Desktop\projects\SkolaBack\target\classes started by bstrapac in D:\bstrapac\Desktop\projects\SkolaBack) 
+14:54:03.346 [restartedMain]   INFO  c.s.p.ProjectApplication - No active profile set, falling back to default profiles: default 
+14:54:03.554 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 3030 (http) 
+14:54:03.555 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3030"] 
+14:54:03.555 [restartedMain]   INFO  o.a.c.c.StandardService - Starting service [Tomcat] 
+14:54:03.555 [restartedMain]   INFO  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38] 
+14:54:03.580 [restartedMain]   INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring embedded WebApplicationContext 
+14:54:03.580 [restartedMain]   INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 233 ms 
+14:54:03.682 [restartedMain]   INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor' 
+14:54:03.730 [restartedMain]   INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+14:54:03.735 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3030"] 
+14:54:03.738 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 3030 (http) with context path '/skola' 
+14:54:03.740 [restartedMain]   INFO  c.s.p.ProjectApplication - Started ProjectApplication in 0.419 seconds (JVM running for 511.376) 
+14:54:03.741 [restartedMain]   INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+14:54:10.385 [http-nio-3030-exec-2] INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+14:54:10.385 [http-nio-3030-exec-2] INFO  o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+14:54:10.387 [http-nio-3030-exec-2] INFO  o.s.w.s.DispatcherServlet - Completed initialization in 1 ms 
+14:54:10.391 [http-nio-3030-exec-2] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Starting... 
+14:54:10.487 [http-nio-3030-exec-2] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Start completed. 
+14:59:32.977 [Finalizer]       WARN  o.a.p.c.COSDocument - Warning: You did not close a PDF Document 

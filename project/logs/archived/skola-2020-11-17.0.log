@@ -1,0 +1,75 @@
+13:17:01.759 [restartedMain]   INFO  c.s.p.ProjectApplication - Starting ProjectApplication on BSTRAPAC with PID 11936 (D:\bstrapac\Desktop\projects\SkolaBack\target\classes started by bstrapac in D:\bstrapac\Desktop\projects\SkolaBack) 
+13:17:01.761 [restartedMain]   INFO  c.s.p.ProjectApplication - No active profile set, falling back to default profiles: default 
+13:17:01.789 [restartedMain]   INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable 
+13:17:01.790 [restartedMain]   INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG' 
+13:17:02.566 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 3030 (http) 
+13:17:02.571 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3030"] 
+13:17:02.572 [restartedMain]   INFO  o.a.c.c.StandardService - Starting service [Tomcat] 
+13:17:02.572 [restartedMain]   INFO  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38] 
+13:17:02.636 [restartedMain]   INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring embedded WebApplicationContext 
+13:17:02.636 [restartedMain]   INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 846 ms 
+13:17:03.098 [restartedMain]   INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor' 
+13:17:03.315 [restartedMain]   INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+13:17:03.327 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3030"] 
+13:17:03.343 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 3030 (http) with context path '/skola' 
+13:17:03.350 [restartedMain]   INFO  c.s.p.ProjectApplication - Started ProjectApplication in 1.778 seconds (JVM running for 2.423) 
+13:17:40.125 [Thread-5]        INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor' 
+13:17:40.182 [restartedMain]   ERROR o.s.b.SpringApplication - Application run failed 
+java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.core.joran.util.PropertySetter@5481594b - A "ch.qos.logback.classic.PatternLayout" object is not assignable to a "ch.qos.logback.core.encoder.Encoder" variable.
+ERROR in ch.qos.logback.core.joran.util.PropertySetter@5481594b - The class "ch.qos.logback.core.encoder.Encoder" was loaded by 
+ERROR in ch.qos.logback.core.joran.util.PropertySetter@5481594b - [jdk.internal.loader.ClassLoaders$AppClassLoader@61064425] whereas object of type 
+ERROR in ch.qos.logback.core.joran.util.PropertySetter@5481594b - "ch.qos.logback.classic.PatternLayout" was loaded by [jdk.internal.loader.ClassLoaders$AppClassLoader@61064425].
+ERROR in ch.qos.logback.core.ConsoleAppender[Console] - No encoder set for the appender named "Console".
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.loadConfiguration(LogbackLoggingSystem.java:169)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.reinitialize(LogbackLoggingSystem.java:222)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initializeWithConventions(AbstractLoggingSystem.java:73)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initialize(AbstractLoggingSystem.java:60)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.initialize(LogbackLoggingSystem.java:118)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:306)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:281)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:239)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:216)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:127)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:80)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:53)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:345)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.skole.project.ProjectApplication.main(ProjectApplication.java:11)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+13:18:16.928 [restartedMain]   INFO  c.s.p.ProjectApplication - Starting ProjectApplication on BSTRAPAC with PID 11936 (D:\bstrapac\Desktop\projects\SkolaBack\target\classes started by bstrapac in D:\bstrapac\Desktop\projects\SkolaBack) 
+13:18:16.929 [restartedMain]   INFO  c.s.p.ProjectApplication - No active profile set, falling back to default profiles: default 
+13:18:17.165 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 3030 (http) 
+13:18:17.165 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3030"] 
+13:18:17.165 [restartedMain]   INFO  o.a.c.c.StandardService - Starting service [Tomcat] 
+13:18:17.166 [restartedMain]   INFO  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38] 
+13:18:17.181 [restartedMain]   INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring embedded WebApplicationContext 
+13:18:17.182 [restartedMain]   INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 252 ms 
+13:18:17.293 [restartedMain]   INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor' 
+13:18:17.345 [restartedMain]   INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+13:18:17.351 [restartedMain]   INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3030"] 
+13:18:17.354 [restartedMain]   INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 3030 (http) with context path '/skola' 
+13:18:17.357 [restartedMain]   INFO  c.s.p.ProjectApplication - Started ProjectApplication in 0.452 seconds (JVM running for 76.428) 
+13:18:17.358 [restartedMain]   INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+13:18:32.307 [http-nio-3030-exec-2] INFO  o.a.c.c.C.[.[.[/skola] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+13:18:32.307 [http-nio-3030-exec-2] INFO  o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+13:18:32.319 [http-nio-3030-exec-2] INFO  o.s.w.s.DispatcherServlet - Completed initialization in 12 ms 
+13:18:32.343 [http-nio-3030-exec-2] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Starting... 
+13:18:32.479 [http-nio-3030-exec-2] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Start completed. 
+13:18:32.498 [http-nio-3030-exec-2] INFO  c.s.p.s.PredmetOsobaService - Ne postosji zapis sa idOsoba : 4 te idPredmet : 26. Stvaram novi zapis. Poruka: Incorrect result size: expected 1, actual 0 
+13:18:32.544 [http-nio-3030-exec-2] ERROR c.s.p.c.PredmetOsobaController - Nisu pronađeni zapisi za osoba ID: 4 te predmet ID: 26. Poruka: PreparedStatementCallback; SQL [insert into predmet_osoba (id_osoba, id_predmet) values ( ?,? ); ]; ERROR: insert or update on table "predmet_osoba" violates foreign key constraint "fk_predmet"
+  Detail: Key (id_predmet)=(26) is not present in table "predmeti".; nested exception is org.postgresql.util.PSQLException: ERROR: insert or update on table "predmet_osoba" violates foreign key constraint "fk_predmet"
+  Detail: Key (id_predmet)=(26) is not present in table "predmeti". 
+13:47:14.331 [RMI TCP Connection(32)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested. 
+13:47:14.394 [RMI TCP Connection(32)-127.0.0.1] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor' 
+13:47:14.395 [RMI TCP Connection(32)-127.0.0.1] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Shutdown initiated... 
+13:47:14.404 [RMI TCP Connection(32)-127.0.0.1] INFO  c.z.h.HikariDataSource - DS1_HIKARICP_CONNECTION_POOL - Shutdown completed. 

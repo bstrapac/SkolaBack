@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<property name="LOGS" value="./logs" />
+	<!-- Console logger appender -->
+	<appender name="Console" class="ch.qos.logback.core.ConsoleAppender">
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<Pattern>%-30(%d{HH:mm:ss.SSS} [%thread]) %-5level %logger{5} - %m %n </Pattern>
+		</layout>
+	</appender>
+	<!-- Rolling file logger appender -->
+	<appender name="RollingFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${LOGS}/skola.log</file>
+		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+			<Pattern>%-30(%d{HH:mm:ss.SSS} [%thread]) %-5level %logger{5} - %m %n </Pattern>
+		</encoder>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern> ${LOGS}/archived/skola-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+			<timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				<maxFileSize>10MB</maxFileSize>
+			</timeBasedFileNamingAndTriggeringPolicy>
+		</rollingPolicy>
+	</appender>
+	<!-- LOG everything at INFO level -->
+	<root level="INFO">
+		<appender-ref ref="Console" />
+		<appender-ref ref="RollingFile"/>
+	</root>
+	<!-- LOG "com.skole.project.*" at INFO level -->
+	<logger name="com.skole.project" level="INFO" additivity="false">
+		<appender-ref ref="Console"/>
+		<appender-ref ref="RollingFile"/>
+	</logger>
+</configuration>
