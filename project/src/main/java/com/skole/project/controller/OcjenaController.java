@@ -22,7 +22,7 @@ import com.skole.project.entity.Ocjena;
 import com.skole.project.entity.Osoba;
 import com.skole.project.entity.ReportCard;
 import com.skole.project.exception.Message;
-import com.skole.project.report.PDFGenerator;
+import com.skole.project.report.XSSFgenerator;
 import com.skole.project.service.OcjenaService;
 import com.skole.project.service.OsobaService;
 
@@ -101,8 +101,8 @@ public class OcjenaController {
 		//PDFGenerator.createReport(report);
 		return ResponseEntity.status(HttpStatus.OK).body(report);  
 	}
-	@GetMapping("/generate/{id}")
-	public ResponseEntity<?> genrateCard(@PathVariable Integer id) {
+	@GetMapping("/generatePDF/{id}")
+	public ResponseEntity<?> genratePDF(@PathVariable Integer id) {
 		ReportCard report = null;
 		Osoba osoba = null;
 		LocalDate timestamp = LocalDate.now();
@@ -116,7 +116,13 @@ public class OcjenaController {
 					String.format("Nije pronađena reportCard za učenika sa ID: %d.", id), 
 					timestamp));
 		}
-		PDFGenerator.createReport(report, osoba);
+		//PDFGenerator.createReport(report, osoba);
+		try {
+			XSSFgenerator.createXSSF();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		return ResponseEntity.status(HttpStatus.OK).body(new Message(
 				String.format("Uspješno kreiran pdf za učenika sa ID : %d.", id), 
 				timestamp));  

@@ -1,7 +1,7 @@
 package com.skole.project.report;
 
 import java.io.IOException;
-import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import org.apache.pdfbox.pdmodel.PDDocument;
@@ -15,13 +15,13 @@ import com.skole.project.entity.ReportCard;
 public class PDFGenerator {
 
 	public static final String DEST = "D:\\bstrapac\\Desktop\\test\\";
-	public static List<?> grades  = new ArrayList<>();
+	
 	public static void createReport (ReportCard report, Osoba osoba) {
+	List<HashMap<String, Double>> grades  =  (List<HashMap<String, Double>>) report.getAvgOcjene();
 		try {
 			PDDocument pdDoc = new PDDocument();
 			PDPage page = new PDPage();
 			pdDoc.addPage(page);
-			grades = report.getAvgOcjene();
 			try(PDPageContentStream pcs = new PDPageContentStream(pdDoc, page)) {
 				pcs.beginText();
 				pcs.setFont(PDType1Font.TIMES_ROMAN, 12);
@@ -29,19 +29,17 @@ public class PDFGenerator {
 			    pcs.newLineAtOffset(25, 725);
 			    pcs.showText(osoba.getIme()+" "+osoba.getPrezime().replace("ć", "c"));
 			    pcs.newLine();
-			    pcs.showText(osoba.getDob() + ", OIB: "+ osoba.getOib());
+			    pcs.showText(osoba.getDob());
 			    pcs.newLine();
-			    grades.forEach((g) -> {
-			    	try {
-			    		String line = g.toString();
-			    		String newLine = line.replace("{", "").replace("}", "").replace("=", " : ");
-						pcs.showText(newLine);
-						pcs.newLine();
-					} catch (IOException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
-			    });
+			    pcs.showText("OIB: "+ osoba.getOib());
+			    pcs.newLine();
+			    for(HashMap<String, Double> entry : grades) {
+			    	for(String key : entry.keySet()) {
+			    		Double grade = entry.get(key);
+			    		pcs.showText(key + " : " + grade);
+			    		pcs.newLine();
+			    	}
+			    }
 				pcs.showText("Završni prosjek : " + report.getFinalGrade().toString());
 				pcs.newLine();
 				pcs.endText();

@@ -1,6 +1,7 @@
 package com.skole.project.dao;
 
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -9,6 +10,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
 import com.skole.project.entity.Ocjena;
@@ -184,7 +186,7 @@ public class OcjenaDAOImpl implements OcjenaDAO {
 	
 	public ReportCard getReportCard(Integer id) {
 		ReportCard reportCard = new ReportCard();
-		List<HashMap<String, String>> avg = new ArrayList<>();
+		List<HashMap<String, Double>> avg = new ArrayList<>();
 		Double finalGrade;
 		
 		final String SQL_REPORT = "select"
@@ -211,17 +213,21 @@ public class OcjenaDAOImpl implements OcjenaDAO {
 					+ "	where po.id_osoba = ?"
 					+ "	group by p.naziv_predmet) tempTable;";
 		
-		jdbcTemplate.query(SQL_REPORT, new Object [] {id}, (ResultSet rs) -> {
-			HashMap<String, String> results = new HashMap<>();
-			do {
-				results = new HashMap<>();
-				//results.put("predmet", rs.getString("predmet"));
-				//results.put("prosjek", String.valueOf(rs.getDouble("avg")));
-				results.put(rs.getString("predmet"),String.valueOf(rs.getDouble("avg")));
-				avg.add(results);
-			} while(rs.next());
+		jdbcTemplate.query(SQL_REPORT, new Object [] {id}, new RowMapper<HashMap<String, Double>>() {
+			HashMap<String, Double> results = new HashMap<>();
+			@Override
+			public HashMap<String, Double> mapRow(ResultSet rs, int rowNum) throws SQLException {
+				do{
+					results = new HashMap<>();
+					results.put(rs.getString("predmet"),rs.getDouble("avg"));
+					avg.add(results);
+						
+				} while(rs.next());
+				return null;
+			}
 			
 		});
+		
 		finalGrade = jdbcTemplate.queryForObject(SQL_FINAL_GRADE, new Object[] {id},  Double.class);
 		
 		reportCard.setAvgOcjene(avg);
