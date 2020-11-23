@@ -1,4 +1,4 @@
-package com.skole.project.service;
+package com.skole.project.predmetosoba;
 
 import java.util.List;
 

@@ -19,12 +19,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.skole.project.entity.Ocjena;
-import com.skole.project.entity.Osoba;
-import com.skole.project.entity.ReportCard;
 import com.skole.project.exception.Message;
-import com.skole.project.report.XSSFgenerator;
-import com.skole.project.service.OcjenaService;
-import com.skole.project.service.OsobaService;
+import com.skole.project.ocjena.OcjenaService;
+import com.skole.project.osoba.OsobaService;
 
 @CrossOrigin(origins = { "http://localhost:3000", "http://localhost:4200" })
 @RestController
@@ -86,48 +83,6 @@ public class OcjenaController {
 		}
 		return ResponseEntity.status(HttpStatus.OK).body(ocjena);  
 	}
-	@GetMapping("/report/{id}")
-	public ResponseEntity<?> getReportCard(@PathVariable Integer id) {
-		ReportCard report = null;
-		LocalDate timestamp = LocalDate.now();
-		try {
-			report = ocjenaService.getReportCard(id);
-		} catch(Exception e) {
-			LOGGER.error(String.format("Nije pronađena reportCard za učenika sa ID: %d. Poruka: %s", id, e.getMessage()));
-			return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new Message(
-					String.format("Nije pronađena reportCard za učenika sa ID: %d.", id), 
-					timestamp));
-		}
-		//PDFGenerator.createReport(report);
-		return ResponseEntity.status(HttpStatus.OK).body(report);  
-	}
-	@GetMapping("/generatePDF/{id}")
-	public ResponseEntity<?> genratePDF(@PathVariable Integer id) {
-		ReportCard report = null;
-		Osoba osoba = null;
-		LocalDate timestamp = LocalDate.now();
-		try {
-			report = ocjenaService.getReportCard(id);
-			osoba = osobaService.getOsobaByID(id);
-			
-		} catch(Exception e) {
-			LOGGER.error(String.format("Nije pronađena reportCard za učenika sa ID: %d. Poruka: %s", id, e.getMessage()));
-			return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new Message(
-					String.format("Nije pronađena reportCard za učenika sa ID: %d.", id), 
-					timestamp));
-		}
-		//PDFGenerator.createReport(report, osoba);
-		try {
-			XSSFgenerator.createXSSF();
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		return ResponseEntity.status(HttpStatus.OK).body(new Message(
-				String.format("Uspješno kreiran pdf za učenika sa ID : %d.", id), 
-				timestamp));  
-	}
-	
 	
 	@PostMapping("/ocjena/add")
 	public ResponseEntity<?> create(@RequestBody Ocjena ocjena) {

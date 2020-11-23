@@ -1,4 +1,4 @@
-package com.skole.project.dao;
+package com.skole.project.predmet.impl;
 
 import java.util.List;
 
@@ -8,7 +8,8 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 import com.skole.project.entity.Predmet;
-import com.skole.project.mappers.PredmetiMapper;
+import com.skole.project.predmet.PredmetDAO;
+import com.skole.project.predmet.PredmetiMapper;
 
 @Repository
 public class PredmetDAOImpl implements PredmetDAO {

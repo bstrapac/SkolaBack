@@ -1,4 +1,4 @@
-package com.skole.project.service;
+package com.skole.project.predmet.impl;
 
 import java.util.List;
 
@@ -6,8 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.skole.project.dao.PredmetDAO;
 import com.skole.project.entity.Predmet;
+import com.skole.project.predmet.PredmetDAO;
+import com.skole.project.predmet.PredmetService;
 
 @Service
 public class PredmetServiceImpl implements PredmetService {

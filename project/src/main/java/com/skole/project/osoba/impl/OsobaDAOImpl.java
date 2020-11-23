@@ -1,4 +1,4 @@
-package com.skole.project.dao;
+package com.skole.project.osoba.impl;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -9,7 +9,8 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 import com.skole.project.entity.Osoba;
-import com.skole.project.mappers.OsobaMapper;
+import com.skole.project.osoba.OsobaDAO;
+import com.skole.project.osoba.OsobaMapper;
 
 @Repository
 public class OsobaDAOImpl implements OsobaDAO {

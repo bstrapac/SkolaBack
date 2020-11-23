@@ -1,4 +1,4 @@
-package com.skole.project.dao;
+package com.skole.project.predmet;
 
 import java.util.List;
 

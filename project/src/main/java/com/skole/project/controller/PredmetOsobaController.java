@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.skole.project.entity.PredmetOsoba;
 import com.skole.project.exception.Message;
-import com.skole.project.service.PredmetOsobaService;
+import com.skole.project.predmetosoba.PredmetOsobaService;
 
 @CrossOrigin(origins = { "http://localhost:3000", "http://localhost:4200" })
 @RestController

@@ -10,7 +10,6 @@ import org.apache.pdfbox.pdmodel.PDPageContentStream;
 import org.apache.pdfbox.pdmodel.font.PDType1Font;
 
 import com.skole.project.entity.Osoba;
-import com.skole.project.entity.ReportCard;
 
 public class PDFGenerator {
 

@@ -1,4 +1,4 @@
-package com.skole.project.entity;
+package com.skole.project.report;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.skole.project.service;
+package com.skole.project.osoba;
 
 import java.util.List;
 

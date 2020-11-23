@@ -1,4 +1,4 @@
-package com.skole.project.mappers;
+package com.skole.project.osoba;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

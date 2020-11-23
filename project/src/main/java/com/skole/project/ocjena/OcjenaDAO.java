@@ -1,12 +1,11 @@
-package com.skole.project.service;
+package com.skole.project.ocjena;
 
 import java.util.List;
 
 import com.skole.project.entity.Ocjena;
-import com.skole.project.entity.ReportCard;
 
-public interface OcjenaService {
-	
+public interface OcjenaDAO {
+
 	List<Ocjena> getAllOcjene();
 	
 	List<Ocjena> getOcjenaByIdOsoba(Integer id);
@@ -20,6 +19,4 @@ public interface OcjenaService {
 	boolean deleteOcjena(Integer id);
 	
 	boolean updateOcjena(Ocjena ocjena);
-	
-	ReportCard getReportCard(Integer id);
 }

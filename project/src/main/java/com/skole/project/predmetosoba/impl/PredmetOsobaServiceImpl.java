@@ -1,4 +1,4 @@
-package com.skole.project.service;
+package com.skole.project.predmetosoba.impl;
 
 import java.util.List;
 
@@ -8,8 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.skole.project.dao.PredmetOsobaDAO;
 import com.skole.project.entity.PredmetOsoba;
+import com.skole.project.predmetosoba.PredmetOsobaDAO;
+import com.skole.project.predmetosoba.PredmetOsobaService;
 
 @Service
 public class PredmetOsobaServiceImpl implements PredmetOsobaService {

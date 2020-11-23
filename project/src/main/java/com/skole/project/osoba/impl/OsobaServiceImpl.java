@@ -1,4 +1,4 @@
-package com.skole.project.service;
+package com.skole.project.osoba.impl;
 
 import java.util.List;
 
@@ -6,8 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.skole.project.dao.OsobaDAO;
 import com.skole.project.entity.Osoba;
+import com.skole.project.osoba.OsobaDAO;
+import com.skole.project.osoba.OsobaService;
 
 @Service
 public class OsobaServiceImpl implements OsobaService {

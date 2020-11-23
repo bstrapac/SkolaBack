@@ -1,4 +1,4 @@
-package com.skole.project.mappers;
+package com.skole.project.predmet;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

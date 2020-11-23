@@ -1,4 +1,4 @@
-package com.skole.project.service;
+package com.skole.project.ocjena.impl;
 
 import java.util.List;
 
@@ -6,9 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.skole.project.dao.OcjenaDAO;
 import com.skole.project.entity.Ocjena;
-import com.skole.project.entity.ReportCard;
+import com.skole.project.ocjena.OcjenaDAO;
+import com.skole.project.ocjena.OcjenaService;
 
 @Service
 public class OcjenaServiceImpl implements OcjenaService {
@@ -83,15 +83,6 @@ public class OcjenaServiceImpl implements OcjenaService {
 		try {
 			return ocjenaDao.updateOcjena(ocjena);
 		}catch(Exception e){
-			throw e;
-		}
-	}
-
-	@Override
-	public ReportCard getReportCard(Integer id) {
-		try {
-			return ocjenaDao.getReportCard(id);
-		}catch (Exception e){
 			throw e;
 		}
 	}
