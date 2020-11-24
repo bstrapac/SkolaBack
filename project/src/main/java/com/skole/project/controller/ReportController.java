@@ -41,6 +41,7 @@ public class ReportController {
 		ReportCard report = null;
 		Osoba osoba = null;
 		LocalDate timestamp = LocalDate.now();
+		PDFGenerator gen = new PDFGenerator();
 		try {
 			report = reportService.getReportCard(id);
 			osoba = osobaService.getOsobaByID(id);
@@ -51,22 +52,25 @@ public class ReportController {
 					String.format("Nije pronađena reportCard za učenika sa ID: %d.", id), 
 					timestamp));
 		}
-		PDFGenerator.createReport(report, osoba);
+		gen.generatePDF(report, osoba);
 		return ResponseEntity.status(HttpStatus.OK).body(new Message(
 				String.format("Uspješno kreiran pdf za učenika sa ID : %d.", id), 
 				timestamp));  
 	}
 	
 	@GetMapping("/generateXlsx")
-	public void generateXlsx() {
+	public byte[] generateXlsx() {
+		XSSFgenerator gen = new XSSFgenerator();
+		byte[] report =  null;
 		List<OcjenaRaw> ocjene = null;
 		ocjene = reportService.getRawOcjene();
 		try {
-			XSSFgenerator.createXSSF(ocjene);
+			report = gen.generateXlsx(ocjene);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		return report;
 	}
 	
 

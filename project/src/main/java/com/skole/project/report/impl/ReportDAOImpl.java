@@ -1,4 +1,4 @@
-package com.skole.project.report;
+package com.skole.project.report.impl;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -11,6 +11,11 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
+
+import com.skole.project.report.OcjenaRaw;
+import com.skole.project.report.OcjenaRawMapper;
+import com.skole.project.report.ReportCard;
+import com.skole.project.report.ReportDAO;
 
 @Repository
 public class ReportDAOImpl implements ReportDAO {
