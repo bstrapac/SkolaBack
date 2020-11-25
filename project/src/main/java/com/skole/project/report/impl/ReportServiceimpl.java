@@ -23,13 +23,7 @@ public class ReportServiceimpl implements ReportService {
 	public List<OcjenaRaw> getRawOcjene() {
 		return reportDao.getRawOcjene();
 	}
-
-	@Override
-	public List<?> getRawOsobe() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
+	
 	@Override
 	public ReportCard getReportCard(Integer id) {
 		try {
@@ -37,6 +31,12 @@ public class ReportServiceimpl implements ReportService {
 		}catch (Exception e){
 			throw e;
 		}
+	}
+
+	@Override
+	public List<?> getRawOsobe() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

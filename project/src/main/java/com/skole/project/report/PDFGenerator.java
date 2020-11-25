@@ -4,9 +4,13 @@ import java.awt.Color;
 import java.io.IOException;
 import java.io.InputStream;
 import java.text.DecimalFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.PDPage;
@@ -56,7 +60,7 @@ public class PDFGenerator {
 		    PDType0Font BoldFont = PDType0Font.load(doc, SansBold, true);
 		    PDType0Font BoldItalicFont = PDType0Font.load(doc, SansBoldItalic, true);
 			
-			PDPage page = new PDPage(Constants.A4);
+			PDPage page = new PDPage(Constants.A4);//842pt × 595pt
 			doc.addPage(page);
 			
 			try(PDPageContentStream pcs = new PDPageContentStream(doc, page)){
@@ -101,18 +105,32 @@ public class PDFGenerator {
 			e.printStackTrace();
 		}
 	}
+	
+	private String dateFormat(String inputDate) {
+		Date date = null;
+		try {
+			date = new SimpleDateFormat("yyyy-MM-dd").parse(inputDate);
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		String pattern = "dd.MMMMM yyyy.";
+		SimpleDateFormat sdf = new SimpleDateFormat(pattern, new Locale("hr", "HR"));
+		String formatedDate = sdf.format(date);
+		return formatedDate;
+	}
 
 	private void getInfo(PDPageContentStream pcs, PDPage page, Osoba osoba, PDType0Font font) {
 		//osoba info -> name, lastname, dob, oib
 		String name = osoba.getIme() + " " + osoba.getPrezime() +"\n";
 		String oib = "OIB: " + osoba.getOib() + "\n";
-		String dob = "Datum rođenja: " + osoba.getDob(); 
+		String dob = "Datum rođenja: \n" + dateFormat(osoba.getDob()); 
 		TextFlow left = new TextFlow();
 		try {
 			left.addText(name, TEXT_FONT_SIZE, font );
 			left.addText(oib, TEXT_FONT_SIZE, font);
 			left.addText(dob, TEXT_FONT_SIZE, font);
-			left.setMaxWidth(100);
+			left.setMaxWidth(150);
 			left.drawText(pcs, new Position(50, page.getMediaBox().getHeight()-150), Alignment.Left, null);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block

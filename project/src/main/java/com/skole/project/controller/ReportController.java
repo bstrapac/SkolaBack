@@ -28,7 +28,7 @@ import com.skole.project.report.XSSFgenerator;
 @RequestMapping("/report")
 public class ReportController {
 	
-	Logger LOGGER = LoggerFactory.getLogger(OcjenaController.class);
+	Logger LOGGER = LoggerFactory.getLogger(ReportController.class);
 	
 	@Autowired
 	ReportService reportService;
@@ -42,36 +42,38 @@ public class ReportController {
 		Osoba osoba = null;
 		LocalDate timestamp = LocalDate.now();
 		PDFGenerator gen = new PDFGenerator();
+		byte[] pdf = null;
 		try {
 			report = reportService.getReportCard(id);
 			osoba = osobaService.getOsobaByID(id);
+			pdf = gen.generatePDF(report, osoba);
+			LOGGER.info("Uspješno kreirano pdf izvješće.");
 			
 		} catch(Exception e) {
-			LOGGER.error(String.format("Nije pronađena reportCard za učenika sa ID: %d. Poruka: %s", id, e.getMessage()));
+			LOGGER.error(String.format("Greška prilikom kreiranja pdf izvješća. Poruka: %s", e.getMessage()));
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new Message(
-					String.format("Nije pronađena reportCard za učenika sa ID: %d.", id), 
+					String.format("Greška prilikom kreiranja pdf izvješća."), 
 					timestamp));
 		}
-		gen.generatePDF(report, osoba);
-		return ResponseEntity.status(HttpStatus.OK).body(new Message(
-				String.format("Uspješno kreiran pdf za učenika sa ID : %d.", id), 
-				timestamp));  
+		return ResponseEntity.status(HttpStatus.OK).body(pdf);  
 	}
 	
 	@GetMapping("/generateXlsx")
-	public byte[] generateXlsx() {
+	public ResponseEntity<?> generateXlsx() {
 		XSSFgenerator gen = new XSSFgenerator();
 		byte[] report =  null;
 		List<OcjenaRaw> ocjene = null;
-		ocjene = reportService.getRawOcjene();
+		LocalDate timestamp = LocalDate.now();
 		try {
+			ocjene = reportService.getRawOcjene();
 			report = gen.generateXlsx(ocjene);
+			LOGGER.info("Uspješnno kreirano xlsx izvješće.");
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			LOGGER.error(String.format("Greška prilikom kreiranja xlsx datoteke. Poruka: %s", e.getMessage()));
+			return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new Message(
+					String.format("Greška prilikom kreiranja xlsx datoteke"), 
+					timestamp));
 		}
-		return report;
+		return ResponseEntity.status(HttpStatus.OK).body(report);
 	}
-	
-
 }
