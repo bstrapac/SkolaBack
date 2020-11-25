@@ -23,6 +23,8 @@ import org.apache.tomcat.util.http.fileupload.ByteArrayOutputStream;
 public class XSSFgenerator {
 	
 	public static final String DEST = "D:\\bstrapac\\Desktop\\test\\";
+	private static final Color LIGHT_BLUE = new Color(120, 166, 222);
+	private static final Color BACKGROUND = new Color(236, 242, 250);
 	
 	//byte [] generateXlsx
 	//kreira novi xlsx file
@@ -39,20 +41,22 @@ public class XSSFgenerator {
 			//style props and settings 
 			//COLORS
 			XSSFColor black = new XSSFColor(Color.BLACK, null);
-			XSSFColor white = new XSSFColor(Color.WHITE, null);
+			XSSFColor lightBlue = new XSSFColor(LIGHT_BLUE, null);
+			XSSFColor background = new XSSFColor(BACKGROUND, null);
 			
 			//FONTS
 			XSSFFont bold = createBoldFont(workbook, black);
 			
 			//CELL STYLES
-			XSSFCellStyle headerCellStyle = createHeaderCellStyle(workbook, white, bold);
+			XSSFCellStyle headerCellStyle = createHeaderCellStyle(workbook, lightBlue, bold);
+			XSSFCellStyle rowCellStyle = createRowCellStyle(workbook, background);
 			
 			
 			String[] headerRowCells = createHeader(headerRow, headerCellStyle);
-			createBody(list, rowNum, spreadsheet);
+			createBody(list, rowNum, spreadsheet, rowCellStyle);
 			autoSizeTable(spreadsheet,headerRowCells);
 			report = saveReport(report, workbook);
-			saveOnDisk(workbook);
+			saveOnDisc(workbook);
 			
 		}catch(Exception e) {
 			e.printStackTrace();
@@ -61,7 +65,7 @@ public class XSSFgenerator {
 		
 		return report;
 	}
-	
+
 	private void autoSizeTable(XSSFSheet spreadsheet, String[] headerRowCells) {
 		for(int i = 0; i < headerRowCells.length; i++ ) {
 			spreadsheet.autoSizeColumn(i);
@@ -72,11 +76,11 @@ public class XSSFgenerator {
 	//kreira redove za body tablice u xlsx
 	//poziva funkciju za popunjavanje redova podatcima
 	
-	private void createBody(List<OcjenaRaw> list, int rowNum, XSSFSheet spreadsheet) {
+	private void createBody(List<OcjenaRaw> list, int rowNum, XSSFSheet spreadsheet, XSSFCellStyle rowCellStyle) {
 		for(int i = 0; i < list.size(); i++) {
 			OcjenaRaw rowData = list.get(i);
 			XSSFRow bodyRow = spreadsheet.createRow(rowNum);
-			populateRowData(bodyRow, rowData);
+			populateRowData(bodyRow, rowData, rowCellStyle);
 			rowNum++;
 		}
 	}
@@ -98,22 +102,26 @@ public class XSSFgenerator {
 	//void populate row data
 	//popunjava tablicu podatcima
 	
-	private void populateRowData(XSSFRow bodyRow, OcjenaRaw rowData) {
+	private void populateRowData(XSSFRow bodyRow, OcjenaRaw rowData, XSSFCellStyle rowCellStyle) {
 		XSSFCell idCell = bodyRow.createCell(0);
 		idCell.setCellValue(rowData.getId());
+		idCell.setCellStyle(rowCellStyle);
 		
 		XSSFCell idPOCell = bodyRow.createCell(1);
 		idPOCell.setCellValue(rowData.getIdPredmetOsoba());
+		idPOCell.setCellStyle(rowCellStyle);
 		
 		XSSFCell ocjenaCell = bodyRow.createCell(2);
 		ocjenaCell.setCellValue(rowData.getOcjena());
+		ocjenaCell.setCellStyle(rowCellStyle);
 		
 		XSSFCell datumCell = bodyRow.createCell(3);
 		datumCell.setCellValue(rowData.getDatum());
+		datumCell.setCellStyle(rowCellStyle);
 		
 		XSSFCell idODCell = bodyRow.createCell(4);
 		idODCell.setCellValue(rowData.getIdOsobaDod());
-		
+		idODCell.setCellStyle(rowCellStyle);
 	}
 	
 	//save report
@@ -129,7 +137,7 @@ public class XSSFgenerator {
 		return report;
 	}
 	
-	private void saveOnDisk(XSSFWorkbook workbook) throws FileNotFoundException {
+	private void saveOnDisc(XSSFWorkbook workbook) throws FileNotFoundException {
 		FileOutputStream out;
 		try {
 			out = new FileOutputStream(new File(DEST + "test4.xlsx"));
@@ -154,9 +162,9 @@ public class XSSFgenerator {
 		return bold;
 	}
 	
-	private XSSFCellStyle createHeaderCellStyle(XSSFWorkbook workbook, XSSFColor white, XSSFFont bold) {
+	private XSSFCellStyle createHeaderCellStyle(XSSFWorkbook workbook, XSSFColor color, XSSFFont bold) {
 		XSSFCellStyle headerCellStyle = workbook.createCellStyle();
-		headerCellStyle.setFillForegroundColor(white);
+		headerCellStyle.setFillForegroundColor(color);
 		headerCellStyle.setFillPattern(FillPatternType.SOLID_FOREGROUND);
 		headerCellStyle.setAlignment(HorizontalAlignment.LEFT);
 		headerCellStyle.setBorderBottom(BorderStyle.THIN);
@@ -165,5 +173,18 @@ public class XSSFgenerator {
 		headerCellStyle.setBorderTop(BorderStyle.THIN);
 		headerCellStyle.setFont(bold);
 		return headerCellStyle;
+	}
+	
+
+	private XSSFCellStyle createRowCellStyle(XSSFWorkbook workbook, XSSFColor color) {
+		XSSFCellStyle rowCellStyle = workbook.createCellStyle();
+		rowCellStyle.setFillForegroundColor(color);
+		rowCellStyle.setFillPattern(FillPatternType.SOLID_FOREGROUND);
+		rowCellStyle.setAlignment(HorizontalAlignment.RIGHT);
+		rowCellStyle.setBorderBottom(BorderStyle.THIN);
+		rowCellStyle.setBorderLeft(BorderStyle.THIN);
+		rowCellStyle.setBorderRight(BorderStyle.THIN);
+		rowCellStyle.setBorderTop(BorderStyle.THIN);
+		return rowCellStyle;
 	}
 }
