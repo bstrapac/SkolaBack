@@ -1,6 +1,7 @@
 package com.skole.project.report;
 
 import java.awt.Color;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.text.DecimalFormat;
@@ -15,9 +16,8 @@ import java.util.Locale;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.PDPage;
 import org.apache.pdfbox.pdmodel.PDPageContentStream;
-import org.apache.pdfbox.pdmodel.common.PDRectangle;
 import org.apache.pdfbox.pdmodel.font.PDType0Font;
-import org.apache.pdfbox.pdmodel.font.PDType1Font;
+import org.apache.pdfbox.pdmodel.graphics.image.PDImageXObject;
 import org.apache.tomcat.util.http.fileupload.ByteArrayOutputStream;
 import org.vandeseer.easytable.TableDrawer;
 import org.vandeseer.easytable.settings.HorizontalAlignment;
@@ -28,6 +28,8 @@ import org.vandeseer.easytable.structure.Table;
 import org.vandeseer.easytable.structure.cell.TextCell;
 
 import com.skole.project.entity.Osoba;
+import com.skole.project.report.entity.HeaderColumn;
+import com.skole.project.report.entity.ReportCard;
 
 import rst.pdfbox.layout.text.Alignment;
 import rst.pdfbox.layout.text.Constants;
@@ -52,6 +54,7 @@ public class PDFGenerator {
 	    InputStream SansRegular = classloader.getResourceAsStream("LiberationSans-Regular.ttf");
 	    InputStream SansBold = classloader.getResourceAsStream("LiberationSans-Bold.ttf");
 	    InputStream SansBoldItalic = classloader.getResourceAsStream("LiberationSans-BoldItalic.ttf");
+	    InputStream url = classloader.getResourceAsStream("logo.png");
 	    
 		PDDocument doc = new PDDocument();
 		try {
@@ -61,9 +64,16 @@ public class PDFGenerator {
 		    PDType0Font BoldItalicFont = PDType0Font.load(doc, SansBoldItalic, true);
 			
 			PDPage page = new PDPage(Constants.A4);//842pt × 595pt
+			
+			File awtImage = new File(url.toString());			
+			PDImageXObject pdImage = PDImageXObject.createFromFileByExtension(awtImage, doc);
+			
+			System.out.println(url.toString());
+		
 			doc.addPage(page);
 			
 			try(PDPageContentStream pcs = new PDPageContentStream(doc, page)){
+				
 				//page title
 				getTitle(pcs, page, BoldFont);
 				
@@ -131,7 +141,7 @@ public class PDFGenerator {
 			left.addText(oib, TEXT_FONT_SIZE, font);
 			left.addText(dob, TEXT_FONT_SIZE, font);
 			left.setMaxWidth(150);
-			left.drawText(pcs, new Position(50, page.getMediaBox().getHeight()-150), Alignment.Left, null);
+			left.drawText(pcs, new Position(50, page.getMediaBox().getHeight()-160), Alignment.Left, null);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -147,7 +157,7 @@ public class PDFGenerator {
 			right.addText(osoba.getMail(), TEXT_FONT_SIZE, font);
 			right.addText("\n", TEXT_FONT_SIZE, font);
 			right.setMaxWidth(150);
-			right.drawText(pcs, new Position(400, page.getMediaBox().getHeight()-150), Alignment.Left, null);
+			right.drawText(pcs, new Position(400, page.getMediaBox().getHeight()-160), Alignment.Left, null);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -159,7 +169,7 @@ public class PDFGenerator {
 		try {
 			title.addText("Report Card", TITLE_FONT_SIZE, font);
 			title.setMaxWidth(100);
-			title.drawText(pcs, new Position(250, page.getMediaBox().getHeight()-70), Alignment.Center, null);
+			title.drawText(pcs, new Position(250, page.getMediaBox().getHeight()-80), Alignment.Center, null);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

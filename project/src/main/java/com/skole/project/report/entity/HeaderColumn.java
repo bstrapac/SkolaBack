@@ -1,8 +1,13 @@
-package com.skole.project.report;
+package com.skole.project.report.entity;
 
 public class HeaderColumn {
-	public String text;
-	public Float width;
+
+	String text;
+	Float width;
+	
+	public HeaderColumn() {
+		
+	}
 	
 	public HeaderColumn(String text, Float width) {
 		super();

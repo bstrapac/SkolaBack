@@ -15,13 +15,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.skole.project.entity.Osoba;
+import com.skole.project.entity.Predmet;
 import com.skole.project.exception.Message;
 import com.skole.project.osoba.OsobaService;
-import com.skole.project.report.OcjenaRaw;
+import com.skole.project.predmet.PredmetService;
 import com.skole.project.report.PDFGenerator;
-import com.skole.project.report.ReportCard;
 import com.skole.project.report.ReportService;
 import com.skole.project.report.XSSFgenerator;
+import com.skole.project.report.entity.OcjenaRaw;
+import com.skole.project.report.entity.OsobaRaw;
+import com.skole.project.report.entity.PredmetOsobaRaw;
+import com.skole.project.report.entity.ReportCard;
 
 @CrossOrigin(origins = { "http://localhost:3000", "http://localhost:4200" })
 @RestController
@@ -35,6 +39,9 @@ public class ReportController {
 	
 	@Autowired
 	OsobaService osobaService;
+	
+	@Autowired
+	PredmetService predmetService;
 	
 	@GetMapping("/generatePDF/{id}")
 	public ResponseEntity<?> genratePDF(@PathVariable Integer id) {
@@ -63,10 +70,16 @@ public class ReportController {
 		XSSFgenerator gen = new XSSFgenerator();
 		byte[] report =  null;
 		List<OcjenaRaw> ocjene = null;
+		List<OsobaRaw> osobe = null;
+		List<Predmet> predmeti = null;
+		List<PredmetOsobaRaw> predmetOsoba = null;
 		LocalDate timestamp = LocalDate.now();
 		try {
 			ocjene = reportService.getRawOcjene();
-			report = gen.generateXlsx(ocjene);
+			osobe = reportService.getRawOsobe();
+			predmeti = predmetService.getAllPredmeti();
+			predmetOsoba = reportService.getPredmetOsobaRaw();
+			report = gen.generateXlsx(ocjene, osobe, predmeti, predmetOsoba);
 			LOGGER.info("Uspješnno kreirano xlsx izvješće.");
 		} catch (Exception e) {
 			LOGGER.error(String.format("Greška prilikom kreiranja xlsx datoteke. Poruka: %s", e.getMessage()));

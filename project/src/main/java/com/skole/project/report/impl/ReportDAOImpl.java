@@ -12,11 +12,14 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
-import com.skole.project.report.OcjenaRaw;
-import com.skole.project.report.OcjenaRawMapper;
-import com.skole.project.report.ReportCard;
 import com.skole.project.report.ReportDAO;
-
+import com.skole.project.report.entity.OcjenaRaw;
+import com.skole.project.report.entity.OsobaRaw;
+import com.skole.project.report.entity.PredmetOsobaRaw;
+import com.skole.project.report.entity.ReportCard;
+import com.skole.project.report.mappers.OcjenaRawMapper;
+import com.skole.project.report.mappers.OsobaRawMapper;
+import com.skole.project.report.mappers.PredmetOsobaRawMapper;
 @Repository
 public class ReportDAOImpl implements ReportDAO {
 	
@@ -34,9 +37,19 @@ public class ReportDAOImpl implements ReportDAO {
 	}
 
 	@Override
-	public List<?> getRawOsobe() {
-		// TODO Auto-generated method stub
-		return null;
+	public List<OsobaRaw> getRawOsobe() {
+		List<OsobaRaw> rawData = null;
+		final String SQL_GET = "select * from osoba";
+		rawData = jdbcTemplate.query(SQL_GET, new OsobaRawMapper());
+		return rawData;
+	}
+
+	@Override
+	public List<PredmetOsobaRaw> getPredmetOsobaRaw() {
+		List<PredmetOsobaRaw> rawData = null;
+		final String SQL_GET = "select * from predmet_osoba";
+		rawData = jdbcTemplate.query(SQL_GET, new PredmetOsobaRawMapper());
+		return rawData;
 	}
 
 	@Override
@@ -91,5 +104,4 @@ public class ReportDAOImpl implements ReportDAO {
 
 		return reportCard;
 	}
-
 }

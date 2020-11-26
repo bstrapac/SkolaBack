@@ -1,9 +1,11 @@
-package com.skole.project.report;
+package com.skole.project.report.mappers;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import org.springframework.jdbc.core.RowMapper;
+
+import com.skole.project.report.entity.OcjenaRaw;
 
 public class OcjenaRawMapper implements RowMapper<OcjenaRaw> {
 

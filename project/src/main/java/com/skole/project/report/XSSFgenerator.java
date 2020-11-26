@@ -20,6 +20,11 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.apache.tomcat.util.http.fileupload.ByteArrayOutputStream;
 
+import com.skole.project.entity.Predmet;
+import com.skole.project.report.entity.OcjenaRaw;
+import com.skole.project.report.entity.OsobaRaw;
+import com.skole.project.report.entity.PredmetOsobaRaw;
+
 public class XSSFgenerator {
 	
 	public static final String DEST = "D:\\bstrapac\\Desktop\\test\\";
@@ -30,13 +35,10 @@ public class XSSFgenerator {
 	//kreira novi xlsx file
 	//poziva funkcije za izradu headera, body-a i za spremanje xlsx fajla
 	
-	public byte[] generateXlsx(List<OcjenaRaw> list) throws Exception{
+	public byte[] generateXlsx(List<OcjenaRaw> ocjene, List<OsobaRaw> osobe, List<Predmet> predmeti, List<PredmetOsobaRaw> predmetOsoba) throws Exception{
 		byte[] report = null;
 		int rowNum = 0;
 		try(XSSFWorkbook workbook = new XSSFWorkbook()){
-			XSSFSheet spreadsheet = workbook.createSheet("ocjene_raw");
-			XSSFRow headerRow = spreadsheet.createRow(rowNum);
-			rowNum++;
 			
 			//style props and settings 
 			//COLORS
@@ -52,9 +54,41 @@ public class XSSFgenerator {
 			XSSFCellStyle rowCellStyle = createRowCellStyle(workbook, background);
 			
 			
-			String[] headerRowCells = createHeader(headerRow, headerCellStyle);
-			createBody(list, rowNum, spreadsheet, rowCellStyle);
-			autoSizeTable(spreadsheet,headerRowCells);
+			XSSFSheet ocjeneSheet = workbook.createSheet("ocjene_raw");
+			XSSFSheet osobeSheet = workbook.createSheet("osobe_raw");
+			XSSFSheet predmetiSheet = workbook.createSheet("predmeti_raw");
+			XSSFSheet predmetiOsobeSheet = workbook.createSheet("predmet_osoba_raw");
+			
+			XSSFRow headerRowOcjene = ocjeneSheet.createRow(rowNum);
+			XSSFRow headerRowOsobe = osobeSheet.createRow(rowNum);
+			XSSFRow headerRowPredmeti = predmetiSheet.createRow(rowNum);
+			XSSFRow headerRowPredmetiOsobe = predmetiOsobeSheet.createRow(rowNum);
+			
+			rowNum++;
+			
+			//HeaderRowCells
+			String[] headerOcjene = {"ID", "ID PREDMET OSOBA", "OCJENA", "DATUM", "ID OSOBA DOD"};
+			String[] headerOsoba = {"ID", "OIB", "IME", "PREZIME", "DOB", "KONTAKT", "MAIL", "ADRESA", "ID TIP"};
+			String[] headerPredmet = {"ID", "NAZIV"};
+			String[] headerPredmetOsoba = {"ID", "ID OSOBA", "ID PREDMET"};
+			
+			//POPULATE
+			String[] headerRowCells = createHeader(headerRowOcjene, headerCellStyle, headerOcjene);
+			String[] headerCellsOsoba = createHeader(headerRowOsobe, headerCellStyle, headerOsoba);
+			String[] headerCellsPredmeti =  createHeader(headerRowPredmeti, headerCellStyle, headerPredmet);
+			String[] headerCellsPedmetiOsobe = createHeader(headerRowPredmetiOsobe, headerCellStyle, headerPredmetOsoba);
+			
+			createBodyOcjene(ocjene, rowNum, ocjeneSheet, rowCellStyle);
+			createBodyOsobe(osobe, rowNum, osobeSheet, rowCellStyle);
+			createBodyPredmet(predmeti, rowNum, predmetiSheet, rowCellStyle);
+			createBodyPredmetOsoba(predmetOsoba, rowNum, predmetiOsobeSheet, rowCellStyle);
+			
+			
+			autoSizeTable(ocjeneSheet,headerRowCells);
+			autoSizeTable(osobeSheet, headerCellsOsoba);
+			autoSizeTable(predmetiSheet,headerCellsPredmeti);
+			autoSizeTable(predmetiOsobeSheet, headerCellsPedmetiOsobe);
+			
 			report = saveReport(report, workbook);
 			saveOnDisc(workbook);
 			
@@ -66,30 +100,55 @@ public class XSSFgenerator {
 		return report;
 	}
 
-	private void autoSizeTable(XSSFSheet spreadsheet, String[] headerRowCells) {
-		for(int i = 0; i < headerRowCells.length; i++ ) {
-			spreadsheet.autoSizeColumn(i);
-		}
-	}
-	
+
 	//void create body
 	//kreira redove za body tablice u xlsx
 	//poziva funkciju za popunjavanje redova podatcima
 	
-	private void createBody(List<OcjenaRaw> list, int rowNum, XSSFSheet spreadsheet, XSSFCellStyle rowCellStyle) {
+	private void createBodyPredmetOsoba(List<PredmetOsobaRaw> list, int rowNum, XSSFSheet spreadsheet,
+			XSSFCellStyle rowCellStyle) {
+		for(int i = 0; i < list.size(); i++) {
+			PredmetOsobaRaw rowData = list.get(i);
+			XSSFRow bodyRow = spreadsheet.createRow(rowNum);
+			populatePredmetOsoba(bodyRow, rowData, rowCellStyle);
+			rowNum++;
+		}
+	}
+
+	private void createBodyPredmet(List<Predmet> list, int rowNum, XSSFSheet spreadsheet,
+			XSSFCellStyle rowCellStyle) {
+		for(int i = 0; i < list.size(); i++) {
+			Predmet rowData = list.get(i);
+			XSSFRow bodyRow = spreadsheet.createRow(rowNum);
+			populatePredmet(bodyRow, rowData, rowCellStyle);
+			rowNum++;
+		}
+	}
+
+	private void createBodyOcjene(List<OcjenaRaw> list, int rowNum, XSSFSheet spreadsheet, XSSFCellStyle rowCellStyle) {
 		for(int i = 0; i < list.size(); i++) {
 			OcjenaRaw rowData = list.get(i);
 			XSSFRow bodyRow = spreadsheet.createRow(rowNum);
-			populateRowData(bodyRow, rowData, rowCellStyle);
+			populateOcjene(bodyRow, rowData, rowCellStyle);
 			rowNum++;
 		}
+	}
+
+	private void createBodyOsobe(List<OsobaRaw> list, int rowNum, XSSFSheet spreadsheet, XSSFCellStyle rowCellStyle) {
+		for(int i = 0; i < list.size(); i++ ) {
+			OsobaRaw rowData = list.get(i);
+			XSSFRow bodyRow = spreadsheet.createRow(rowNum);
+			populateOsobe(bodyRow, rowData, rowCellStyle);
+			rowNum++;
+		}
+		
 	}
 	
 	//string create header
 	//stvara header tablice 
 	
-	String[] createHeader(XSSFRow headerRow, XSSFCellStyle headerCellStyle) {
-		String[] headerRowCells = {"ID", "ID PREDMET OSOBA", "OCJENA", "DATUM", "ID OSOBA DOD"};
+	String[] createHeader(XSSFRow headerRow, XSSFCellStyle headerCellStyle, String[] headerCells) {
+		String[] headerRowCells = headerCells;
 		
 		for(int i = 0; i < headerRowCells.length; i++) {
 			XSSFCell hCell = headerRow.createCell(i);
@@ -101,8 +160,34 @@ public class XSSFgenerator {
 	
 	//void populate row data
 	//popunjava tablicu podatcima
-	
-	private void populateRowData(XSSFRow bodyRow, OcjenaRaw rowData, XSSFCellStyle rowCellStyle) {
+
+	private void populatePredmetOsoba(XSSFRow bodyRow, PredmetOsobaRaw rowData, XSSFCellStyle rowCellStyle) {
+		XSSFCell idCell = bodyRow.createCell(0);
+		idCell.setCellValue(rowData.getIdPredmetOsoba());
+		idCell.setCellStyle(rowCellStyle);
+		
+		XSSFCell idOsobaCell = bodyRow.createCell(1);
+		idOsobaCell.setCellValue(rowData.getIdOsoba());
+		idOsobaCell.setCellStyle(rowCellStyle);
+		
+		XSSFCell idPredmetCell = bodyRow.createCell(2);
+		idPredmetCell.setCellValue(rowData.getIdPredmet());
+		idPredmetCell.setCellStyle(rowCellStyle);
+		
+	}
+
+	private void populatePredmet(XSSFRow bodyRow, Predmet rowData, XSSFCellStyle rowCellStyle) {
+		XSSFCell idCell = bodyRow.createCell(0);
+		idCell.setCellValue(rowData.getIdPredmet());
+		idCell.setCellStyle(rowCellStyle);
+		
+		XSSFCell nazivCell = bodyRow.createCell(1);
+		nazivCell.setCellValue(rowData.getNazivPredmet());
+		nazivCell.setCellStyle(rowCellStyle);
+		
+	}
+
+	private void populateOcjene(XSSFRow bodyRow, OcjenaRaw rowData, XSSFCellStyle rowCellStyle) {
 		XSSFCell idCell = bodyRow.createCell(0);
 		idCell.setCellValue(rowData.getId());
 		idCell.setCellStyle(rowCellStyle);
@@ -123,6 +208,45 @@ public class XSSFgenerator {
 		idODCell.setCellValue(rowData.getIdOsobaDod());
 		idODCell.setCellStyle(rowCellStyle);
 	}
+
+	private void populateOsobe(XSSFRow bodyRow, OsobaRaw rowData, XSSFCellStyle rowCellStyle) {
+		XSSFCell idCell = bodyRow.createCell(0);
+		idCell.setCellValue(rowData.getIdOsoba());
+		idCell.setCellStyle(rowCellStyle);
+		
+		XSSFCell oibCell = bodyRow.createCell(1);
+		oibCell.setCellValue(rowData.getOib());
+		oibCell.setCellStyle(rowCellStyle);
+		
+		XSSFCell imeCell = bodyRow.createCell(2);
+		imeCell.setCellValue(rowData.getIme());
+		imeCell.setCellStyle(rowCellStyle);
+		
+		XSSFCell prezimeCell = bodyRow.createCell(3);
+		prezimeCell.setCellValue(rowData.getPrezime());
+		prezimeCell.setCellStyle(rowCellStyle);
+		
+		XSSFCell dobCell = bodyRow.createCell(4);
+		dobCell.setCellValue(rowData.getDob());
+		dobCell.setCellStyle(rowCellStyle);
+		
+		XSSFCell kontaktCell = bodyRow.createCell(5);
+		kontaktCell.setCellValue(rowData.getKontakt());
+		kontaktCell.setCellStyle(rowCellStyle);
+
+		XSSFCell mailCell = bodyRow.createCell(6);
+		mailCell.setCellValue(rowData.getMail());
+		mailCell.setCellStyle(rowCellStyle);
+		
+		XSSFCell adresaCell = bodyRow.createCell(7);
+		adresaCell.setCellValue(rowData.getAdresa());
+		adresaCell.setCellStyle(rowCellStyle);
+		
+		XSSFCell tipCell = bodyRow.createCell(8);
+		tipCell.setCellValue(rowData.getIdTipOsobe());
+		tipCell.setCellStyle(rowCellStyle);
+		
+	}
 	
 	//save report
 	//sprema xlsx u obliku byte array-a 
@@ -140,7 +264,7 @@ public class XSSFgenerator {
 	private void saveOnDisc(XSSFWorkbook workbook) throws FileNotFoundException {
 		FileOutputStream out;
 		try {
-			out = new FileOutputStream(new File(DEST + "test4.xlsx"));
+			out = new FileOutputStream(new File(DEST + "skolaDemoRawData.xlsx"));
 			workbook.write(out);
 			workbook.close();
 			out.close();
@@ -175,8 +299,8 @@ public class XSSFgenerator {
 		return headerCellStyle;
 	}
 	
-
 	private XSSFCellStyle createRowCellStyle(XSSFWorkbook workbook, XSSFColor color) {
+
 		XSSFCellStyle rowCellStyle = workbook.createCellStyle();
 		rowCellStyle.setFillForegroundColor(color);
 		rowCellStyle.setFillPattern(FillPatternType.SOLID_FOREGROUND);
@@ -186,5 +310,11 @@ public class XSSFgenerator {
 		rowCellStyle.setBorderRight(BorderStyle.THIN);
 		rowCellStyle.setBorderTop(BorderStyle.THIN);
 		return rowCellStyle;
+	}
+	
+	private void autoSizeTable(XSSFSheet spreadsheet, String[] headerRowCells) {
+		for(int i = 0; i < headerRowCells.length; i++ ) {
+			spreadsheet.autoSizeColumn(i);
+		}
 	}
 }
