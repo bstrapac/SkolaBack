@@ -24,19 +24,21 @@ public class OsobaDAOImpl implements OsobaDAO {
 		List<Osoba> osobe = null;
 
 		final String SQL_GET_ALL = "select"
-					+ "	o.id_osoba,"
-					+ "	o.ime, "
-					+ " o.prezime,"
-					+ "	o.oib, "
-					+ " o.dob,"
-					+ "	o.kontakt,"
-					+ "	o.adresa,"
-					+ "	o.mail, "
-					+ "o.id_tip_osobe,"
-					+ "	t.naziv as tip"
-				+ " from osoba o"
-				+ " left join tipovi_osoba t on"
-					+ "	o.id_tip_osobe = t.id_tip_osobe;";
+				+ "	o.idosoba,"
+				+ "	o.ime,"
+				+ "	o.prezime,"
+				+ "	o.dob,"
+				+ "	o.oib,"
+				+ "	attr.adresa,"
+				+ "	attr.mail,"
+				+ "	attr.kontakt,"
+				+ "	o.idtiposobe,"
+				+ "	t.naziv as tip"
+				+ " from skola.osobe o"
+				+ " left join skola.osobaattr attr on"
+				+ "	o.idosoba = attr.idosoba"
+				+ " left join skola.tipoviosoba t"
+				+ " on o.idtiposobe = t.idtiposoba;";
 		
 		osobe = jdbcTemplate.query(SQL_GET_ALL, new OsobaMapper());
 		return osobe;
@@ -47,20 +49,22 @@ public class OsobaDAOImpl implements OsobaDAO {
 		List<Osoba> osobe = null;
 		
 		final String SQL_GET_ALL_NASTAVNICI = "select"
-				+ "	o.id_osoba,"
-				+ "	o.ime, "
-				+ " o.prezime,"
-				+ "	o.oib, "
-				+ " o.dob,"
-				+ "	o.kontakt,"
-				+ "	o.adresa,"
-				+ "	o.mail, "
-				+ "o.id_tip_osobe,"
+				+ "	o.idosoba,"
+				+ "	o.ime,"
+				+ "	o.prezime,"
+				+ "	o.dob,"
+				+ "	o.oib,"
+				+ "	attr.adresa,"
+				+ "	attr.mail,"
+				+ "	attr.kontakt,"
+				+ "	o.idtiposobe,"
 				+ "	t.naziv as tip"
-			+ " from osoba o"
-			+ " left join tipovi_osoba t on"
-				+ "	o.id_tip_osobe = t.id_tip_osobe"
-			+ " where o.id_tip_osobe = 1;";
+				+ " from skola.osobe o"
+				+ " left join skola.osobaattr attr on"
+				+ "	o.idosoba = attr.idosoba"
+				+ " left join skola.tipoviosoba t"
+				+ " on o.idtiposobe = t.idtiposoba"
+				+ " where o.idtiposobe = 2;";
 		
 		osobe = jdbcTemplate.query(SQL_GET_ALL_NASTAVNICI, new OsobaMapper());
 		return osobe;
@@ -71,20 +75,22 @@ public class OsobaDAOImpl implements OsobaDAO {
 		List<Osoba> osobe = null;
 
 		final String SQL_GET_ALL_UCENICI = "select"
-					+ "	o.id_osoba,"
-					+ "	o.ime, "
-					+ " o.prezime,"
-					+ "	o.oib, "
-					+ " o.dob,"
-					+ "	o.kontakt,"
-					+ "	o.adresa,"
-					+ "	o.mail, "
-					+ "o.id_tip_osobe,"
-					+ "	t.naziv as tip"
-				+ " from osoba o"
-				+ " left join tipovi_osoba t on"
-					+ "	o.id_tip_osobe = t.id_tip_osobe "
-				+ " where o.id_tip_osobe = 2;";
+				+ "	o.idosoba,"
+				+ "	o.ime,"
+				+ "	o.prezime,"
+				+ "	o.dob,"
+				+ "	o.oib,"
+				+ "	attr.adresa,"
+				+ "	attr.mail,"
+				+ "	attr.kontakt,"
+				+ "	o.idtiposobe,"
+				+ "	t.naziv as tip"
+				+ " from skola.osobe o"
+				+ " left join skola.osobaattr attr on"
+				+ "	o.idosoba = attr.idosoba"
+				+ " left join skola.tipoviosoba t"
+				+ " on o.idtiposobe = t.idtiposoba"
+				+ " where o.idtiposobe = 3;";
 		
 		osobe = jdbcTemplate.query(SQL_GET_ALL_UCENICI, new OsobaMapper());
 		return osobe;
@@ -94,21 +100,23 @@ public class OsobaDAOImpl implements OsobaDAO {
 	public Osoba getOsobaByID(Integer id) {
 		Osoba osoba = null;
 		
-		final String SQL_GET_BY_ID = "select "
-				+ "	o.id_osoba,"
-				+ "	o.ime, "
-				+ " o.prezime,"
-				+ "	o.oib, "
-				+ " o.dob,"
-				+ "	o.kontakt,"
-				+ "	o.adresa,"
-				+ "	o.mail, "
-				+ "o.id_tip_osobe,"
+		final String SQL_GET_BY_ID = "select"
+				+ "	o.idosoba,"
+				+ "	o.ime,"
+				+ "	o.prezime,"
+				+ "	o.dob,"
+				+ "	o.oib,"
+				+ "	attr.adresa,"
+				+ "	attr.mail,"
+				+ "	attr.kontakt,"
+				+ "	o.idtiposobe,"
 				+ "	t.naziv as tip"
-			+ " from osoba o"
-			+ " left join tipovi_osoba t on"
-				+ "	o.id_tip_osobe = t.id_tip_osobe"
-			+ " where id_osoba = ?";
+				+ " from skola.osobe o"
+				+ " left join skola.osobaattr attr on"
+				+ "	o.idosoba = attr.idosoba"
+				+ " left join skola.tipoviosoba t"
+				+ " on o.idtiposobe = t.idtiposoba"
+				+ " where o.idosoba = ?;";
 		
 		osoba = jdbcTemplate.queryForObject(SQL_GET_BY_ID, new Object[] {id}, new OsobaMapper());
 		return osoba;
@@ -117,56 +125,49 @@ public class OsobaDAOImpl implements OsobaDAO {
 	@Override
 	public boolean createOsoba(Osoba osoba) {
 		LocalDate date = LocalDate.parse(osoba.getDob());
+		boolean stat = false;
 
 		final String SQL_INSERT = "insert into osoba ("
 					+ " oib,"
 					+ " ime,"
 					+ " prezime,"
 					+ " dob,"
-					+ " kontakt,"
-					+ " mail,"
-					+ " adresa,"
-					+ " id_tip_osobe)"
-				+ " values (  ?, ?, ?, ?, ?, ?, ?, ?)";
+					+ " idtiposobe)"
+				+ " values ( ?, ?, ?, ?, ?)";
+		final String SQL_OSOBA_ATTR="UPDATE skola.osobaattr"
+				+ " SET mail=?,"
+				+ " kontakt=?,"
+				+ " adresa=?"
+				+ " where idosoba = ?;";
 		
-		return jdbcTemplate.update(SQL_INSERT, 
+		
+		stat = jdbcTemplate.update(SQL_INSERT, 
 					osoba.getOib(), 
 					osoba.getIme(), 
 					osoba.getPrezime(), 
 					date,
-					osoba.getKontakt(), 
-					osoba.getMail(), 
-					osoba.getAdresa(), 
 					osoba.getIdTipOsobe()) > 0;
+		jdbcTemplate.update(SQL_OSOBA_ATTR, osoba.getMail(), osoba.getKontakt(), osoba.getAdresa());		
+		return stat;
 	}
 
 	@Override
 	public boolean deleteOsoba(Integer id) {
 		
-		final String SQL_DELETE = "delete from osoba where id_osoba = ?";
+		final String SQL_DELETE = "delete from osoba where idosoba = ?";
 		
 		return jdbcTemplate.update(SQL_DELETE, id) > 0;
 	}
 
 	@Override
-	public boolean updateOsoba(Osoba osoba) {
-		LocalDate date = LocalDate.parse(osoba.getDob());
-		
-		final String SQL_UPDATE = "update osoba set "
-				+ "oib = ?, "
-				+ "ime = ?, "
-				+ "prezime = ?, "
-				+ "dob = ?, "
-				+ "kontakt = ?, "
-				+ "mail = ?, "
-				+ "adresa = ?"
-			+ " where id_osoba = ?";
+	public boolean updateOsoba(Osoba osoba) {		
+		final String SQL_UPDATE = "update osobaattr set "
+				+ " kontakt = ?,"
+				+ " mail = ?,"
+				+ " adresa = ?"
+			+ " where idosoba = ?";
 		
 		return jdbcTemplate.update(SQL_UPDATE, 
-				osoba.getOib(), 
-				osoba.getIme(), 
-				osoba.getPrezime(), 
-				date, 
 				osoba.getKontakt(),
 				osoba.getMail(), 
 				osoba.getAdresa(),

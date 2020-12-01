@@ -12,11 +12,11 @@ public class OcjenaRawMapper implements RowMapper<OcjenaRaw> {
 	public OcjenaRaw mapRow(ResultSet resultSet, int i) throws SQLException{
 		
 		OcjenaRaw ocjena = new OcjenaRaw();
-		ocjena.setId(resultSet.getInt("id_ocjena"));
-		ocjena.setIdPredmetOsoba(resultSet.getInt("id_predmet_osoba"));
+		ocjena.setId(resultSet.getInt("idocjena"));
+		ocjena.setIdPredmetOsoba(resultSet.getInt("idpredmetosoba"));
 		ocjena.setOcjena(resultSet.getInt("ocjena"));
 		ocjena.setDatum(resultSet.getString("datum"));
-		ocjena.setIdOsobaDod(resultSet.getInt("id_osoba_dod"));
+		ocjena.setIdOsobaDod(resultSet.getInt("idosobadod"));
 		return ocjena;
 	}
 }

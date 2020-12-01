@@ -12,8 +12,9 @@ public class PredmetiMapper implements RowMapper<Predmet>{
 	public Predmet mapRow(ResultSet resultSet, int i) throws SQLException{
 		
 		Predmet predmet = new Predmet();
-		predmet.setIdPredmet(resultSet.getInt("id_predmet"));
-		predmet.setNazivPredmet(resultSet.getString("naziv_predmet"));
+		predmet.setIdPredmet(resultSet.getInt("idpredmet"));
+		predmet.setNazivPredmet(resultSet.getString("nazivpredmt"));
+		predmet.setActive(resultSet.getBoolean("active"));
 		return predmet;
 	}
 }

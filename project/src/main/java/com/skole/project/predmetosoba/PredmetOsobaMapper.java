@@ -12,11 +12,12 @@ public class PredmetOsobaMapper implements RowMapper<PredmetOsoba> {
 	public PredmetOsoba mapRow(ResultSet resultSet, int i) throws SQLException{
 		
 		PredmetOsoba predmetOsoba = new PredmetOsoba();
-		predmetOsoba.setIdPredmetOsoba(resultSet.getInt("id_predmet_osoba"));
-		predmetOsoba.setIdOsoba(resultSet.getInt("id_osoba"));
+		predmetOsoba.setIdPredmetOsoba(resultSet.getInt("idpredmetosoba"));
+		predmetOsoba.setIdOsoba(resultSet.getInt("idosoba"));
 		predmetOsoba.setOsoba(resultSet.getString("osoba"));
-		predmetOsoba.setIdPredmet(resultSet.getInt("id_predmet"));
+		predmetOsoba.setIdPredmet(resultSet.getInt("idpredmet"));
 		predmetOsoba.setPredmet(resultSet.getString("predmet"));
+		predmetOsoba.setActive(resultSet.getBoolean("active"));
 		return predmetOsoba;
 	}
 }

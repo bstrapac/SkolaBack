@@ -25,25 +25,26 @@ public class OcjenaDAOImpl implements OcjenaDAO {
 		List<Ocjena> ocjene = null;
 		
 		final String SQL_GET_ALL = "select"
-					+ " oc.id_ocjena,"
-					+ "	oc.id_predmet_osoba,"
-					+ " po.id_osoba,"
-					+ " po.id_predmet,"
+					+ " oc.idocjena,"
+					+ "	oc.idpredmetosoba,"
+					+ " po.idosoba,"
+					+ " po.idpredmet,"
 					+ "	o.ime ||' '|| o.prezime as ucenik,"
 					+ "	oc.ocjena,"
 					+ "	oc.datum,"
-					+ "	p.naziv_predmet predmet,"
-					+ "	oc.id_osoba_dod,"
-					+ "	o2.ime|| ' ' ||o2.prezime as nastavnik"
+					+ "	p.nazivpredmt predmet,"
+					+ "	oc.idosobadod,"
+					+ "	o2.ime|| ' ' ||o2.prezime as nastavnik,"
+					+ " oc.active "
 				+ " from ocjene oc"
-				+ " left join predmet_osoba po on"
-					+ "	po.id_predmet_osoba = oc.id_predmet_osoba"
-				+ " left join osoba o on"
-					+ "	o.id_osoba = po.id_osoba"
+				+ " left join predmetosoba po on"
+					+ "	po.idpredmetosoba = oc.idpredmetosoba"
+				+ " left join osobe o on"
+					+ "	o.idosoba = po.idosoba"
 				+ " left join predmeti p on"
-					+ "	p.id_predmet = po.id_predmet"
-				+ " left join osoba o2 on"
-					+ "	oc.id_osoba_dod = o2.id_osoba;";
+					+ "	p.idpredmet = po.idpredmet"
+				+ " left join osobe o2 on"
+					+ "	oc.idosobadod = o2.idosoba;";
 		
 		ocjene = jdbcTemplate.query(SQL_GET_ALL, new OcjenaMapper());
 		return ocjene;
@@ -53,29 +54,30 @@ public class OcjenaDAOImpl implements OcjenaDAO {
 	public List<Ocjena> getOcjenaByIdOsoba(Integer id){
 		List<Ocjena> ocjene = null;
 		
-		final String SQL_GET_BY_ID_OSOBA ="select"
-				+ " oc.id_ocjena,"
-				+ "	oc.id_predmet_osoba,"
-				+ "po.id_osoba,"
+		final String SQL_GET_BY_idosoba ="select"
+				+ " oc.idocjena,"
+				+ "	oc.idpredmetosoba,"
+				+ "po.idosoba,"
 				+ "	o.ime ||' '|| o.prezime as ucenik,"
 				+ "	oc.ocjena,"
 				+ "	oc.datum,"
-				+ " po.id_predmet,"
-				+ "	p.naziv_predmet predmet,"
-				+ "	oc.id_osoba_dod,"
-				+ "	o2.ime|| ' ' ||o2.prezime as nastavnik"
+				+ " po.idpredmet,"
+				+ "	p.nazivpredmt predmet,"
+				+ "	oc.idosobadod,"
+				+ "	o2.ime|| ' ' ||o2.prezime as nastavnik,"
+				+ " oc.active"
 			+ " from ocjene oc"
-			+ " left join predmet_osoba po on"
-				+ "	po.id_predmet_osoba = oc.id_predmet_osoba"
-			+ " left join osoba o on"
-				+ "	o.id_osoba = po.id_osoba"
+			+ " left join predmetosoba po on"
+				+ "	po.idpredmetosoba = oc.idpredmetosoba"
+			+ " left join osobe o on"
+				+ "	o.idosoba = po.idosoba"
 			+ " left join predmeti p on"
-				+ "	p.id_predmet = po.id_predmet"
-			+ " left join osoba o2 on"
-				+ "	oc.id_osoba_dod = o2.id_osoba"
-			+ " where po.id_osoba = ?;";
+				+ "	p.idpredmet = po.idpredmet"
+			+ " left join osobe o2 on"
+				+ "	oc.idosobadod = o2.idosoba"
+			+ " where po.idosoba = ?;";
 		
-		ocjene = jdbcTemplate.query(SQL_GET_BY_ID_OSOBA, new Object[] {id}, new OcjenaMapper() );
+		ocjene = jdbcTemplate.query(SQL_GET_BY_idosoba, new Object[] {id}, new OcjenaMapper() );
 		return ocjene;
 	}
 	
@@ -83,29 +85,30 @@ public class OcjenaDAOImpl implements OcjenaDAO {
 	public List<Ocjena> getOcjenaByIdPredmet(Integer id){
 		List<Ocjena> ocjene = null;
 		
-		final String SQL_GET_BY_ID_PREDMET ="select"
-				+ " oc.id_ocjena,"
-				+ "	oc.id_predmet_osoba,"
-				+ " po.id_osoba,"
+		final String SQL_GET_BY_idpredmet ="select"
+				+ " oc.idocjena,"
+				+ "	oc.idpredmetosoba,"
+				+ " po.idosoba,"
 				+ "	o.ime ||' '|| o.prezime as ucenik,"
 				+ "	oc.ocjena,"
 				+ "	oc.datum,"
-				+ " po.id_predmet,"
-				+ "	p.naziv_predmet predmet,"
-				+ "	oc.id_osoba_dod,"
-				+ "	o2.ime|| ' ' ||o2.prezime as nastavnik"
+				+ " po.idpredmet,"
+				+ "	p.nazivpredmt predmet,"
+				+ "	oc.idosobadod,"
+				+ "	o2.ime|| ' ' ||o2.prezime as nastavnik,"
+				+ " oc.active"
 			+ " from ocjene oc"
 			+ " left join predmet_osoba po on"
-				+ "	po.id_predmet_osoba = oc.id_predmet_osoba"
-			+ " left join osoba o on"
-				+ "	o.id_osoba = po.id_osoba"
+				+ "	po.idpredmetosoba = oc.idpredmetosoba"
+			+ " left join osobe o on"
+				+ "	o.idosoba = po.idosoba"
 			+ " left join predmeti p on"
-				+ "	p.id_predmet = po.id_predmet"
-			+ " left join osoba o2 on"
-				+ "	oc.id_osoba_dod = o2.id_osoba"
-			+ " where po.id_predmet = ?;";
+				+ "	p.idpredmet = po.idpredmet"
+			+ " left join osobe o2 on"
+				+ "	oc.idosobadod = o2.idosoba"
+			+ " where po.idpredmet = ?;";
 		
-		ocjene = jdbcTemplate.query(SQL_GET_BY_ID_PREDMET, new Object[] {id}, new OcjenaMapper() );
+		ocjene = jdbcTemplate.query(SQL_GET_BY_idpredmet, new Object[] {id}, new OcjenaMapper() );
 		return ocjene;
 	}
 	
@@ -114,24 +117,25 @@ public class OcjenaDAOImpl implements OcjenaDAO {
 		Ocjena ocjena = null;
 		
 		final String SQL_GET_BY_ID ="select"
-				+ " oc.id_ocjena,"
-				+ "	oc.id_predmet_osoba,"
+				+ " oc.idocjena,"
+				+ "	oc.idpredmetosoba,"
 				+ "	o.ime ||' '|| o.prezime as ucenik,"
 				+ "	oc.ocjena,"
 				+ "	oc.datum,"
-				+ "	p.naziv_predmet predmet,"
-				+ "	oc.id_osoba_dod,"
-				+ "	o2.ime|| ' ' ||o2.prezime as nastavnik"
+				+ "	p.nazivpredmt predmet,"
+				+ "	oc.idosobadod,"
+				+ "	o2.ime|| ' ' ||o2.prezime as nastavnik,"
+				+ " oc.active "
 			+ " from ocjene oc"
 			+ " left join predmet_osoba po on"
-				+ "	po.id_predmet_osoba = oc.id_predmet_osoba"
-			+ " left join osoba o on"
-				+ "	o.id_osoba = po.id_osoba"
+				+ "	po.idpredmetosoba = oc.idpredmetosoba"
+			+ " left join osobe o on"
+				+ "	o.idosoba = po.idosoba"
 			+ " left join predmeti p on"
-				+ "	p.id_predmet = po.id_predmet"
-			+ " left join osoba o2 on"
-				+ "	oc.id_osoba_dod = o2.id_osoba"
-			+ " where oc.id_ocjena = ?;";
+				+ "	p.idpredmet = po.idpredmet"
+			+ " left join osobe o2 on"
+				+ "	oc.idosobadod = o2.idosoba"
+			+ " where oc.idocjena = ?;";
 		
 		ocjena = jdbcTemplate.queryForObject(SQL_GET_BY_ID, new Object[] {id}, new OcjenaMapper());
 		return ocjena;
@@ -142,10 +146,10 @@ public class OcjenaDAOImpl implements OcjenaDAO {
 		LocalDate date = LocalDate.parse(ocjena.getDatum());
 		
 		final String SQL_INSERT = "insert into ocjene ("
-				+ "id_predmet_osoba, "
+				+ "idpredmetosoba, "
 				+ "ocjena, "
 				+ "datum, "
-				+ "id_osoba_dod) "
+				+ "idosobadod) "
 		+ "values ( ?, ?, ?, ? )";
 		
 		return jdbcTemplate.update(SQL_INSERT, 
@@ -157,7 +161,7 @@ public class OcjenaDAOImpl implements OcjenaDAO {
 
 	@Override
 	public boolean deleteOcjena(Integer id) {
-		final String SQL_DELETE = "delete from ocjene where id_ocjena = ?";
+		final String SQL_DELETE = "delete from ocjene where idocjena = ?";
 		
 		return jdbcTemplate.update(SQL_DELETE, id) > 0 ;
 	}
@@ -169,8 +173,8 @@ public class OcjenaDAOImpl implements OcjenaDAO {
 		final String SQL_UPDATE = "update ocjene set "
 					+ "ocjena = ?, "
 					+ "datum = ?, "
-					+ "id_osoba_dod = ? "
-				+ "where id_ocjena = ?";
+					+ "idosobadod = ? "
+				+ "where idocjena = ?";
 		
 		return jdbcTemplate.update(SQL_UPDATE, 
 				ocjena.getOcjena(), 

@@ -11,8 +11,9 @@ public class Ocjena {
 	public String datum;
 	public Integer idOsobaDod;
 	public String nastavnik;
+	public Boolean active;
 	
-	public Ocjena(Integer idOcjena, Integer idPredmetOsoba, Integer idOsoba, String ucenik, Integer idPredmet, String predmet, Integer ocjena, String datum, Integer idOsobaDod, String nastavnik) {
+	public Ocjena(Integer idOcjena, Integer idPredmetOsoba, Integer idOsoba, String ucenik, Integer idPredmet, String predmet, Integer ocjena, String datum, Integer idOsobaDod, String nastavnik, Boolean active) {
 		super();
 		this.idOcjena = idOcjena;
 		this.idPredmetOsoba = idPredmetOsoba;
@@ -24,6 +25,15 @@ public class Ocjena {
 		this.datum = datum;
 		this.idOsobaDod = idOsobaDod;
 		this.nastavnik = nastavnik;
+		this.active = active;
+	}
+
+	public Boolean getActive() {
+		return active;
+	}
+
+	public void setActive(Boolean active) {
+		this.active = active;
 	}
 
 	public Integer getIdOcjena() {
@@ -92,12 +102,12 @@ public class Ocjena {
 	public void setNastavnik(String nastavnik) {
 		this.nastavnik = nastavnik;
 	}
-	
-	
+
 	@Override
 	public String toString() {
-		return "Ocjena [idPredmetOsoba=" + idPredmetOsoba + ", idOsoba=" + idOsoba + ", ucenik=" + ucenik
-				+ ", idPredmet=" + idPredmet + ", predmet=" + predmet + ", ocjena=" + ocjena + ", datum=" + datum
-				+ ", idOsobaDod=" + idOsobaDod + ", nastavnik=" + nastavnik + "]";
+		return "Ocjena [idOcjena=" + idOcjena + ", idPredmetOsoba=" + idPredmetOsoba + ", idOsoba=" + idOsoba
+				+ ", ucenik=" + ucenik + ", idPredmet=" + idPredmet + ", predmet=" + predmet + ", ocjena=" + ocjena
+				+ ", datum=" + datum + ", idOsobaDod=" + idOsobaDod + ", nastavnik=" + nastavnik + ", active=" + active
+				+ "]";
 	}
 }

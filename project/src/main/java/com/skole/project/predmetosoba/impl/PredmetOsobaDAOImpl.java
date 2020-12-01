@@ -23,19 +23,20 @@ public class PredmetOsobaDAOImpl implements PredmetOsobaDAO {
 		List<PredmetOsoba> predmetOsoba = null;
 		
 		final String SQL_GET_ALL = "select"
-				+ " po.id_predmet_osoba,"
-				+ " po.id_osoba,"
-				+ " o.ime ||' '|| o.prezime as osoba,"
-				+ " po.id_predmet,"
-				+ " p.naziv_predmet predmet,"
-				+ " tip.naziv"
-			+ " from predmet_osoba po"
-			+ " left join osoba o on"
-				+ " po.id_osoba = o.id_osoba"
-			+ " left join predmeti p on"
-				+ " po.id_predmet = p.id_predmet"
-			+ " left join tipovi_osoba tip on"
-				+ " o.id_tip_osobe = tip.id_tip_osobe;";
+				+ "	po.idpredmetosoba,"
+				+ "	po.idpredmet,"
+				+ "	p.nazivpredmt predmet,"
+				+ "	po.idosoba,"
+				+ "	o.ime || ' ' || o.prezime osoba,"
+				+ "	po.active,"
+				+ "	t.naziv"
+				+ " from skola.predmetosoba po"
+				+ " left join skola.osobe o on"
+				+ "	po.idosoba = o.idosoba"
+				+ " left join skola.predmeti p on"
+				+ "	po.idpredmet = p.idpredmet"
+				+ " left join skola.tipoviosoba t on"
+				+ "	o.idtiposobe = t.idtiposoba ";
 		
 		predmetOsoba = jdbcTemplate.query(SQL_GET_ALL, new PredmetOsobaMapper());
 		return predmetOsoba;
@@ -46,20 +47,21 @@ public class PredmetOsobaDAOImpl implements PredmetOsobaDAO {
 		List<PredmetOsoba> list = null;
 		
 		final String SQL_BY_ID_OSOBA = "select"
-				+" po.id_predmet_osoba,"
-				+" po.id_osoba,"
-				+" o.ime ||' '|| o.prezime as osoba,"
-				+" po.id_predmet,"
-				+" p.naziv_predmet predmet,"
-				+" tip.naziv"
-				+" from predmet_osoba po"
-				+" left join osoba o on"
-					+" po.id_osoba = o.id_osoba"
-				+" left join predmeti p on"
-					+" po.id_predmet = p.id_predmet"
-				+" left join tipovi_osoba tip on"
-					+" o.id_tip_osobe = tip.id_tip_osobe" 
-				+" where po.id_osoba = ? ";
+				+ "	po.idpredmetosoba,"
+				+ "	po.idpredmet,"
+				+ "	p.nazivpredmt predmet,"
+				+ "	po.idosoba,"
+				+ "	o.ime || ' ' || o.prezime osoba,"
+				+ "	po.active,"
+				+ "	t.naziv"
+				+ " from skola.predmetosoba po"
+				+ " left join skola.osobe o on"
+				+ "	po.idosoba = o.idosoba"
+				+ " left join skola.predmeti p on"
+				+ "	po.idpredmet = p.idpredmet"
+				+ " left join skola.tipoviosoba t on"
+				+ "	o.idtiposobe = t.idtiposoba "
+				+ " where po.idosoba = ? ";
 		
 		list = jdbcTemplate.query(SQL_BY_ID_OSOBA, new Object[] {id}, new PredmetOsobaMapper());
 		return list;
@@ -70,20 +72,21 @@ public class PredmetOsobaDAOImpl implements PredmetOsobaDAO {
 		List<PredmetOsoba> list = null;
 		
 		final String SQL_BY_ID_OSOBA = "select"
-				+" po.id_predmet_osoba,"
-				+" po.id_osoba,"
-				+" o.ime ||' '|| o.prezime as osoba,"
-				+" po.id_predmet,"
-				+" p.naziv_predmet predmet,"
-				+" tip.naziv"
-				+" from predmet_osoba po"
-				+" left join osoba o on"
-					+" po.id_osoba = o.id_osoba"
-				+" left join predmeti p on"
-					+" po.id_predmet = p.id_predmet"
-				+" left join tipovi_osoba tip on"
-					+" o.id_tip_osobe = tip.id_tip_osobe" 
-				+" where po.id_predmet = ? ";
+				+ "	po.idpredmetosoba,"
+				+ "	po.idpredmet,"
+				+ "	p.nazivpredmt predmet,"
+				+ "	po.idosoba,"
+				+ "	o.ime || ' ' || o.prezime osoba,"
+				+ "	po.active,"
+				+ "	t.naziv"
+				+ " from skola.predmetosoba po"
+				+ " left join skola.osobe o on"
+				+ "	po.idosoba = o.idosoba"
+				+ " left join skola.predmeti p on"
+				+ "	po.idpredmet = p.idpredmet"
+				+ " left join skola.tipoviosoba t on"
+				+ "	o.idtiposobe = t.idtiposoba "
+				+ " where po.idpredmet = ? ";
 		
 		list = jdbcTemplate.query(SQL_BY_ID_OSOBA, new Object[] {id}, new PredmetOsobaMapper());
 		return list;
@@ -95,19 +98,20 @@ public class PredmetOsobaDAOImpl implements PredmetOsobaDAO {
 		PredmetOsoba predmetOsoba = null;
 		
 		final String SQL_GET_BY_ID = "select"
-					+ " po.id_predmet_osoba,"
-					+ " po.id_osoba,"
-					+ " o.ime ||' '|| o.prezime as osoba,"
-					+ " po.id_predmet,"
-					+ " p.naziv_predmet predmet,"
-					+ " tip.naziv"
-				+ " from predmet_osoba po"
-				+ " left join osoba o on"
-					+ " po.id_osoba = o.id_osoba"
-				+ " left join predmeti p on"
-					+ " po.id_predmet = p.id_predmet"
-				+ " left join tipovi_osoba tip on"
-					+ " o.id_tip_osobe = tip.id_tip_osobe"
+				+ "	po.idpredmetosoba,"
+				+ "	po.idpredmet,"
+				+ "	p.nazivpredmt predmet,"
+				+ "	po.idosoba,"
+				+ "	o.ime || ' ' || o.prezime osoba,"
+				+ "	po.active,"
+				+ "	t.naziv"
+				+ " from skola.predmetosoba po"
+				+ " left join skola.osobe o on"
+				+ "	po.idosoba = o.idosoba"
+				+ " left join skola.predmeti p on"
+				+ "	po.idpredmet = p.idpredmet"
+				+ " left join skola.tipoviosoba t on"
+				+ "	o.idtiposobe = t.idtiposoba "
 				+ " where id_predmet_osoba = ?;";
 		predmetOsoba = jdbcTemplate.queryForObject(SQL_GET_BY_ID, new Object[] {id}, new PredmetOsobaMapper());
 		return predmetOsoba;
@@ -116,9 +120,9 @@ public class PredmetOsobaDAOImpl implements PredmetOsobaDAO {
 	@Override
 	public boolean createPredmetOsoba(PredmetOsoba predmetOsoba) {
 		
-		final String SQL_INSERT = "insert into predmet_osoba ("
-					+ "id_osoba, "
-					+ "id_predmet) "
+		final String SQL_INSERT = "insert into predmetosoba ("
+				+ "idosoba, "
+				+ "idpredmet) "
 				+ "values ( ?, ? )";
 		
 		return jdbcTemplate.update(SQL_INSERT, predmetOsoba.getIdOsoba(), predmetOsoba.getIdPredmet()) > 0;
@@ -127,7 +131,9 @@ public class PredmetOsobaDAOImpl implements PredmetOsobaDAO {
 	@Override
 	public boolean deletePredmetOsoba(Integer id) {
 		
-		final String SQL_DELETE = "delete from predmet_osoba where id_predmet_osoba = ?";
+		final String SQL_DELETE = "delete"
+				+ " from predmetosoba"
+				+ " where idpredmetosoba = ?";
 		
 		return jdbcTemplate.update(SQL_DELETE, id) > 0;
 	}
@@ -135,10 +141,11 @@ public class PredmetOsobaDAOImpl implements PredmetOsobaDAO {
 	@Override
 	public boolean updatePredmetOsoba(PredmetOsoba predmetOsoba) {
 		
-		final String SQL_UPDATE = "update predmet_osoba set "
-					+ "id_osoba = ? ,"
-					+ "id_predmet = ? "
-				+ "where id_predmet_osoba = ?";
+		final String SQL_UPDATE = "update predmetosoba"
+				+ " set "
+				+ " idosoba = ?,"
+				+ " idpredmet = ?"
+				+ " where idpredmetosoba = ?";
 		
 		return jdbcTemplate.update(SQL_UPDATE, predmetOsoba.getIdOsoba(), predmetOsoba.getIdPredmet(), predmetOsoba.getIdPredmetOsoba()) > 0;
 	}
@@ -146,12 +153,12 @@ public class PredmetOsobaDAOImpl implements PredmetOsobaDAO {
 	@Override
 	public Integer getExisting(Integer idOsoba, Integer idPredmet) {
 		Integer idZapisa =  null;
-		final String SQL_GET = "select "
-				+ "id_predmet_osoba "
-			+ "from predmet_osoba  "
-			+ "where "
-				+ "id_osoba =? "
-				+ "and id_predmet = ?;";
+		final String SQL_GET = "select"
+				+ " idpredmetosoba"
+				+ " from predmetosoba"
+				+ " where"
+				+ " idosoba = ?"
+				+ " and idpredmet = ?;";
 		
 		idZapisa = jdbcTemplate.queryForObject(SQL_GET, new Object[] {idOsoba, idPredmet}, Integer.class);
 		return idZapisa;
@@ -160,16 +167,17 @@ public class PredmetOsobaDAOImpl implements PredmetOsobaDAO {
 	@Override
 	public Integer createAndGet(Integer idOsoba, Integer idPredmet) {
 		
-		final String SQL_CREATE = "insert into predmet_osoba ("
-					+ "id_osoba, "
-					+ "id_predmet) "
+		final String SQL_CREATE = "insert into predmetosoba ("
+				+ "idosoba, "
+				+ "idpredmet) "
 				+ "values ( ?,? ); ";
-		final String SQL_GET ="select "
-					+ "id_predmet_osoba "
-				+ "from predmet_osoba "
-				+ "where "
-					+ "id_osoba = ? and "
-					+ "id_predmet = ?";
+		
+		final String SQL_GET ="select"
+				+ " idpredmetosoba"
+				+ " from predmetosoba"
+				+ " where"
+				+ " idosoba = ? and"
+				+ " idpredmet = ?";
 		jdbcTemplate.update(SQL_CREATE, idOsoba, idPredmet);
 		return jdbcTemplate.queryForObject(SQL_GET, new Object[] {idOsoba, idPredmet}, Integer.class);
 	}

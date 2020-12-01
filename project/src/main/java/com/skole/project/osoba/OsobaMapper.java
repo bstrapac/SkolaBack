@@ -12,7 +12,7 @@ public class OsobaMapper implements RowMapper<Osoba>{
 	public Osoba mapRow(ResultSet resultSet, int i) throws SQLException{
 		
 		Osoba osoba = new Osoba();
-		osoba.setIdOsoba(resultSet.getInt("id_osoba"));
+		osoba.setIdOsoba(resultSet.getInt("idosoba"));
 		osoba.setOib(resultSet.getString("oib"));
 		osoba.setIme(resultSet.getString("ime"));
 		osoba.setPrezime(resultSet.getString("prezime"));
@@ -20,7 +20,7 @@ public class OsobaMapper implements RowMapper<Osoba>{
 		osoba.setKontakt(resultSet.getString("kontakt"));
 		osoba.setMail(resultSet.getString("mail"));
 		osoba.setAdresa(resultSet.getString("adresa"));
-		osoba.setIdTipOsobe(resultSet.getInt("id_tip_osobe"));
+		osoba.setIdTipOsobe(resultSet.getInt("idtiposobe"));
 		osoba.setTip(resultSet.getString("tip"));
 		return osoba;
 	}

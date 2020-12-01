@@ -7,18 +7,31 @@ public class OcjenaRaw {
 	Integer ocjena;
 	String datum;
 	Integer idOsobaDod;
+	boolean active;
 	
-	public OcjenaRaw(Integer id, Integer idPredmetOsoba, Integer ocjena, String datum, Integer idOsobaDod) {
+	
+
+	public OcjenaRaw(Integer id, Integer idPredmetOsoba, Integer ocjena, String datum, Integer idOsobaDod,
+			boolean active) {
 		super();
 		this.id = id;
 		this.idPredmetOsoba = idPredmetOsoba;
 		this.ocjena = ocjena;
 		this.datum = datum;
 		this.idOsobaDod = idOsobaDod;
+		this.active = active;
 	}
 
 	public OcjenaRaw() {
 		// TODO Auto-generated constructor stub
+	}
+
+	public boolean isActive() {
+		return active;
+	}
+
+	public void setActive(boolean active) {
+		this.active = active;
 	}
 
 	public Integer getId() {

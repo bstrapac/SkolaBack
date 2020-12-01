@@ -6,20 +6,26 @@ public class PredmetOsoba {
 	public String osoba;
 	public Integer idPredmet;
 	public String predmet;
+	public Boolean active;
 	
-	public PredmetOsoba(Integer idPredmetOsoba, Integer idOsoba, String osoba, Integer idPredmet, String predmet) {
+	public PredmetOsoba(Integer idPredmetOsoba, Integer idOsoba, String osoba, Integer idPredmet, String predmet, Boolean active) {
 		super();
 		this.idPredmetOsoba = idPredmetOsoba;
 		this.idOsoba = idOsoba;
 		this.osoba = osoba;
 		this.idPredmet = idPredmet;
 		this.predmet = predmet;
+		this.active = active;
 	}
 	public PredmetOsoba() {
 		//prazan konstruktor
 	}
-	
-	
+	public Boolean getActive() {
+		return active;
+	}
+	public void setActive(Boolean active) {
+		this.active = active;
+	}
 	public Integer getIdPredmetOsoba() {
 		return idPredmetOsoba;
 	}
@@ -50,10 +56,9 @@ public class PredmetOsoba {
 	public void setPredmet(String predmet) {
 		this.predmet = predmet;
 	}
-	
 	@Override
 	public String toString() {
-		return "PredmetOsoba [idPredmetOsoba=" + idPredmetOsoba + ", idOsoba=" + idOsoba + "osoba= " + osoba + ", idPredmet="
-				+ idPredmet + "predmet= " + predmet + "]";
+		return "PredmetOsoba [idPredmetOsoba=" + idPredmetOsoba + ", idOsoba=" + idOsoba + ", osoba=" + osoba
+				+ ", idPredmet=" + idPredmet + ", predmet=" + predmet + ", active=" + active + "]";
 	}
 }

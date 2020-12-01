@@ -12,9 +12,10 @@ public class Osoba {
 	public String adresa;
 	public Integer idTipOsobe;
 	public String tip;
+	public Boolean active;
 	
 	public Osoba(Integer idOsoba, String oib, String ime, String prezime, String dob, String kontakt, String mail,
-			String adresa, Integer idTipOsobe, String tip) {
+			String adresa, Integer idTipOsobe, String tip, Boolean active) {
 		super();
 		this.idOsoba = idOsoba;
 		this.oib = oib;
@@ -26,12 +27,21 @@ public class Osoba {
 		this.adresa = adresa;
 		this.idTipOsobe = idTipOsobe;
 		this.tip = tip;
+		this.active = active;
 	}
 	public Osoba() {
 		//prazan konstruktor
 	}
 	
-	
+	public Boolean getActive() {
+		return active;
+	}
+	public void setActive(Boolean active) {
+		this.active = active;
+	}
+	public String getTip() {
+		return tip;
+	}
 	public Integer getIdOsoba() {
 		return idOsoba;
 	}
@@ -86,9 +96,6 @@ public class Osoba {
 	public void setIdTipOsobe(Integer idTipOsobe) {
 		this.idTipOsobe = idTipOsobe;
 	}
-	public String geTip() {
-		return tip;
-	}
 	public void setTip(String tip) {
 		this.tip = tip;
 	}
@@ -97,7 +104,6 @@ public class Osoba {
 	public String toString() {
 		return "Osoba [idOsoba=" + idOsoba + ", oib=" + oib + ", ime=" + ime + ", prezime=" + prezime + ", dob=" + dob
 				+ ", kontakt=" + kontakt + ", mail=" + mail + ", adresa=" + adresa + ", idTipOsobe=" + idTipOsobe
-				+", tip="+tip+"]";
-	}
-	
+				+ ", tip=" + tip + ", active=" + active + "]";
+	}	
 }

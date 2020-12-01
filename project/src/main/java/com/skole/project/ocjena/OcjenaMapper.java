@@ -12,16 +12,17 @@ public class OcjenaMapper implements RowMapper<Ocjena> {
 	public Ocjena mapRow(ResultSet resultSet, int i) throws SQLException{
 		
 		Ocjena ocjena = new Ocjena();
-		ocjena.setIdOcjena(resultSet.getInt("id_ocjena"));
-		ocjena.setIdPredmetOsoba(resultSet.getInt("id_predmet_osoba"));
-		ocjena.setIdOsoba(resultSet.getInt("id_osoba"));
+		ocjena.setIdOcjena(resultSet.getInt("idocjena"));
+		ocjena.setIdPredmetOsoba(resultSet.getInt("idpredmetosoba"));
+		ocjena.setIdOsoba(resultSet.getInt("idosoba"));
 		ocjena.setUcenik(resultSet.getString("ucenik"));
-		ocjena.setIdPredmet(resultSet.getInt("id_predmet"));
+		ocjena.setIdPredmet(resultSet.getInt("idpredmet"));
 		ocjena.setPredmet(resultSet.getString("predmet"));
 		ocjena.setOcjena(resultSet.getInt("ocjena"));
 		ocjena.setDatum(resultSet.getString("datum"));
-		ocjena.setIdOsobaDod(resultSet.getInt("id_osoba_dod"));
+		ocjena.setIdOsobaDod(resultSet.getInt("idosobadod"));
 		ocjena.setNastavnik(resultSet.getString("nastavnik"));
+		ocjena.setActive(resultSet.getBoolean("active"));
 		return ocjena;
 	}
 }

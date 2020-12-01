@@ -39,7 +39,19 @@ public class ReportDAOImpl implements ReportDAO {
 	@Override
 	public List<OsobaRaw> getRawOsobe() {
 		List<OsobaRaw> rawData = null;
-		final String SQL_GET = "select * from osoba";
+		final String SQL_GET = "select"
+				+ "	o.idosoba,"
+				+ "	o.ime,"
+				+ "	o.prezime,"
+				+ "	o.dob,"
+				+ "	o.oib,"
+				+ "	attr.adresa,"
+				+ "	attr.mail,"
+				+ "	attr.kontakt,"
+				+ "	o.idtiposobe"
+				+ "from skola.osobe o"
+				+ "left join skola.osobaattr attr on"
+				+ "	o.idosoba = attr.idosoba";
 		rawData = jdbcTemplate.query(SQL_GET, new OsobaRawMapper());
 		return rawData;
 	}
@@ -47,7 +59,7 @@ public class ReportDAOImpl implements ReportDAO {
 	@Override
 	public List<PredmetOsobaRaw> getPredmetOsobaRaw() {
 		List<PredmetOsobaRaw> rawData = null;
-		final String SQL_GET = "select * from predmet_osoba";
+		final String SQL_GET = "select * from predmetosoba";
 		rawData = jdbcTemplate.query(SQL_GET, new PredmetOsobaRawMapper());
 		return rawData;
 	}
@@ -60,14 +72,14 @@ public class ReportDAOImpl implements ReportDAO {
 		
 		final String SQL_REPORT = "select"
 				+ "	avg(oc.ocjena) as avg,"
-				+ "	p.naziv_predmet as predmet"
+				+ "	p.nazivpredmt as predmet"
 				+ " from ocjene oc"
-				+ " left join predmet_osoba po"
-				+ " on oc.id_predmet_osoba = po.id_predmet_osoba"
+				+ " left join predmetosoba po"
+				+ " on oc.idpredmetosoba = po.idpredmetosoba"
 				+ " left join predmeti p"
-				+ " on po.id_predmet = p.id_predmet"
-				+ " where po.id_osoba = ? "
-				+ " group by p.naziv_predmet;";
+				+ " on po.idpredmet = p.idpredmet"
+				+ " where po.idosoba = ? "
+				+ " group by p.nazivpredmt;";
 		
 		final String SQL_FINAL_GRADE = "select"
 				+ "	avg(ocjena) as final_grade"
@@ -75,12 +87,12 @@ public class ReportDAOImpl implements ReportDAO {
 				+ "	select"
 					+ "	avg(oc.ocjena) as ocjena"
 					+ "	from ocjene oc"
-					+ "	left join predmet_osoba po"
-					+ "	on oc.id_predmet_osoba = po.id_predmet_osoba"
+					+ "	left join predmetosoba po"
+					+ "	on oc.idpredmetosoba = po.idpredmetosoba"
 					+ "	left join predmeti p"
-					+ "	on po.id_predmet = p.id_predmet"
-					+ "	where po.id_osoba = ?"
-					+ "	group by p.naziv_predmet) tempTable;";
+					+ "	on po.idpredmet = p.idpredmet"
+					+ "	where po.idosoba = ?"
+					+ "	group by p.nazivpredmt) tempTable;";
 		
 		jdbcTemplate.query(SQL_REPORT, new Object [] {id}, new RowMapper<HashMap<String, Double>>() {
 			HashMap<String, Double> results = new HashMap<>();
