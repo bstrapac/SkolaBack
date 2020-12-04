@@ -22,6 +22,7 @@ public class OsobaMapper implements RowMapper<Osoba>{
 		osoba.setAdresa(resultSet.getString("adresa"));
 		osoba.setIdTipOsobe(resultSet.getInt("idtiposobe"));
 		osoba.setTip(resultSet.getString("tip"));
+		osoba.setActive(resultSet.getBoolean("active"));
 		return osoba;
 	}
 }

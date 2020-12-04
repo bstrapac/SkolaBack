@@ -54,7 +54,6 @@ public class PDFGenerator {
 	    InputStream SansRegular = classloader.getResourceAsStream("LiberationSans-Regular.ttf");
 	    InputStream SansBold = classloader.getResourceAsStream("LiberationSans-Bold.ttf");
 	    InputStream SansBoldItalic = classloader.getResourceAsStream("LiberationSans-BoldItalic.ttf");
-	    InputStream url = classloader.getResourceAsStream("logo.png");
 	    
 		PDDocument doc = new PDDocument();
 		try {
@@ -64,12 +63,6 @@ public class PDFGenerator {
 		    PDType0Font BoldItalicFont = PDType0Font.load(doc, SansBoldItalic, true);
 			
 			PDPage page = new PDPage(Constants.A4);//842pt × 595pt
-			
-			File awtImage = new File(url.toString());			
-			PDImageXObject pdImage = PDImageXObject.createFromFileByExtension(awtImage, doc);
-			
-			System.out.println(url.toString());
-		
 			doc.addPage(page);
 			
 			try(PDPageContentStream pcs = new PDPageContentStream(doc, page)){
@@ -91,7 +84,6 @@ public class PDFGenerator {
 			e.printStackTrace();
 		}
 		pdf = saveAsByteArray(pdf, doc);
-		saveOnDisc(doc, osoba);
 		try {
 			doc.close();
 		} catch (IOException e) {
@@ -265,16 +257,5 @@ public class PDFGenerator {
 			e.printStackTrace();
 		}
 		return pdf;
-	}
-	
-	//save on disc -> saves pdf on destination file
-	private void saveOnDisc(PDDocument doc, Osoba osoba) {
-		try {
-			String PATH = DEST + osoba.getPrezime() + "-test.pdf";
-			doc.save(PATH);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 	}
 }

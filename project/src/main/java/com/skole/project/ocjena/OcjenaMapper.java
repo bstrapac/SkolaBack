@@ -2,6 +2,10 @@ package com.skole.project.ocjena;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 
 import org.springframework.jdbc.core.RowMapper;
 

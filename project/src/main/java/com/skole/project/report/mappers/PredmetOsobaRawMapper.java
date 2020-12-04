@@ -15,6 +15,7 @@ public class PredmetOsobaRawMapper implements RowMapper<PredmetOsobaRaw> {
 		predmetOsoba.setIdPredmetOsoba(rs.getInt("idpredmetosoba"));
 		predmetOsoba.setIdOsoba(rs.getInt("idosoba"));
 		predmetOsoba.setIdPredmet(rs.getInt("idpredmet"));
+		predmetOsoba.setActive(rs.getBoolean("active"));
 		return predmetOsoba;
 	}
 	

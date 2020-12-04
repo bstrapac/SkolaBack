@@ -48,9 +48,10 @@ public class ReportDAOImpl implements ReportDAO {
 				+ "	attr.adresa,"
 				+ "	attr.mail,"
 				+ "	attr.kontakt,"
-				+ "	o.idtiposobe"
-				+ "from skola.osobe o"
-				+ "left join skola.osobaattr attr on"
+				+ "	o.idtiposobe,"
+				+ " o.active"
+				+ " from skola.osobe o"
+				+ " left join skola.osobaattr attr on"
 				+ "	o.idosoba = attr.idosoba";
 		rawData = jdbcTemplate.query(SQL_GET, new OsobaRawMapper());
 		return rawData;
@@ -78,7 +79,7 @@ public class ReportDAOImpl implements ReportDAO {
 				+ " on oc.idpredmetosoba = po.idpredmetosoba"
 				+ " left join predmeti p"
 				+ " on po.idpredmet = p.idpredmet"
-				+ " where po.idosoba = ? "
+				+ " where po.idosoba = ? and oc.active = true "
 				+ " group by p.nazivpredmt;";
 		
 		final String SQL_FINAL_GRADE = "select"
@@ -91,7 +92,7 @@ public class ReportDAOImpl implements ReportDAO {
 					+ "	on oc.idpredmetosoba = po.idpredmetosoba"
 					+ "	left join predmeti p"
 					+ "	on po.idpredmet = p.idpredmet"
-					+ "	where po.idosoba = ?"
+					+ "	where po.idosoba = ? and oc.active = true"
 					+ "	group by p.nazivpredmt) tempTable;";
 		
 		jdbcTemplate.query(SQL_REPORT, new Object [] {id}, new RowMapper<HashMap<String, Double>>() {

@@ -5,15 +5,25 @@ public class PredmetOsobaRaw {
 	Integer idPredmetOsoba;
 	Integer idOsoba;
 	Integer idPredmet;
-	
+	boolean active;
+
 	public PredmetOsobaRaw() {
 	}
 	
-	public PredmetOsobaRaw(Integer idPredmetOsoba, Integer idOsoba, Integer idPredmet) {
+	public PredmetOsobaRaw(Integer idPredmetOsoba, Integer idOsoba, Integer idPredmet, boolean active) {
 		super();
 		this.idPredmetOsoba = idPredmetOsoba;
 		this.idOsoba = idOsoba;
 		this.idPredmet = idPredmet;
+		this.active = active;
+	}
+
+	public boolean getActive() {
+		return active;
+	}
+
+	public void setActive(boolean active) {
+		this.active = active;
 	}
 	
 	public Integer getIdPredmetOsoba() {

@@ -123,31 +123,7 @@ public class PredmetOsobaController {
 		}
 		return ResponseEntity.status(HttpStatus.OK).body(new Message("Spremljen novi zapis predmetOsoba.", timestamp));
 	}
-	
-	@PutMapping("/update")
-	public ResponseEntity<?> update(@RequestBody PredmetOsoba predmetOsoba) {
-		LocalDate timestamp = LocalDate.now();
-		Boolean stat = false; 
-		try {
-			stat = predmetOsobaService.updatePredmetOsoba(predmetOsoba);
-		} catch (Exception e) {
-			LOGGER.error(String.format("Greška prilikom ažuriranja zapisa predmetOsoba ID : %d. Poruka: %s", predmetOsoba.getIdPredmetOsoba(), e.getMessage()));
-			return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new Message(
-					String.format("Greška prilikom ažuriranja zapisa predmetOsoba ID : %d.", predmetOsoba.getIdPredmetOsoba()), 
-					timestamp));
-		}
-		if(!stat) {
-			LOGGER.error(String.format("Zapis predmet osoba ID: %d nije pronađen.", predmetOsoba.getIdPredmetOsoba()));
-			return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new Message(
-					String.format("Zapis predmet osoba ID: %d nije pronađen.", predmetOsoba.getIdPredmetOsoba()), 
-					timestamp));
-		}
-		LOGGER.info(String.format("Uspješno ažuriran zapis predmetOsoba ID: %d", predmetOsoba.getIdPredmetOsoba()));
-		return ResponseEntity.status(HttpStatus.OK).body(new Message(
-				String.format("Uspješno ažuriran zapis predmetOsoba ID: %d", predmetOsoba.getIdPredmetOsoba()),
-				timestamp));
-	}
-	
+		
 	@DeleteMapping("/delete/{id}")
 	public ResponseEntity<?> delete(@PathVariable Integer id) {
 		LocalDate timestamp = LocalDate.now();
@@ -158,12 +134,6 @@ public class PredmetOsobaController {
 			LOGGER.error(String.format("Greška prilikom brisanja zapisa predmetOsoba sa ID: %d. Poruka: %s", id, e.getMessage()));
 			return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new Message(
 					String.format("Greška prilikom brisanja zapisa predmetOsoba sa ID: %d.", id), 
-					timestamp));
-		}
-		if(!stat) {
-			LOGGER.error(String.format("Zapis predmet osoba ID: %d nije pronađen.", id));
-			return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new Message(
-					String.format("Zapis predmet osoba ID: %d nije pronađen.", id), 
 					timestamp));
 		}
 		LOGGER.info(String.format("Uspješno obrisan zapis predmetOsoba ID: %d.", id));

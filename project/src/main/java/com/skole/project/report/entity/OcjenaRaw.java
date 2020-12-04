@@ -26,7 +26,7 @@ public class OcjenaRaw {
 		// TODO Auto-generated constructor stub
 	}
 
-	public boolean isActive() {
+	public boolean getActive() {
 		return active;
 	}
 

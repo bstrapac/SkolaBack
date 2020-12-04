@@ -21,6 +21,4 @@ public interface PredmetOsobaService {
 	boolean createPredmetOsoba(PredmetOsoba predmetOsoba);
 	
 	boolean deletePredmetOsoba(Integer id);
-	
-	boolean updatePredmetOsoba(PredmetOsoba predmetOsoba);
 }

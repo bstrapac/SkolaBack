@@ -80,16 +80,6 @@ public class PredmetOsobaServiceImpl implements PredmetOsobaService {
 
 	@Override
 	@Transactional
-	public boolean  updatePredmetOsoba(PredmetOsoba predmetOsoba) {
-		try {
-			return predmetOsobaDao.updatePredmetOsoba(predmetOsoba);
-		}catch(Exception e){
-			throw e;			
-		}
-	}
-
-	@Override
-	@Transactional
 	public Integer getExisting(Integer idOsoba, Integer idPredmet) {
 		Integer idZapis = null;
 		try {

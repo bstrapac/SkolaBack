@@ -109,12 +109,6 @@ public class PredmetController {
 					"Greška prilikom brisanja predmeta.", 
 					timestamp));
 		}
-		if(!stat) {
-			LOGGER.error(String.format("Predmet sa ID: %d nije pronađen.", id));
-			return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new Message(
-					"Predmet za brisanje nije pronađen.", 
-					timestamp));
-		}
 		return  ResponseEntity.status(HttpStatus.OK).body(new Message(
 				String.format("Uspješno obrisan predmet ID: %d", id), 
 				timestamp));		

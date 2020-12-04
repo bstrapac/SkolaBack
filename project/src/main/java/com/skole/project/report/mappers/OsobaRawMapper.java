@@ -21,6 +21,7 @@ public class OsobaRawMapper implements RowMapper<OsobaRaw> {
 		osoba.setMail(resultSet.getString("mail"));
 		osoba.setAdresa(resultSet.getString("adresa"));
 		osoba.setIdTipOsobe(resultSet.getInt("idtiposobe"));
+		osoba.setActive(resultSet.getBoolean("active"));
 		return osoba;
 	}
 }

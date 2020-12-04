@@ -33,12 +33,14 @@ public class OsobaDAOImpl implements OsobaDAO {
 				+ "	attr.mail,"
 				+ "	attr.kontakt,"
 				+ "	o.idtiposobe,"
-				+ "	t.naziv as tip"
+				+ "	t.naziv as tip,"
+				+ " o.active"
 				+ " from skola.osobe o"
 				+ " left join skola.osobaattr attr on"
 				+ "	o.idosoba = attr.idosoba"
 				+ " left join skola.tipoviosoba t"
-				+ " on o.idtiposobe = t.idtiposoba;";
+				+ " on o.idtiposobe = t.idtiposoba"
+				+ " where o.active = true;";
 		
 		osobe = jdbcTemplate.query(SQL_GET_ALL, new OsobaMapper());
 		return osobe;
@@ -58,13 +60,14 @@ public class OsobaDAOImpl implements OsobaDAO {
 				+ "	attr.mail,"
 				+ "	attr.kontakt,"
 				+ "	o.idtiposobe,"
-				+ "	t.naziv as tip"
+				+ "	t.naziv as tip,"
+				+ " o.active"
 				+ " from skola.osobe o"
 				+ " left join skola.osobaattr attr on"
 				+ "	o.idosoba = attr.idosoba"
 				+ " left join skola.tipoviosoba t"
 				+ " on o.idtiposobe = t.idtiposoba"
-				+ " where o.idtiposobe = 2;";
+				+ " where o.idtiposobe = 2 and o.active = true;";
 		
 		osobe = jdbcTemplate.query(SQL_GET_ALL_NASTAVNICI, new OsobaMapper());
 		return osobe;
@@ -84,13 +87,14 @@ public class OsobaDAOImpl implements OsobaDAO {
 				+ "	attr.mail,"
 				+ "	attr.kontakt,"
 				+ "	o.idtiposobe,"
-				+ "	t.naziv as tip"
+				+ "	t.naziv as tip,"
+				+ " o.active"
 				+ " from skola.osobe o"
 				+ " left join skola.osobaattr attr on"
 				+ "	o.idosoba = attr.idosoba"
 				+ " left join skola.tipoviosoba t"
 				+ " on o.idtiposobe = t.idtiposoba"
-				+ " where o.idtiposobe = 3;";
+				+ " where o.idtiposobe = 3 and o.active = true;";
 		
 		osobe = jdbcTemplate.query(SQL_GET_ALL_UCENICI, new OsobaMapper());
 		return osobe;
@@ -110,7 +114,8 @@ public class OsobaDAOImpl implements OsobaDAO {
 				+ "	attr.mail,"
 				+ "	attr.kontakt,"
 				+ "	o.idtiposobe,"
-				+ "	t.naziv as tip"
+				+ "	t.naziv as tip,"
+				+ " o.active"
 				+ " from skola.osobe o"
 				+ " left join skola.osobaattr attr on"
 				+ "	o.idosoba = attr.idosoba"
@@ -127,7 +132,7 @@ public class OsobaDAOImpl implements OsobaDAO {
 		LocalDate date = LocalDate.parse(osoba.getDob());
 		boolean stat = false;
 
-		final String SQL_INSERT = "insert into osoba ("
+		final String SQL_INSERT = "insert into osobe ("
 					+ " oib,"
 					+ " ime,"
 					+ " prezime,"
@@ -147,14 +152,17 @@ public class OsobaDAOImpl implements OsobaDAO {
 					osoba.getPrezime(), 
 					date,
 					osoba.getIdTipOsobe()) > 0;
-		jdbcTemplate.update(SQL_OSOBA_ATTR, osoba.getMail(), osoba.getKontakt(), osoba.getAdresa());		
+		if(osoba.getMail() != " " || osoba.getKontakt() != " " || osoba.getAdresa() != " ")
+		{
+			jdbcTemplate.update(SQL_OSOBA_ATTR, osoba.getMail(), osoba.getKontakt(), osoba.getAdresa(), osoba.getIdOsoba());	
+		}			
 		return stat;
 	}
 
 	@Override
 	public boolean deleteOsoba(Integer id) {
 		
-		final String SQL_DELETE = "delete from osoba where idosoba = ?";
+		final String SQL_DELETE = "delete from osobe where idosoba = ?";
 		
 		return jdbcTemplate.update(SQL_DELETE, id) > 0;
 	}

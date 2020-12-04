@@ -17,6 +17,7 @@ public class OcjenaRawMapper implements RowMapper<OcjenaRaw> {
 		ocjena.setOcjena(resultSet.getInt("ocjena"));
 		ocjena.setDatum(resultSet.getString("datum"));
 		ocjena.setIdOsobaDod(resultSet.getInt("idosobadod"));
+		ocjena.setActive(resultSet.getBoolean("active"));
 		return ocjena;
 	}
 }

@@ -10,9 +10,11 @@ public class OsobaRaw {
 	String mail;
 	String adresa;
 	Integer idTipOsobe;
+	boolean active;
+	
 	
 	public OsobaRaw(Integer idOsoba, String oib, String ime, String prezime, String dob, String kontakt, String mail,
-			String adresa, Integer idTipOsobe) {
+			String adresa, Integer idTipOsobe, boolean active) {
 		super();
 		this.idOsoba = idOsoba;
 		this.oib = oib;
@@ -23,10 +25,19 @@ public class OsobaRaw {
 		this.mail = mail;
 		this.adresa = adresa;
 		this.idTipOsobe = idTipOsobe;
+		this.active = active;
 	}
-	
+
 	public OsobaRaw() {
 		// TODO Auto-generated constructor stub
+	}
+	
+	public boolean getActive() {
+		return active;
+	}
+
+	public void setActive(boolean active) {
+		this.active = active;
 	}
 
 	public Integer getIdOsoba() {

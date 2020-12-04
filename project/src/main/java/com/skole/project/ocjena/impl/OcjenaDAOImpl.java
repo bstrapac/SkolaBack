@@ -44,7 +44,8 @@ public class OcjenaDAOImpl implements OcjenaDAO {
 				+ " left join predmeti p on"
 					+ "	p.idpredmet = po.idpredmet"
 				+ " left join osobe o2 on"
-					+ "	oc.idosobadod = o2.idosoba;";
+					+ "	oc.idosobadod = o2.idosoba"
+					+ " where oc.active = true;";
 		
 		ocjene = jdbcTemplate.query(SQL_GET_ALL, new OcjenaMapper());
 		return ocjene;
@@ -75,7 +76,7 @@ public class OcjenaDAOImpl implements OcjenaDAO {
 				+ "	p.idpredmet = po.idpredmet"
 			+ " left join osobe o2 on"
 				+ "	oc.idosobadod = o2.idosoba"
-			+ " where po.idosoba = ?;";
+			+ " where po.idosoba = ? and oc.active = true;";
 		
 		ocjene = jdbcTemplate.query(SQL_GET_BY_idosoba, new Object[] {id}, new OcjenaMapper() );
 		return ocjene;
@@ -98,7 +99,7 @@ public class OcjenaDAOImpl implements OcjenaDAO {
 				+ "	o2.ime|| ' ' ||o2.prezime as nastavnik,"
 				+ " oc.active"
 			+ " from ocjene oc"
-			+ " left join predmet_osoba po on"
+			+ " left join predmetosoba po on"
 				+ "	po.idpredmetosoba = oc.idpredmetosoba"
 			+ " left join osobe o on"
 				+ "	o.idosoba = po.idosoba"
@@ -106,7 +107,7 @@ public class OcjenaDAOImpl implements OcjenaDAO {
 				+ "	p.idpredmet = po.idpredmet"
 			+ " left join osobe o2 on"
 				+ "	oc.idosobadod = o2.idosoba"
-			+ " where po.idpredmet = ?;";
+			+ " where po.idpredmet = ? and oc.active =  true;";
 		
 		ocjene = jdbcTemplate.query(SQL_GET_BY_idpredmet, new Object[] {id}, new OcjenaMapper() );
 		return ocjene;
@@ -119,15 +120,17 @@ public class OcjenaDAOImpl implements OcjenaDAO {
 		final String SQL_GET_BY_ID ="select"
 				+ " oc.idocjena,"
 				+ "	oc.idpredmetosoba,"
+				+ " o.idosoba,"
 				+ "	o.ime ||' '|| o.prezime as ucenik,"
 				+ "	oc.ocjena,"
 				+ "	oc.datum,"
+				+ "	p.idpredmet,"
 				+ "	p.nazivpredmt predmet,"
 				+ "	oc.idosobadod,"
 				+ "	o2.ime|| ' ' ||o2.prezime as nastavnik,"
 				+ " oc.active "
 			+ " from ocjene oc"
-			+ " left join predmet_osoba po on"
+			+ " left join predmetosoba po on"
 				+ "	po.idpredmetosoba = oc.idpredmetosoba"
 			+ " left join osobe o on"
 				+ "	o.idosoba = po.idosoba"
@@ -143,7 +146,7 @@ public class OcjenaDAOImpl implements OcjenaDAO {
 
 	@Override
 	public boolean createOcjena(Ocjena ocjena) {
-		LocalDate date = LocalDate.parse(ocjena.getDatum());
+		LocalDate date = LocalDate.now();
 		
 		final String SQL_INSERT = "insert into ocjene ("
 				+ "idpredmetosoba, "
@@ -168,7 +171,7 @@ public class OcjenaDAOImpl implements OcjenaDAO {
 
 	@Override
 	public boolean updateOcjena(Ocjena ocjena) {
-		LocalDate date = LocalDate.parse(ocjena.getDatum());
+		LocalDate date = LocalDate.now();
 		
 		final String SQL_UPDATE = "update ocjene set "
 					+ "ocjena = ?, "
@@ -180,7 +183,7 @@ public class OcjenaDAOImpl implements OcjenaDAO {
 				ocjena.getOcjena(), 
 				date, 
 				ocjena.getIdOsobaDod(), 
-				ocjena.getIdPredmetOsoba()) > 0;
+				ocjena.getIdOcjena()) > 0;
 	}
 }
 

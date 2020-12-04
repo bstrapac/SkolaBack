@@ -55,7 +55,7 @@ public class OcjenaController {
 		}
 		return ResponseEntity.status(HttpStatus.OK).body(ocjene); 
 	}
-	@GetMapping("/predmeti/{id}")
+	@GetMapping("/predmet/{id}")
 	public ResponseEntity<?> getAllByPredmet(@PathVariable Integer id){
 		List<Ocjena> ocjene = null;
 		LocalDate timestamp = LocalDate.now();
@@ -120,20 +120,13 @@ public class OcjenaController {
 	@DeleteMapping("/ocjena/delete/{id}")
 	public ResponseEntity<?> delete(@PathVariable Integer id) {
 		LocalDate timestamp = LocalDate.now();
-		Boolean stat = false;
 		try {
-			stat = ocjenaService.deleteOcjena(id);
+			ocjenaService.deleteOcjena(id);
 			LOGGER.info(String.format("Uspješno obrisana ocjena ID: %d.", id));
 		} catch (Exception e) {
 			LOGGER.error(String.format("Greška prilikom brisanja ocjene. Poruka: %s", e.getMessage()));
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new Message(
 					String.format("Greška prilikom brisanja ocjene. Poruka: %s", e.getMessage()), 
-					timestamp));
-		}
-		if(!stat) {
-			LOGGER.error(String.format("Ocjena sa ID: %d nije pronađena",id));
-			return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new Message(
-					String.format("Ocjena sa ID: %d nije pronađena",id), 
 					timestamp));
 		}
 		return ResponseEntity.status(HttpStatus.OK).body(new Message(

@@ -84,12 +84,6 @@ public class OsobaController {
 					String.format("Greška prilikom ažuriranja osobe ID: %d.", osoba.getIdOsoba()), 
 					timestamp));
 		}
-		if(!stat) {
-			LOGGER.error(String.format("Osoba sa ID: %d nije pronađena.", osoba.getIdOsoba()));
-			return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new Message(
-					String.format("Osoba sa ID: %d nije pronađena.", osoba.getIdOsoba()), 
-					timestamp));
-		}
 		return ResponseEntity.status(HttpStatus.OK).body(new Message(
 				String.format("Uspješno ažurirana osoba ID: %d", osoba.getIdOsoba()),
 				timestamp));
@@ -106,12 +100,6 @@ public class OsobaController {
 			LOGGER.error(String.format("Greška prilikom brisanja osobe ID: %d. Poruka: %s", id, e.getMessage()));
 			return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new Message(
 					String.format("Greška prilikom brisanja osobe ID: %id.", id),
-					timestamp));
-		}
-		if(!stat) {
-			LOGGER.error(String.format("Osoba sa ID: %d nije pronađena.", id));
-			return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new Message(
-					String.format("Osoba sa ID: %d nije pronađena.", id), 
 					timestamp));
 		}
 		return ResponseEntity.status(HttpStatus.OK).body(new Message(

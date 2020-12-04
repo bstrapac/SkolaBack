@@ -67,10 +67,10 @@ public class XSSFgenerator {
 			rowNum++;
 			
 			//HeaderRowCells
-			String[] headerOcjene = {"ID", "ID PREDMET OSOBA", "OCJENA", "DATUM", "ID OSOBA DOD"};
-			String[] headerOsoba = {"ID", "OIB", "IME", "PREZIME", "DOB", "KONTAKT", "MAIL", "ADRESA", "ID TIP"};
-			String[] headerPredmet = {"ID", "NAZIV"};
-			String[] headerPredmetOsoba = {"ID", "ID OSOBA", "ID PREDMET"};
+			String[] headerOcjene = {"ID", "ID PREDMET OSOBA", "OCJENA", "DATUM", "ID OSOBA DOD", "STATUS"};
+			String[] headerOsoba = {"ID", "OIB", "IME", "PREZIME", "DOB", "KONTAKT", "MAIL", "ADRESA", "ID TIP", "STATUS"};
+			String[] headerPredmet = {"ID", "NAZIV", "STATUS"};
+			String[] headerPredmetOsoba = {"ID", "ID OSOBA", "ID PREDMET", "STATUS"};
 			
 			//POPULATE
 			String[] headerRowCells = createHeader(headerRowOcjene, headerCellStyle, headerOcjene);
@@ -90,7 +90,7 @@ public class XSSFgenerator {
 			autoSizeTable(predmetiOsobeSheet, headerCellsPedmetiOsobe);
 			
 			report = saveReport(report, workbook);
-			saveOnDisc(workbook);
+			//saveOnDisc(workbook);
 			
 		}catch(Exception e) {
 			e.printStackTrace();
@@ -173,6 +173,10 @@ public class XSSFgenerator {
 		XSSFCell idPredmetCell = bodyRow.createCell(2);
 		idPredmetCell.setCellValue(rowData.getIdPredmet());
 		idPredmetCell.setCellStyle(rowCellStyle);
+
+		XSSFCell activeCell = bodyRow.createCell(3);
+		activeCell.setCellValue(rowData.getActive());
+		activeCell.setCellStyle(rowCellStyle);
 		
 	}
 
@@ -184,6 +188,10 @@ public class XSSFgenerator {
 		XSSFCell nazivCell = bodyRow.createCell(1);
 		nazivCell.setCellValue(rowData.getNazivPredmet());
 		nazivCell.setCellStyle(rowCellStyle);
+
+		XSSFCell activeCell = bodyRow.createCell(2);
+		activeCell.setCellValue(rowData.getActive());
+		activeCell.setCellStyle(rowCellStyle);
 		
 	}
 
@@ -207,6 +215,10 @@ public class XSSFgenerator {
 		XSSFCell idODCell = bodyRow.createCell(4);
 		idODCell.setCellValue(rowData.getIdOsobaDod());
 		idODCell.setCellStyle(rowCellStyle);
+
+		XSSFCell activeCell = bodyRow.createCell(5);
+		activeCell.setCellValue(rowData.getActive());
+		activeCell.setCellStyle(rowCellStyle);
 	}
 
 	private void populateOsobe(XSSFRow bodyRow, OsobaRaw rowData, XSSFCellStyle rowCellStyle) {
@@ -246,6 +258,10 @@ public class XSSFgenerator {
 		tipCell.setCellValue(rowData.getIdTipOsobe());
 		tipCell.setCellStyle(rowCellStyle);
 		
+		XSSFCell activeCell = bodyRow.createCell(9);
+		activeCell.setCellValue(rowData.getActive());
+		activeCell.setCellStyle(rowCellStyle);
+		
 	}
 	
 	//save report
@@ -259,20 +275,6 @@ public class XSSFgenerator {
 			e.printStackTrace();
 		}
 		return report;
-	}
-	
-	private void saveOnDisc(XSSFWorkbook workbook) throws FileNotFoundException {
-		FileOutputStream out;
-		try {
-			out = new FileOutputStream(new File(DEST + "skolaDemoRawData.xlsx"));
-			workbook.write(out);
-			workbook.close();
-			out.close();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
 	}
 	
 	//CELL STYLES

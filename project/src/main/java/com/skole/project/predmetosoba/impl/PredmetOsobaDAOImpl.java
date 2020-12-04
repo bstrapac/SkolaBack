@@ -112,7 +112,7 @@ public class PredmetOsobaDAOImpl implements PredmetOsobaDAO {
 				+ "	po.idpredmet = p.idpredmet"
 				+ " left join skola.tipoviosoba t on"
 				+ "	o.idtiposobe = t.idtiposoba "
-				+ " where id_predmet_osoba = ?;";
+				+ " where idpredmetosoba = ?;";
 		predmetOsoba = jdbcTemplate.queryForObject(SQL_GET_BY_ID, new Object[] {id}, new PredmetOsobaMapper());
 		return predmetOsoba;
 	}
@@ -136,18 +136,6 @@ public class PredmetOsobaDAOImpl implements PredmetOsobaDAO {
 				+ " where idpredmetosoba = ?";
 		
 		return jdbcTemplate.update(SQL_DELETE, id) > 0;
-	}
-
-	@Override
-	public boolean updatePredmetOsoba(PredmetOsoba predmetOsoba) {
-		
-		final String SQL_UPDATE = "update predmetosoba"
-				+ " set "
-				+ " idosoba = ?,"
-				+ " idpredmet = ?"
-				+ " where idpredmetosoba = ?";
-		
-		return jdbcTemplate.update(SQL_UPDATE, predmetOsoba.getIdOsoba(), predmetOsoba.getIdPredmet(), predmetOsoba.getIdPredmetOsoba()) > 0;
 	}
 
 	@Override
