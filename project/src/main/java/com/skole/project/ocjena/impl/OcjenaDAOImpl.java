@@ -45,16 +45,19 @@ public class OcjenaDAOImpl implements OcjenaDAO {
 					+ "	p.idpredmet = po.idpredmet"
 				+ " left join osobe o2 on"
 					+ "	oc.idosobadod = o2.idosoba"
-					+ " where oc.active = true;";
-		
-		ocjene = jdbcTemplate.query(SQL_GET_ALL, new OcjenaMapper());
+					+ " where oc.active = true"
+					+ " order by oc.idocjena asc;";
+		try {
+			ocjene = jdbcTemplate.query(SQL_GET_ALL, new OcjenaMapper());
+		} catch(Exception e) {
+			throw e;
+		}
 		return ocjene;
 	}
 	
 	@Override
 	public List<Ocjena> getOcjenaByIdOsoba(Integer id){
 		List<Ocjena> ocjene = null;
-		
 		final String SQL_GET_BY_idosoba ="select"
 				+ " oc.idocjena,"
 				+ "	oc.idpredmetosoba,"
@@ -77,8 +80,11 @@ public class OcjenaDAOImpl implements OcjenaDAO {
 			+ " left join osobe o2 on"
 				+ "	oc.idosobadod = o2.idosoba"
 			+ " where po.idosoba = ? and oc.active = true;";
-		
-		ocjene = jdbcTemplate.query(SQL_GET_BY_idosoba, new Object[] {id}, new OcjenaMapper() );
+		try {
+			ocjene = jdbcTemplate.query(SQL_GET_BY_idosoba, new Object[] {id}, new OcjenaMapper() );	
+		} catch(Exception e) {
+			throw e;
+		}
 		return ocjene;
 	}
 	
@@ -108,8 +114,11 @@ public class OcjenaDAOImpl implements OcjenaDAO {
 			+ " left join osobe o2 on"
 				+ "	oc.idosobadod = o2.idosoba"
 			+ " where po.idpredmet = ? and oc.active =  true;";
-		
-		ocjene = jdbcTemplate.query(SQL_GET_BY_idpredmet, new Object[] {id}, new OcjenaMapper() );
+		try {
+			ocjene = jdbcTemplate.query(SQL_GET_BY_idpredmet, new Object[] {id}, new OcjenaMapper() );
+		} catch(Exception e) {
+			throw e;
+		}
 		return ocjene;
 	}
 	
@@ -140,7 +149,11 @@ public class OcjenaDAOImpl implements OcjenaDAO {
 				+ "	oc.idosobadod = o2.idosoba"
 			+ " where oc.idocjena = ?;";
 		
-		ocjena = jdbcTemplate.queryForObject(SQL_GET_BY_ID, new Object[] {id}, new OcjenaMapper());
+		try {
+			ocjena = jdbcTemplate.queryForObject(SQL_GET_BY_ID, new Object[] {id}, new OcjenaMapper());
+		} catch(Exception e) {
+			throw e;
+		}
 		return ocjena;
 	}
 
@@ -155,35 +168,45 @@ public class OcjenaDAOImpl implements OcjenaDAO {
 				+ "idosobadod) "
 		+ "values ( ?, ?, ?, ? )";
 		
-		return jdbcTemplate.update(SQL_INSERT, 
+		try {
+			return jdbcTemplate.update(SQL_INSERT, 
 				ocjena.getIdPredmetOsoba(), 
 				ocjena.getOcjena(), 
 				date, 
 				ocjena.getIdOsobaDod()) > 0;
+		} catch (Exception e) {
+			throw e;
+		}
 	}
 
 	@Override
 	public boolean deleteOcjena(Integer id) {
 		final String SQL_DELETE = "delete from ocjene where idocjena = ?";
-		
-		return jdbcTemplate.update(SQL_DELETE, id) > 0 ;
+		try {
+			return jdbcTemplate.update(SQL_DELETE, id) > 0 ;
+		} catch (Exception e) {
+			throw e;
+		}
 	}
 
 	@Override
 	public boolean updateOcjena(Ocjena ocjena) {
 		LocalDate date = LocalDate.now();
-		
 		final String SQL_UPDATE = "update ocjene set "
 					+ "ocjena = ?, "
 					+ "datum = ?, "
 					+ "idosobadod = ? "
 				+ "where idocjena = ?";
 		
-		return jdbcTemplate.update(SQL_UPDATE, 
+		try {
+			return jdbcTemplate.update(SQL_UPDATE, 
 				ocjena.getOcjena(), 
 				date, 
 				ocjena.getIdOsobaDod(), 
 				ocjena.getIdOcjena()) > 0;
+		} catch (Exception e) {
+			throw e;
+		}
 	}
 }
 

@@ -40,9 +40,13 @@ public class OsobaDAOImpl implements OsobaDAO {
 				+ "	o.idosoba = attr.idosoba"
 				+ " left join skola.tipoviosoba t"
 				+ " on o.idtiposobe = t.idtiposoba"
-				+ " where o.active = true;";
-		
-		osobe = jdbcTemplate.query(SQL_GET_ALL, new OsobaMapper());
+				+ " where o.active = true"
+				+ " order by o.idosoba asc;";
+		try {
+			osobe = jdbcTemplate.query(SQL_GET_ALL, new OsobaMapper());
+		} catch(Exception e) {
+			throw e;
+		}
 		return osobe;
 	}
 	
@@ -68,8 +72,11 @@ public class OsobaDAOImpl implements OsobaDAO {
 				+ " left join skola.tipoviosoba t"
 				+ " on o.idtiposobe = t.idtiposoba"
 				+ " where o.idtiposobe = 2 and o.active = true;";
-		
-		osobe = jdbcTemplate.query(SQL_GET_ALL_NASTAVNICI, new OsobaMapper());
+		try {
+			osobe = jdbcTemplate.query(SQL_GET_ALL_NASTAVNICI, new OsobaMapper());
+		} catch(Exception e) {
+			throw e;
+		}
 		return osobe;
 	}
 
@@ -95,8 +102,11 @@ public class OsobaDAOImpl implements OsobaDAO {
 				+ " left join skola.tipoviosoba t"
 				+ " on o.idtiposobe = t.idtiposoba"
 				+ " where o.idtiposobe = 3 and o.active = true;";
-		
-		osobe = jdbcTemplate.query(SQL_GET_ALL_UCENICI, new OsobaMapper());
+		try {
+			osobe = jdbcTemplate.query(SQL_GET_ALL_UCENICI, new OsobaMapper());
+		} catch(Exception e) {
+			throw e;
+		}
 		return osobe;
 	}
 
@@ -122,8 +132,12 @@ public class OsobaDAOImpl implements OsobaDAO {
 				+ " left join skola.tipoviosoba t"
 				+ " on o.idtiposobe = t.idtiposoba"
 				+ " where o.idosoba = ?;";
+		try {
+			osoba = jdbcTemplate.queryForObject(SQL_GET_BY_ID, new Object[] {id}, new OsobaMapper());
+		} catch(Exception e) {
+			throw e;
+		}
 		
-		osoba = jdbcTemplate.queryForObject(SQL_GET_BY_ID, new Object[] {id}, new OsobaMapper());
 		return osoba;
 		}
 
@@ -145,17 +159,24 @@ public class OsobaDAOImpl implements OsobaDAO {
 				+ " adresa=?"
 				+ " where idosoba = ?;";
 		
-		
-		stat = jdbcTemplate.update(SQL_INSERT, 
+		try {
+			stat = jdbcTemplate.update(SQL_INSERT, 
 					osoba.getOib(), 
 					osoba.getIme(), 
 					osoba.getPrezime(), 
 					date,
 					osoba.getIdTipOsobe()) > 0;
-		if(osoba.getMail() != " " || osoba.getKontakt() != " " || osoba.getAdresa() != " ")
-		{
-			jdbcTemplate.update(SQL_OSOBA_ATTR, osoba.getMail(), osoba.getKontakt(), osoba.getAdresa(), osoba.getIdOsoba());	
-		}			
+					try {
+						if(osoba.getMail() != "" || osoba.getKontakt() != "" || osoba.getAdresa() != "")
+						{
+							jdbcTemplate.update(SQL_OSOBA_ATTR, osoba.getMail(), osoba.getKontakt(), osoba.getAdresa(), osoba.getIdOsoba());	
+						}
+					} catch(Exception ex) {
+						throw ex;
+					}
+		} catch(Exception e) {
+			throw e;
+		}		
 		return stat;
 	}
 
@@ -163,8 +184,12 @@ public class OsobaDAOImpl implements OsobaDAO {
 	public boolean deleteOsoba(Integer id) {
 		
 		final String SQL_DELETE = "delete from osobe where idosoba = ?";
+		try {
+			return jdbcTemplate.update(SQL_DELETE, id) > 0;
+		} catch(Exception e) {
+			throw e;
+		}
 		
-		return jdbcTemplate.update(SQL_DELETE, id) > 0;
 	}
 
 	@Override
@@ -174,11 +199,14 @@ public class OsobaDAOImpl implements OsobaDAO {
 				+ " mail = ?,"
 				+ " adresa = ?"
 			+ " where idosoba = ?";
-		
-		return jdbcTemplate.update(SQL_UPDATE, 
+		try {
+			return jdbcTemplate.update(SQL_UPDATE, 
 				osoba.getKontakt(),
 				osoba.getMail(), 
 				osoba.getAdresa(),
 				osoba.getIdOsoba()) > 0;
+		} catch(Exception e) {
+			throw e;
+		}
 	}
 }

@@ -53,7 +53,11 @@ public class ReportDAOImpl implements ReportDAO {
 				+ " from skola.osobe o"
 				+ " left join skola.osobaattr attr on"
 				+ "	o.idosoba = attr.idosoba";
-		rawData = jdbcTemplate.query(SQL_GET, new OsobaRawMapper());
+		try {
+			rawData = jdbcTemplate.query(SQL_GET, new OsobaRawMapper());
+		} catch(Exception e) {
+			throw e;
+		}
 		return rawData;
 	}
 
@@ -61,7 +65,11 @@ public class ReportDAOImpl implements ReportDAO {
 	public List<PredmetOsobaRaw> getPredmetOsobaRaw() {
 		List<PredmetOsobaRaw> rawData = null;
 		final String SQL_GET = "select * from predmetosoba";
-		rawData = jdbcTemplate.query(SQL_GET, new PredmetOsobaRawMapper());
+		try {
+			rawData = jdbcTemplate.query(SQL_GET, new PredmetOsobaRawMapper());
+		} catch(Exception e) {
+			throw e;
+		}
 		return rawData;
 	}
 
@@ -94,8 +102,8 @@ public class ReportDAOImpl implements ReportDAO {
 					+ "	on po.idpredmet = p.idpredmet"
 					+ "	where po.idosoba = ? and oc.active = true"
 					+ "	group by p.nazivpredmt) tempTable;";
-		
-		jdbcTemplate.query(SQL_REPORT, new Object [] {id}, new RowMapper<HashMap<String, Double>>() {
+		try {
+			jdbcTemplate.query(SQL_REPORT, new Object [] {id}, new RowMapper<HashMap<String, Double>>() {
 			HashMap<String, Double> results = new HashMap<>();
 			@Override
 			public HashMap<String, Double> mapRow(ResultSet rs, int rowNum) throws SQLException {
@@ -105,15 +113,18 @@ public class ReportDAOImpl implements ReportDAO {
 					avg.add(results);
 						
 				} while(rs.next());
-				return null;
-			}
-			
-		});
+					return null;
+				}
+			});
 		
-		finalGrade = jdbcTemplate.queryForObject(SQL_FINAL_GRADE, new Object[] {id},  Double.class);
+			finalGrade = jdbcTemplate.queryForObject(SQL_FINAL_GRADE, new Object[] {id},  Double.class);
 		
-		reportCard.setAvgOcjene(avg);
-		reportCard.setFinalGrade(finalGrade);
+			reportCard.setAvgOcjene(avg);
+			reportCard.setFinalGrade(finalGrade);
+		} catch(Exception e) {
+			throw e;
+		}
+		
 
 		return reportCard;
 	}

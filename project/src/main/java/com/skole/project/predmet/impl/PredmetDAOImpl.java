@@ -21,9 +21,13 @@ public class PredmetDAOImpl implements PredmetDAO {
 	public List<Predmet> getAllPredmeti(){
 		List<Predmet> predmeti = null;
 		
-		final String SQL_GET_ALL = "SELECT * FROM predmeti";
+		final String SQL_GET_ALL = "SELECT * FROM predmeti where active = true order by idpredmet asc;";
+		try {
+			predmeti =  jdbcTemplate.query(SQL_GET_ALL, new PredmetiMapper());
+		} catch(Exception e) {
+			throw e;
+		}
 		
-		predmeti =  jdbcTemplate.query(SQL_GET_ALL, new PredmetiMapper());
 		return predmeti;
 	}
 	
@@ -32,29 +36,41 @@ public class PredmetDAOImpl implements PredmetDAO {
 		Predmet predmet = null;
 		
 		final String SQL_GET_BY_ID = "select * from predmeti where idpredmet = ?";
-		
-		predmet = jdbcTemplate.queryForObject(SQL_GET_BY_ID, new Object[] { id }, new PredmetiMapper());
+		try {
+			predmet = jdbcTemplate.queryForObject(SQL_GET_BY_ID, new Object[] { id }, new PredmetiMapper());
+		} catch(Exception e) {
+			throw e;
+		}
 		return predmet;
 	}
 	
 	@Override
 	public boolean createPredmet(Predmet predmet) {
 		final String SQL_INSERT = "insert into predmeti (nazivpredmt) values ( ? )";
-		
-		return jdbcTemplate.update(SQL_INSERT, predmet.getNazivPredmet()) > 0;
+		try {
+			return jdbcTemplate.update(SQL_INSERT, predmet.getNazivPredmet()) > 0;
+		} catch(Exception e) {
+			throw e;
+		}
 	}
 	
 	@Override
 	public boolean deletePredmet(Integer id) {
 		final String SQL_DELETE = "delete from predmeti where idpredmet = ?";
-		
-		return jdbcTemplate.update(SQL_DELETE, id) > 0;
+		try {
+			return jdbcTemplate.update(SQL_DELETE, id) > 0;
+		} catch(Exception e) {
+			throw e;
+		}
 	}
 	
 	@Override
 	public boolean updatePredmet(Predmet predmet) {
 		final String SQL_UPDATE = "update predmeti set nazivpredmt = ? where idpredmet = ?";
-		
-		return jdbcTemplate.update(SQL_UPDATE, predmet.getNazivPredmet(), predmet.getIdPredmet()) > 0;
+		try {
+			return jdbcTemplate.update(SQL_UPDATE, predmet.getNazivPredmet(), predmet.getIdPredmet()) > 0;
+		} catch(Exception e) {
+			throw e;
+		}
 	}
 }
